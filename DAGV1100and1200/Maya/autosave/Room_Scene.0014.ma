@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Room_Scene.ma
-//Last modified: Tue, Sep 02, 2025 01:46:23 PM
+//Name: Room_Scene.0014.ma
+//Last modified: Tue, Sep 02, 2025 01:45:13 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,19 +11,20 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "EEA968A0-4BD3-EFED-BBE0-D2B56F9235DE";
+fileInfo "UUID" "57A3AE85-405F-203A-9B0C-B8AC84570194";
 fileInfo "license" "education";
+fileInfo "exportedFrom" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Room_Scene.ma";
 createNode transform -s -n "persp";
 	rename -uid "95AC1333-4C07-823D-9F15-B0A16C093631";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.1987303861107899 25.962356057510959 49.901489094482407 ;
-	setAttr ".r" -type "double3" -24.000000000016854 -1.1999999999999675 2.4853534239700991e-16 ;
+	setAttr ".t" -type "double3" -12.634064741778513 15.75437757250889 43.883046875836008 ;
+	setAttr ".r" -type "double3" -13.200000000015242 -15.999999999999911 -1.2407734653200521e-15 ;
 	setAttr ".rpt" -type "double3" -2.97249530808976e-15 4.0687314648550475e-15 -6.037872785499711e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "22F18411-4564-03D4-A243-218DB74115B6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 52.912185237037619;
+	setAttr ".coi" 47.135513577290546;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -26543,10 +26544,6 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "layerManager.dli[1]" "Room.id";
 connectAttr "pasted__polyCube1.out" "polyExtrudeFace1.ip";
 connectAttr "pasted__WallShape.wm" "polyExtrudeFace1.mp";
@@ -26726,4 +26723,4 @@ connectAttr "floorBoard79Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "floorBoard80Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "floorBoard81Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "floorBoard82Shape.iog" ":initialShadingGroup.dsm" -na;
-// End of Room_Scene.ma
+// End of Room_Scene.0014.ma
