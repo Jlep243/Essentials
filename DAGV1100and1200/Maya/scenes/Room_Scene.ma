@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Room_Scene.ma
-//Last modified: Tue, Sep 09, 2025 03:16:43 PM
+//Last modified: Tue, Sep 09, 2025 03:18:05 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,19 +11,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "338AE53B-4452-BAB4-C6CD-AA885CB57F3C";
+fileInfo "UUID" "9BECB28A-4C05-13A9-360D-8CA1AF6EA00B";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "95AC1333-4C07-823D-9F15-B0A16C093631";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.6287486605696202 4.226520322701055 12.075402495064095 ;
-	setAttr ".r" -type "double3" -12.000000000000028 9.1999999999999389 -2.0137510354436413e-16 ;
+	setAttr ".t" -type "double3" -20.440233936694263 7.2103434409250857 23.633993472622009 ;
+	setAttr ".r" -type "double3" -10.200000000001175 -40.39999999999992 -5.2206084874300349e-16 ;
 	setAttr ".rpt" -type "double3" -3.5661452046186069e-15 5.183393768424652e-15 -2.7368623445323633e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "22F18411-4564-03D4-A243-218DB74115B6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 12.505117434019414;
+	setAttr ".coi" 31.531701815347695;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -25626,8 +25626,9 @@ createNode mesh -n "pPlaneShape3" -p "pPlane3";
 	setAttr ".dr" 1;
 createNode transform -n "BookShelf";
 	rename -uid "9A381DC1-4784-FC9B-DC9D-FFBAB399A1D0";
-	setAttr ".t" -type "double3" -0.32689414342270101 0.19590510489883828 0 ;
-	setAttr ".s" -type "double3" 5.9870156090346196 0.1007557427335973 1.1875984789584977 ;
+	setAttr ".t" -type "double3" 10.818791045041108 0.19590510489883828 -9.9371193058492817e-20 ;
+	setAttr ".r" -type "double3" 0 -89.810924858345729 0 ;
+	setAttr ".s" -type "double3" 6.8937013266879852 0.11601439560402803 1.3674507876034983 ;
 createNode mesh -n "BookShelfShape" -p "BookShelf";
 	rename -uid "15DED6A3-41BF-3417-21D9-FF842DC9ECD0";
 	setAttr -k off ".v";
@@ -25750,7 +25751,6 @@ createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
 	rename -uid "71471AE8-4E1C-C098-3634-86876043F02A";
 createNode displayLayer -n "Walls";
 	rename -uid "B3F428BD-4755-28A8-7040-60B431768985";
-	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode polyExtrudeFace -n "polyExtrudeFace1";
@@ -25898,7 +25898,6 @@ createNode polyExtrudeFace -n "polyExtrudeFace3";
 	setAttr ".cbx" -type "double3" 1.0064209805634379 0.05 1 ;
 createNode displayLayer -n "Furniture";
 	rename -uid "F827337E-42DF-5674-6895-5F9CC25316C7";
-	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 2;
 createNode polyCube -n "polyCube3";
@@ -26856,6 +26855,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "Walls.di" "Wall.do";
 connectAttr "polyCube1.out" "WallShape.i";
 connectAttr "Walls.di" "pasted__Wall.do";
