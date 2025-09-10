@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Room_Scene.ma
-//Last modified: Tue, Sep 09, 2025 03:18:05 PM
+//Last modified: Tue, Sep 09, 2025 03:19:50 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,19 +11,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "9BECB28A-4C05-13A9-360D-8CA1AF6EA00B";
+fileInfo "UUID" "345658AD-43B7-A99A-EFDC-A682DF05D045";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "95AC1333-4C07-823D-9F15-B0A16C093631";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -20.440233936694263 7.2103434409250857 23.633993472622009 ;
-	setAttr ".r" -type "double3" -10.200000000001175 -40.39999999999992 -5.2206084874300349e-16 ;
+	setAttr ".t" -type "double3" -29.924517963603446 17.580920712284058 18.051171982429175 ;
+	setAttr ".r" -type "double3" -26.400000000007111 -46.399999999999963 0 ;
 	setAttr ".rpt" -type "double3" -3.5661452046186069e-15 5.183393768424652e-15 -2.7368623445323633e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "22F18411-4564-03D4-A243-218DB74115B6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 31.531701815347695;
+	setAttr ".coi" 35.396055344916526;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -239,6 +239,10 @@ createNode transform -n "chairCushion";
 	setAttr -av ".sx";
 	setAttr -av ".sy";
 	setAttr -av ".sz";
+	setAttr ".rp" -type "double3" 0 0.46682142822668005 0.10996781057935601 ;
+	setAttr ".rpt" -type "double3" -0.093758254069009339 0 -0.16743353216664852 ;
+	setAttr ".sp" -type "double3" 0 1.1963441808467197 0.058746323773729736 ;
+	setAttr ".spt" -type "double3" 0 -0.72952275262003963 0.051221486805626271 ;
 createNode mesh -n "chairCushionShape" -p "chairCushion";
 	rename -uid "F0F8EF2A-4758-DC9B-EF7C-8C8353200455";
 	setAttr -k off ".v";
