@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Room_Scene.ma
-//Last modified: Mon, Sep 15, 2025 05:52:47 PM
+//Name: Room_Scene.0023.ma
+//Last modified: Mon, Sep 15, 2025 05:51:25 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "polyBoolean" "polyBoolean" "1.1";
@@ -12,19 +12,20 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "7DC7605F-43C5-C214-B946-92AEE190A687";
+fileInfo "UUID" "988AE6F1-483F-4AD9-5629-1683F1C36549";
 fileInfo "license" "education";
+fileInfo "exportedFrom" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Room_Scene.ma";
 createNode transform -s -n "persp";
 	rename -uid "95AC1333-4C07-823D-9F15-B0A16C093631";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -34.781463267033637 39.160322083564793 41.399067514515707 ;
-	setAttr ".r" -type "double3" -27.600000000000708 -33.600000000000165 1.9092769676229955e-15 ;
+	setAttr ".t" -type "double3" -31.946922877117714 26.315791392827553 10.973369856664881 ;
+	setAttr ".r" -type "double3" -35.400000000003516 -60.399999999999984 1.2878255100982174e-14 ;
 	setAttr ".rpt" -type "double3" -1.467876590893194e-15 7.5846109431467873e-15 -4.0303221476714112e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "22F18411-4564-03D4-A243-218DB74115B6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 71.708530416859844;
+	setAttr ".coi" 45.158655576017836;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -27951,11 +27952,11 @@ createNode mesh -n "pCubeShape15" -p "pCube15";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "Window";
+createNode transform -n "pCube16";
 	rename -uid "2127D562-43F3-F4EB-D0B7-CB8817ED2290";
 	setAttr ".t" -type "double3" 0 6.0796555326760826 -12.091073748759039 ;
 	setAttr ".s" -type "double3" 6.1633483965432161 6.0538250447080975 0.085215150831192146 ;
-createNode mesh -n "WindowShape" -p "Window";
+createNode mesh -n "pCubeShape16" -p "pCube16";
 	rename -uid "07065D70-484E-CE17-094E-2FAAE8BBAE05";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -29359,21 +29360,11 @@ connectAttr "groupId3.id" "pCubeShape14.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCubeShape14.iog.og[0].gco";
 connectAttr "groupParts1.og" "pCubeShape14.i";
 connectAttr "groupId4.id" "pCubeShape14.ciog.cog[0].cgid";
-connectAttr "Walls.di" "polySurface1.do";
 connectAttr "polyBoolean1.out" "polySurfaceShape4.i";
 connectAttr "groupId1.id" "polySurfaceShape4.iog.og[0].gid";
 connectAttr "groupId3.id" "polySurfaceShape4.iog.og[1].gid";
 connectAttr "groupId5.id" "polySurfaceShape4.ciog.cog[0].cgid";
-connectAttr "Walls.di" "pCube15.do";
 connectAttr "polyCube7.out" "pCubeShape15.i";
-connectAttr "Walls.di" "Window.do";
-connectAttr "Walls.di" "pCube17.do";
-connectAttr "Walls.di" "pCube18.do";
-connectAttr "Walls.di" "pCube19.do";
-connectAttr "Walls.di" "pCube20.do";
-connectAttr "Walls.di" "pCube21.do";
-connectAttr "Walls.di" "pCube22.do";
-connectAttr "Walls.di" "pCube23.do";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -29382,10 +29373,6 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "layerManager.dli[1]" "Walls.id";
 connectAttr "polyCube2.out" "polySplit1.ip";
 connectAttr "polySplit1.out" "polySplit2.ip";
@@ -29584,7 +29571,7 @@ connectAttr "polySurfaceShape4.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurfaceShape4.iog.og[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurfaceShape4.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape15.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "WindowShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape16.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape17.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape18.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape19.iog" ":initialShadingGroup.dsm" -na;
@@ -29596,4 +29583,4 @@ connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
-// End of Room_Scene.ma
+// End of Room_Scene.0023.ma
