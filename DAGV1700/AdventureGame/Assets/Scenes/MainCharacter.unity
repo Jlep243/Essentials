@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 64389841}
   - component: {fileID: 64389840}
   m_Layer: 0
-  m_Name: Blue (15)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 86950666}
   - component: {fileID: 86950665}
   m_Layer: 0
-  m_Name: Blue (19)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 100406550}
   - component: {fileID: 100406549}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (12)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: 109501990}
   - component: {fileID: 109501989}
   m_Layer: 0
-  m_Name: Blue (20)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 139348956}
   - component: {fileID: 139348955}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (14)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -864,7 +864,7 @@ GameObject:
   - component: {fileID: 171361484}
   - component: {fileID: 171361483}
   m_Layer: 0
-  m_Name: Blue (22)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,7 +973,7 @@ GameObject:
   - component: {fileID: 178216186}
   - component: {fileID: 178216185}
   m_Layer: 0
-  m_Name: Blue (26)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 197395397}
   - component: {fileID: 197395396}
   m_Layer: 0
-  m_Name: Blue (5)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 259475063}
   - component: {fileID: 259475062}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (9)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1301,7 +1301,7 @@ GameObject:
   - component: {fileID: 286487737}
   - component: {fileID: 286487736}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (13)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1520,7 +1520,7 @@ GameObject:
   - component: {fileID: 339607750}
   - component: {fileID: 339607749}
   m_Layer: 0
-  m_Name: Blue (3)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1629,7 +1629,7 @@ GameObject:
   - component: {fileID: 344178191}
   - component: {fileID: 344178190}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_5
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1738,7 +1738,7 @@ GameObject:
   - component: {fileID: 376038994}
   - component: {fileID: 376038993}
   m_Layer: 0
-  m_Name: Blue (21)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1878,7 +1878,7 @@ GameObject:
   - component: {fileID: 413461160}
   - component: {fileID: 413461159}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_39
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1987,7 +1987,7 @@ GameObject:
   - component: {fileID: 435883570}
   - component: {fileID: 435883569}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_38
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2096,7 +2096,7 @@ GameObject:
   - component: {fileID: 440720264}
   - component: {fileID: 440720263}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_7
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2299,7 +2299,7 @@ GameObject:
   - component: {fileID: 546034280}
   - component: {fileID: 546034279}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_24 (1)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2409,7 +2409,7 @@ GameObject:
   - component: {fileID: 626759751}
   - component: {fileID: 626759750}
   m_Layer: 0
-  m_Name: Blue (6)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2518,7 +2518,7 @@ GameObject:
   - component: {fileID: 649159992}
   - component: {fileID: 649159991}
   m_Layer: 0
-  m_Name: Blue (11)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2627,7 +2627,7 @@ GameObject:
   - component: {fileID: 674643414}
   - component: {fileID: 674643413}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_6 (1)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2768,7 +2768,7 @@ GameObject:
   - component: {fileID: 729739702}
   - component: {fileID: 729739701}
   m_Layer: 0
-  m_Name: Blue (14)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2877,7 +2877,7 @@ GameObject:
   - component: {fileID: 748893622}
   - component: {fileID: 748893621}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_6 (6)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3018,7 +3018,7 @@ GameObject:
   - component: {fileID: 807163906}
   - component: {fileID: 807163905}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_6
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3159,7 +3159,7 @@ GameObject:
   - component: {fileID: 844756851}
   - component: {fileID: 844756850}
   m_Layer: 0
-  m_Name: Blue (18)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3268,7 +3268,7 @@ GameObject:
   - component: {fileID: 848317578}
   - component: {fileID: 848317577}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (5)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3378,7 +3378,7 @@ GameObject:
   - component: {fileID: 854939455}
   - component: {fileID: 854939454}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_6 (2)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3488,7 +3488,7 @@ GameObject:
   - component: {fileID: 857098527}
   - component: {fileID: 857098526}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_6
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3597,7 +3597,7 @@ GameObject:
   - component: {fileID: 857650093}
   - component: {fileID: 857650092}
   m_Layer: 0
-  m_Name: Blue (23)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3706,7 +3706,7 @@ GameObject:
   - component: {fileID: 893003590}
   - component: {fileID: 893003589}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (1)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3816,7 +3816,7 @@ GameObject:
   - component: {fileID: 905948782}
   - component: {fileID: 905948781}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (7)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3926,7 +3926,7 @@ GameObject:
   - component: {fileID: 909362807}
   - component: {fileID: 909362806}
   m_Layer: 0
-  m_Name: Blue (25)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4035,7 +4035,7 @@ GameObject:
   - component: {fileID: 937458127}
   - component: {fileID: 937458126}
   m_Layer: 0
-  m_Name: Blue (4)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4206,7 +4206,7 @@ GameObject:
   - component: {fileID: 993326696}
   - component: {fileID: 993326695}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (8)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4316,7 +4316,7 @@ GameObject:
   - component: {fileID: 1006537774}
   - component: {fileID: 1006537773}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_7
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4518,7 +4518,7 @@ GameObject:
   - component: {fileID: 1102645520}
   - component: {fileID: 1102645519}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (15)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4659,7 +4659,7 @@ GameObject:
   - component: {fileID: 1177548741}
   - component: {fileID: 1177548740}
   m_Layer: 0
-  m_Name: Blue (1)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 1213359374}
   - component: {fileID: 1213359373}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (11)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4878,7 +4878,7 @@ GameObject:
   - component: {fileID: 1217083702}
   - component: {fileID: 1217083701}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (4)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4988,7 +4988,7 @@ GameObject:
   - component: {fileID: 1231764585}
   - component: {fileID: 1231764584}
   m_Layer: 0
-  m_Name: Blue (8)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5097,7 +5097,7 @@ GameObject:
   - component: {fileID: 1280978416}
   - component: {fileID: 1280978415}
   m_Layer: 0
-  m_Name: Blue (27)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5330,7 +5330,7 @@ GameObject:
   - component: {fileID: 1418465717}
   - component: {fileID: 1418465716}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_6 (4)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5440,7 +5440,7 @@ GameObject:
   - component: {fileID: 1432934877}
   - component: {fileID: 1432934876}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5550,7 +5550,7 @@ GameObject:
   - component: {fileID: 1433709602}
   - component: {fileID: 1433709601}
   m_Layer: 0
-  m_Name: Blue (10)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5659,7 +5659,7 @@ GameObject:
   - component: {fileID: 1475654225}
   - component: {fileID: 1475654224}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_37
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5768,7 +5768,7 @@ GameObject:
   - component: {fileID: 1524589051}
   - component: {fileID: 1524589050}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_6 (3)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5878,7 +5878,7 @@ GameObject:
   - component: {fileID: 1538190154}
   - component: {fileID: 1538190153}
   m_Layer: 0
-  m_Name: Blue (12)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6045,7 +6045,7 @@ GameObject:
   - component: {fileID: 1584996190}
   - component: {fileID: 1584996189}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (2)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6186,7 +6186,7 @@ GameObject:
   - component: {fileID: 1683906742}
   - component: {fileID: 1683906741}
   m_Layer: 0
-  m_Name: Blue (7)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6295,7 +6295,7 @@ GameObject:
   - component: {fileID: 1692554218}
   - component: {fileID: 1692554217}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (6)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6405,7 +6405,7 @@ GameObject:
   - component: {fileID: 1697843031}
   - component: {fileID: 1697843030}
   m_Layer: 0
-  m_Name: Blue (9)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6514,7 +6514,7 @@ GameObject:
   - component: {fileID: 1718857488}
   - component: {fileID: 1718857487}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (10)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6624,7 +6624,7 @@ GameObject:
   - component: {fileID: 1766342903}
   - component: {fileID: 1766342902}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_6 (7)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6826,7 +6826,7 @@ GameObject:
   - component: {fileID: 1782994144}
   - component: {fileID: 1782994143}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_6 (5)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6936,7 +6936,7 @@ GameObject:
   - component: {fileID: 1834890171}
   - component: {fileID: 1834890170}
   m_Layer: 0
-  m_Name: Blue (2)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7045,7 +7045,7 @@ GameObject:
   - component: {fileID: 1861640311}
   - component: {fileID: 1861640310}
   m_Layer: 0
-  m_Name: Blue (17)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7154,7 +7154,7 @@ GameObject:
   - component: {fileID: 1873878614}
   - component: {fileID: 1873878613}
   m_Layer: 0
-  m_Name: Blue (24)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7263,7 +7263,7 @@ GameObject:
   - component: {fileID: 1884743836}
   - component: {fileID: 1884743835}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_23 (3)
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7373,7 +7373,7 @@ GameObject:
   - component: {fileID: 1916131541}
   - component: {fileID: 1916131540}
   m_Layer: 0
-  m_Name: Blue (13)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7513,7 +7513,7 @@ GameObject:
   - component: {fileID: 1943936682}
   - component: {fileID: 1943936681}
   m_Layer: 0
-  m_Name: Blue (16)
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7749,7 +7749,7 @@ GameObject:
   - component: {fileID: 2081736927}
   - component: {fileID: 2081736926}
   m_Layer: 0
-  m_Name: Terrain (16x16) 1_24
+  m_Name: Terrain (16x16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
