@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Room_Scene.ma
-//Last modified: Tue, Sep 16, 2025 07:33:17 PM
+//Name: Room_Scene.0032.ma
+//Last modified: Tue, Sep 16, 2025 07:19:17 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,8 +11,9 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "16DC9E8E-4A2C-6C75-08CA-F8804F314669";
+fileInfo "UUID" "D2096F9B-4C95-C78B-4529-5EA646254617";
 fileInfo "license" "education";
+fileInfo "exportedFrom" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Room_Scene.ma";
 createNode transform -s -n "persp";
 	rename -uid "95AC1333-4C07-823D-9F15-B0A16C093631";
 	setAttr ".v" no;
@@ -34025,10 +34026,6 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "layerManager.dli[1]" "Walls.id";
 connectAttr "layerManager.dli[2]" "Furniture.id";
 connectAttr "layerManager.dli[3]" "WoodenFloor.id";
@@ -34150,4 +34147,4 @@ connectAttr "pCubeShape22.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape23.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "WallShape2.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
-// End of Room_Scene.ma
+// End of Room_Scene.0032.ma
