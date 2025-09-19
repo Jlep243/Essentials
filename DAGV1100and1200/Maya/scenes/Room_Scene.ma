@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Room_Scene.ma
-//Last modified: Thu, Sep 18, 2025 06:28:51 PM
+//Last modified: Thu, Sep 18, 2025 06:37:13 PM
 //Codeset: 1252
 file -rdi 1 -ns "Lamp" -rfn "LampRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Lamp.ma";
 file -r -ns "Lamp" -dr 1 -rfn "LampRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Lamp.ma";
@@ -13,23 +13,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "9FBB8FE3-4A9A-8AE6-1A34-29874834C5D6";
+fileInfo "UUID" "DFFAD859-41D5-F435-8A05-DDA00E912919";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "95AC1333-4C07-823D-9F15-B0A16C093631";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -34.412169321750703 9.870103412743628 33.68885737538757 ;
-	setAttr ".r" -type "double3" -7.2000000000152928 314.00000000022777 -5.7232353641489703e-16 ;
+	setAttr ".t" -type "double3" -28.145625488083127 17.869903863094287 35.03829407215143 ;
+	setAttr ".r" -type "double3" -18.60000000000019 321.60000000004135 0 ;
 	setAttr ".rpt" -type "double3" -1.4678765908931942e-15 7.5846109431467873e-15 -4.0303221476714112e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "22F18411-4564-03D4-A243-218DB74115B6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 56.546851521226088;
+	setAttr ".coi" 60.484332596093722;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 10.384609812663552 3.379591166973114 -10.398722498439733 ;
+	setAttr ".tp" -type "double3" 9.9504358969172824 3.4787305593490601 -10.019093636925202 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "CD92EFAC-4005-3374-58B8-BE8F11CE06B9";
@@ -419,11 +419,11 @@ createNode mesh -n "TableShape" -p "Table";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
-createNode transform -n "chairCushion";
+createNode transform -n "Chair";
 	rename -uid "6B13423F-4E16-F260-FDE3-3E9E076F0D20";
 	setAttr ".rp" -type "double3" -6.8186614850951708 0.017400634677036564 -7.5312148228447873 ;
 	setAttr ".sp" -type "double3" -6.8186614850951699 0.017400634677042781 -7.5312148228447864 ;
-createNode mesh -n "chairCushionShape" -p "chairCushion";
+createNode mesh -n "ChairShape" -p "Chair";
 	rename -uid "F0F8EF2A-4758-DC9B-EF7C-8C8353200455";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -768,7 +768,7 @@ createNode mesh -n "chairCushionShape" -p "chairCushion";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
-createNode transform -n "ChairLegs" -p "chairCushion";
+createNode transform -n "ChairLegs" -p "Chair";
 	rename -uid "E293D4F9-4414-A760-5433-ADA9E6D298BB";
 	setAttr ".rp" -type "double3" -6.8656258617251336 1.7623248824071203 -7.5597389424127037 ;
 	setAttr ".sp" -type "double3" -6.8656258617251336 1.7623248824071203 -7.5597389424127037 ;
@@ -31883,6 +31883,7 @@ createNode mesh -n "BookShape1" -p "Book1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Book3";
 	rename -uid "86845A51-4A62-198C-2F96-E4B2E25E71FF";
+	setAttr ".t" -type "double3" 0.0012391240598930153 0 0 ;
 	setAttr ".rp" -type "double3" 10.432651904197153 2.0334082089291017 -3.12117306501113 ;
 	setAttr ".sp" -type "double3" 10.432651904197172 2.0334082089291181 -3.12117306501113 ;
 createNode mesh -n "Book3Shape" -p "Book3";
@@ -33752,15 +33753,15 @@ createNode mesh -n "pCubeShape23" -p "pCube23";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DB03B964-4EF9-A61E-E46E-17816A29BA76";
+	rename -uid "A9D36FDB-4151-4B6E-E441-1B90544294A8";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "66528D69-4FCB-779C-E8ED-ECBA3D3FA4B5";
+	rename -uid "9352EFB6-45AC-A57F-09E4-A4BF711D0B65";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "5D5F82B4-4ABD-7F25-20EF-CA9688D8F9F1";
+	rename -uid "B697089D-4F55-7E1D-592F-BDB955BA24DF";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "64F9AD8A-4E69-A700-D51E-43A0044A95B5";
+	rename -uid "B3625703-497D-12F8-C185-DF85E170ED4D";
 	setAttr ".cdl" 1;
 	setAttr -s 5 ".dli[1:4]"  1 2 3 4;
 	setAttr -s 5 ".dli";
@@ -33768,7 +33769,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "CE11445F-4048-4281-92B1-CC96115548D9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CC19FF64-44BF-5739-CD10-7C9F0EB32225";
+	rename -uid "D212E85F-403D-2F27-7074-1D9DC68AA1C9";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4731A1D7-4F3B-20A5-4CE0-8C82C8F9ACD4";
 	setAttr ".g" yes;
@@ -33860,13 +33861,15 @@ createNode reference -n "LampRN";
 	rename -uid "47659DA6-48CD-5351-5D24-2E8C93EC9386";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"LampRN"
-		"LampRN" 0
-		"LampRN" 7
+		"LampRN" 3
 		2 "|Lamp:pCylinder18" "translate" " -type \"double3\" 10.372903508119796 0.13803106546401978 -8.27939061208312843"
 		
 		2 "|Lamp:pCylinder18" "rotate" " -type \"double3\" 0 -92.31403684498899054 0"
 		
 		2 "|Lamp:pCylinder18" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		"LampRN" 5
+		2 "|Lamp:LampStand" "translate" " -type \"double3\" 9.93872954468339564 0.23717045783996582 -7.8997618002247636"
+		
 		2 "Lamp:lamppole" "visibility" " 1"
 		2 "Lamp:Switch" "visibility" " 1"
 		2 "Lamp:bulb" "visibility" " 1"
@@ -33922,10 +33925,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "Furniture.di" "Table.do";
-connectAttr "Furniture.di" "chairCushion.do";
+connectAttr "Furniture.di" "Chair.do";
 connectAttr "Furniture.di" "ChairLegs.do";
 connectAttr "WoodenFloor.di" "floorBoard10.do";
 connectAttr "WoodenFloor.di" "floorBoard47.do";
@@ -34060,7 +34061,7 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "TableShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "chairLegsShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "chairCushionShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "ChairShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "floorBoardShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "floorBoard1Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "floorBoard3Shape.iog" ":initialShadingGroup.dsm" -na;
