@@ -1,7 +1,9 @@
 //Maya ASCII 2026 scene
 //Name: Room_Scene.ma
-//Last modified: Tue, Sep 16, 2025 07:33:17 PM
+//Last modified: Thu, Sep 18, 2025 06:28:51 PM
 //Codeset: 1252
+file -rdi 1 -ns "Lamp" -rfn "LampRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Lamp.ma";
+file -r -ns "Lamp" -dr 1 -rfn "LampRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Lamp.ma";
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.3";
@@ -11,23 +13,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "16DC9E8E-4A2C-6C75-08CA-F8804F314669";
+fileInfo "UUID" "9FBB8FE3-4A9A-8AE6-1A34-29874834C5D6";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "95AC1333-4C07-823D-9F15-B0A16C093631";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -19.822806950317254 10.210581648682362 21.044075999799389 ;
-	setAttr ".r" -type "double3" -10.200000000013059 316.8000000002512 5.4538607043711728e-16 ;
+	setAttr ".t" -type "double3" -34.412169321750703 9.870103412743628 33.68885737538757 ;
+	setAttr ".r" -type "double3" -7.2000000000152928 314.00000000022777 -5.7232353641489703e-16 ;
 	setAttr ".rpt" -type "double3" -1.4678765908931942e-15 7.5846109431467873e-15 -4.0303221476714112e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "22F18411-4564-03D4-A243-218DB74115B6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 29.280152956457073;
+	setAttr ".coi" 56.546851521226088;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.095940589904785156 5.0255133658647537 0.037096977233886719 ;
+	setAttr ".tp" -type "double3" 10.384609812663552 3.379591166973114 -10.398722498439733 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "CD92EFAC-4005-3374-58B8-BE8F11CE06B9";
@@ -103,8 +105,8 @@ createNode transform -n "pasted__group" -p "group1";
 	setAttr ".sp" -type "double3" 12 5.043185058866877 0 ;
 createNode transform -n "Table";
 	rename -uid "BE0B6E71-4E5C-F2DA-1F27-E18E175A7650";
-	setAttr ".rp" -type "double3" 1.0305586513048453 1.703674936356707 0.16796982867439925 ;
-	setAttr ".sp" -type "double3" 1.0305586513048453 1.703674936356707 0.16796982867439925 ;
+	setAttr ".rp" -type "double3" 1.0305586513048453 0.32163447141647339 0.16796982867439925 ;
+	setAttr ".sp" -type "double3" 1.0305586513048453 0.32163447141647339 0.16796982867439925 ;
 createNode mesh -n "TableShape" -p "Table";
 	rename -uid "2EE76428-4BB4-6908-7755-56B7AE5A7505";
 	setAttr -k off ".v";
@@ -33750,15 +33752,15 @@ createNode mesh -n "pCubeShape23" -p "pCube23";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2E9EB391-4FE6-6990-42C7-FDA089FD6334";
+	rename -uid "DB03B964-4EF9-A61E-E46E-17816A29BA76";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "59CB7526-41D5-8389-7B3A-1A8783445A5E";
+	rename -uid "66528D69-4FCB-779C-E8ED-ECBA3D3FA4B5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "10C2FC87-4280-1AE8-53DA-C796A6D97C6B";
+	rename -uid "5D5F82B4-4ABD-7F25-20EF-CA9688D8F9F1";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3BCC0011-4252-EAE7-F232-DAB3E53A64DD";
+	rename -uid "64F9AD8A-4E69-A700-D51E-43A0044A95B5";
 	setAttr ".cdl" 1;
 	setAttr -s 5 ".dli[1:4]"  1 2 3 4;
 	setAttr -s 5 ".dli";
@@ -33766,7 +33768,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "CE11445F-4048-4281-92B1-CC96115548D9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A475C784-4079-6816-DA0C-3BBE74303A77";
+	rename -uid "CC19FF64-44BF-5739-CD10-7C9F0EB32225";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4731A1D7-4F3B-20A5-4CE0-8C82C8F9ACD4";
 	setAttr ".g" yes;
@@ -33854,6 +33856,23 @@ createNode groupId -n "groupId5";
 createNode groupId -n "groupId6";
 	rename -uid "5599BC29-4F6B-21E6-937F-4A8BDD068A50";
 	setAttr ".ihi" 0;
+createNode reference -n "LampRN";
+	rename -uid "47659DA6-48CD-5351-5D24-2E8C93EC9386";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"LampRN"
+		"LampRN" 0
+		"LampRN" 7
+		2 "|Lamp:pCylinder18" "translate" " -type \"double3\" 10.372903508119796 0.13803106546401978 -8.27939061208312843"
+		
+		2 "|Lamp:pCylinder18" "rotate" " -type \"double3\" 0 -92.31403684498899054 0"
+		
+		2 "|Lamp:pCylinder18" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "Lamp:lamppole" "visibility" " 1"
+		2 "Lamp:Switch" "visibility" " 1"
+		2 "Lamp:bulb" "visibility" " 1"
+		2 "Lamp:lampshade" "visibility" " 1";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 79;
 	setAttr ".unw" 79;
@@ -33872,6 +33891,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
+	setAttr -s 2 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -33879,8 +33899,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 115 ".dsm";
+	setAttr -s 131 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 14 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -33901,6 +33922,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "Furniture.di" "Table.do";
 connectAttr "Furniture.di" "chairCushion.do";
 connectAttr "Furniture.di" "ChairLegs.do";
