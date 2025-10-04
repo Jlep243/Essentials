@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Unit5_LabScene.ma
-//Last modified: Fri, Oct 03, 2025 07:29:55 PM
+//Last modified: Fri, Oct 03, 2025 07:31:26 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "materialxStack" -nodeType "MaterialXSurfaceShader" -dataType "MxDocumentStackData"
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "FA7C4978-40FF-7BBC-E62A-6CB9E035DF79";
+fileInfo "UUID" "0CA7272E-42B8-B1F9-986E-19B0826EAD4B";
 createNode transform -s -n "persp";
 	rename -uid "1E8F2019-4694-BC8C-5559-E9B3FEE3ACBE";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -16.653917682112617 8.7219883957119109 3.1923671019392823 ;
-	setAttr ".r" -type "double3" 1434 3166.4000000001715 -2.8162306706530872e-15 ;
+	setAttr ".t" -type "double3" -16.125189462488251 12.257885500408488 -0.63994019354899612 ;
+	setAttr ".r" -type "double3" 1415.3999999999996 3146.400000000152 0 ;
 	setAttr ".rpt" -type "double3" -4.9203777440076874e-16 -6.8519377872462935e-18 -5.1213381758871915e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A655AE55-43EA-B100-50BF-4D8B72E7F162";
@@ -1597,6 +1597,8 @@ createNode mesh -n "TabletShape" -p "Tablet";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".bw" 3;
+	setAttr ".difs" yes;
 createNode transform -n "handle" -p "Tablet";
 	rename -uid "01D9FB13-491B-749B-D816-DA9D196E31D2";
 	setAttr ".t" -type "double3" -2.2632022140788441 0.73182852221244687 -0.0077098608016967773 ;
@@ -1804,6 +1806,8 @@ createNode mesh -n "handleShape" -p "handle";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".bw" 3;
+	setAttr ".difs" yes;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "6F477070-4DE9-C78F-C594-22A5E40EB760";
 	setAttr -s 3 ".lnk";
