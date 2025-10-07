@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5796788532475101972}
   - component: {fileID: 1680677813347926617}
   - component: {fileID: 5505912361582391461}
+  - component: {fileID: 8574493219838929738}
   m_Layer: 3
   m_Name: Art
   m_TagString: Untagged
@@ -130,6 +131,28 @@ MonoBehaviour:
   key2: 276
   direction1: 0
   direction2: 180
+--- !u!95 &8574493219838929738
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6821777040719914888}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c3f4569a50ca8d4bab753bbd8f58e52, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8518003606325396686
 GameObject:
   m_ObjectHideFlags: 0
