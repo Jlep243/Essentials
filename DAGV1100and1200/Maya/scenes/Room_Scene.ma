@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Room_Scene.ma
-//Last modified: Tue, Oct 07, 2025 08:55:58 PM
+//Last modified: Tue, Oct 07, 2025 08:57:40 PM
 //Codeset: 1252
 file -rdi 1 -ns "Lamp" -rfn "LampRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Lamp.ma";
 file -rdi 1 -ns "Backpack" -rfn "BackpackRN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/maya/projects/default//scenes/Backpack.ma";
@@ -17,19 +17,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "392BAA4A-42C8-BCA9-457C-76A96B8A9AD8";
+fileInfo "UUID" "C004645E-4457-AB58-84FC-1D9ADFEE5752";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "95AC1333-4C07-823D-9F15-B0A16C093631";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6.7418223515820648 8.3550544834990124 6.1348109693574591 ;
-	setAttr ".r" -type "double3" -20.399999999999547 -1.2000000000000881 -2.4853534239700988e-17 ;
+	setAttr ".t" -type "double3" -7.3679204057860703 7.747841540724524 16.977137340988193 ;
+	setAttr ".r" -type "double3" -13.200000000001125 -4.4000000000000599 9.9686133530790473e-17 ;
 	setAttr ".rpt" -type "double3" -1.1199071387887134e-15 7.6139261768504509e-15 -3.7032216713752369e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "22F18411-4564-03D4-A243-218DB74115B6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 13.973815589464706;
+	setAttr ".coi" 20.188140535298182;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
