@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Table.ma
-//Last modified: Wed, Oct 15, 2025 09:39:49 PM
+//Last modified: Tue, Oct 21, 2025 12:44:54 PM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.3";
@@ -9,8 +9,8 @@ fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
-fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "92170DB3-4A1D-1C68-C7DD-64BC3F574C97";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
+fileInfo "UUID" "61F91E4A-4212-7978-B247-05BB3427D0E9";
 createNode transform -n "Table";
 	rename -uid "BE0B6E71-4E5C-F2DA-1F27-E18E175A7650";
 	setAttr ".rp" -type "double3" 1.0305586513048453 0.32163447141647339 0.16796982867439925 ;
@@ -20,7 +20,7 @@ createNode mesh -n "TableShape" -p "Table";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.49083432555198669 0.51563723385334015 ;
+	setAttr ".pv" -type "double2" 0.84090828895568848 0.26030158102512369 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -363,8 +363,8 @@ createNode mesh -n "polySurfaceShape4" -p "Table";
 createNode transform -s -n "persp";
 	rename -uid "B0C88601-4788-D44B-6F71-CFBC292A9807";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.0717134386828864 4.4727347988605626 8.3570280461589874 ;
-	setAttr ".r" -type "double3" -20.738352729600045 40.199999999997885 3.1231060671547632e-15 ;
+	setAttr ".t" -type "double3" 9.2380200345194545 5.146620427850376 -6.6555931799218744 ;
+	setAttr ".r" -type "double3" -24.338352729594675 129.4000000000002 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A16AE28F-457A-2810-A974-F79EDDC11119";
 	setAttr -k off ".v" no;
@@ -428,8 +428,8 @@ createNode polyTweakUV -n "polyTweakUV7";
 	rename -uid "63F9865B-4757-7A15-E1BF-2BA0B16F4B14";
 	setAttr ".uopa" yes;
 	setAttr -s 116 ".uvtk[0:115]" -type "float2" -0.16930193 0.90611947 -0.18077254
-		 0.9040243 -0.19022179 0.89691377 -0.1598044 0.90231609 -0.14001918 -0.11302118 -0.13049108
-		 -0.096912771 -0.16241932 -0.1290822 -0.15041107 -0.12349598 0.89826429 0.77723551
+		 0.9040243 -0.19022179 0.89691377 -0.1598044 0.90231609 -0.14001918 -0.036243387 -0.13049108
+		 -0.020134974 -0.16241932 -0.052304409 -0.15041107 -0.046718191 0.89826429 0.77723551
 		 0.90617234 0.80238491 0.87365878 0.74648917 0.8880921 0.75959837 1.051404715 0.057971001
 		 1.061884999 0.0065077841 1.0178895 0.052146345 1.028183341 0.030602604 0.068757825
 		 -0.75274009 0.058963493 -0.47355849 -0.23814303 -0.47340816 -0.2518723 -0.75278777
@@ -446,17 +446,17 @@ createNode polyTweakUV -n "polyTweakUV7";
 		 -0.51386893 0.094469577 -0.81231558 0.078827232 -0.54126418 0.066062838 -0.81231546
 		 0.060416967 -0.54126441 -0.24887562 -0.81231582 -0.25130188 -0.54126465 -0.27079225
 		 -0.81231582 -0.26659334 -0.54126477 -0.26346123 1.037793994 -0.0556615 1.025709033
-		 -0.16457033 0.87628949 -0.14934242 0.8907854 0.0081351995 -0.23326957 -0.19300938
-		 -0.29738873 -0.15095907 -0.089307919 -0.17517281 -0.12921244 1.036309838 -0.16123739
+		 -0.16457033 0.87628949 -0.14934242 0.8907854 0.0081351995 -0.15649176 -0.19300938
+		 -0.22061092 -0.15095907 -0.012530122 -0.17517281 -0.052434646 1.036309838 -0.16123739
 		 0.82179755 -0.026239842 1.041165352 0.07948941 1.0065346956 0.082058221 1.096759439
 		 0.68364626 0.88557523 0.5606575 0.8789472 0.80188757 0.86033887 0.74042296 0.86877495
-		 0.78425056 -0.1613512 -0.099782661 -0.17406303 0.88014287 1.047529101 0.014513701
+		 0.78425056 -0.1613512 -0.023004867 -0.17406303 0.88014287 1.047529101 0.014513701
 		 -0.23096156 -0.73962414 -0.11110359 1.04849422 0.014373906 -0.69418311 0.86277962
 		 -0.075614855 0.97331142 -0.14551723 0.051478885 -0.73836589 1.04997611 0.63400614
 		 0.014673404 -0.47355938 -0.21766794 1.051910758 -0.19921201 -0.69420576 -0.19960111
-		 -0.47361726 -0.14136779 -0.29721302 -0.038854659 -0.26509076 -0.23318052 -0.43685544
+		 -0.47361726 -0.14136779 -0.2204352 -0.038854659 -0.18831295 -0.23318052 -0.43685544
 		 0.053720959 -0.43692708 0.94045699 0.57251322 1.00036096573 0.59873188 0.91907531
-		 -0.11870226 -0.087903798 -0.28604043 -0.15852708 1.056100965 -0.26961762 -0.48674721
+		 -0.11870226 -0.087903798 -0.20926261 -0.15852708 1.056100965 -0.26961762 -0.48674721
 		 -0.2696051 -0.4426389 -0.25130582 -0.48674721 0.060412914 -0.48674685 0.081729054
 		 -0.48674697 0.081741452 -0.44263855 -0.25121069 -0.1714856 0.060508102 -0.17148525
 		 0.081808388 -0.22396629 0.081824124 -0.17148525 -0.26953715 -0.22396915 -0.26952249
@@ -1041,23 +1041,23 @@ createNode polyPlanarProj -n "polyPlanarProj1";
 	setAttr ".ps" -type "double2" 6.0687134265899658 1.678973913192749 ;
 	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B8A75FB1-467D-37DC-1D42-37A07616DE4F";
+	rename -uid "434933B4-4332-0FFC-056F-F0BF6CDB0238";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "15FBC22A-4FB8-9614-31EA-1A99DE5A4375";
+	rename -uid "DFF992FB-4370-ED2B-B5F9-D08EBC88C084";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9E0D418F-448B-D098-3831-A8B34F5DD5F2";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "D5409B6C-4B27-FD9B-D46E-8085D57EBB52";
+	rename -uid "8A8AFCD0-4D8D-FA8F-CB34-8FA7CA56747D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3192CB95-4FFE-6E62-8D77-5C917C201688";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2CCCCC0A-4228-3076-495F-F4BD2001D672";
+	rename -uid "742EC9E4-441F-24E6-562B-BD8E869DBF39";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C122D0AD-4AF4-3B16-1FFF-349CD096196B";
+	rename -uid "2D3C0557-42B2-8DEF-9394-348DC9A39A06";
 createNode file -n "file1";
 	rename -uid "F7BCF267-4626-5E09-B179-B1A21F11AA3E";
 	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
@@ -1130,7 +1130,6 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
-select -ne :lambert1;
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -1160,8 +1159,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "polyTweakUV7.out" "TableShape.i";
 connectAttr "polyTweakUV7.uvtk[0]" "TableShape.uvst[0].uvtw";
 connectAttr "polyMapCut8.out" "polyTweakUV7.ip";
