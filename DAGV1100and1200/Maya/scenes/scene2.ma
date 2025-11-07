@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: scene2.ma
-//Last modified: Fri, Nov 07, 2025 03:30:18 PM
+//Last modified: Fri, Nov 07, 2025 03:31:31 PM
 //Codeset: 1252
 file -rdi 1 -ns "Asset2" -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Asset2.ma";
 file -r -ns "Asset2" -dr 1 -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Asset2.ma";
@@ -13,19 +13,19 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
-fileInfo "UUID" "834C5F9E-4FBC-216E-6C6A-928D4654959D";
+fileInfo "UUID" "ABB7C0A2-43D9-96D3-95FF-1DB374B8639C";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "681B7346-4D66-609C-3EC1-429764BA586F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 46.424519117368199 29.976018101346249 -15.678045412343049 ;
-	setAttr ".r" -type "double3" -29.999999999975081 -628.40000000001487 5.0888874903416268e-14 ;
+	setAttr ".t" -type "double3" 23.656681921498482 11.757865806990047 -6.2252089972829507 ;
+	setAttr ".r" -type "double3" -9.0000000000012719 -617.99999999999648 0 ;
 	setAttr ".rpt" -type "double3" -1.9134157218128132e-15 3.2147083126339009e-15 1.0657037235953275e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "18818233-4810-FBFE-BDC2-BB91B4113F25";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 45.969107381602527;
+	setAttr ".coi" 24.362594830344324;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4611,7 +4611,7 @@ createNode file -n "file1";
 createNode place2dTexture -n "place2dTexture1";
 	rename -uid "6637A5DC-4EAD-891C-232C-6C8C90C7B157";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "D804E6CB-45B5-DA5A-408F-16BA8E2458F0";
+	rename -uid "F5E40978-4B14-6EEB-6A57-E4ADAF8C128E";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" 48.070589474484535 -548.51220217202092 ;
 	setAttr ".tgi[0].vh" -type "double2" 598.60372625543926 11.112307509903726 ;
