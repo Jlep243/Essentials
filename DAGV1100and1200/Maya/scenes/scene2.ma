@@ -1,33 +1,35 @@
-//Maya ASCII 2026 scene
+//Maya ASCII 2025ff03 scene
 //Name: scene2.ma
-//Last modified: Tue, Nov 04, 2025 06:27:55 PM
+//Last modified: Fri, Nov 07, 2025 03:30:18 PM
 //Codeset: 1252
 file -rdi 1 -ns "Asset2" -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Asset2.ma";
 file -r -ns "Asset2" -dr 1 -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Asset2.ma";
-requires maya "2026";
-requires "mtoa" "5.5.3";
+requires maya "2025ff03";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
+		 "mtoa" "5.4.5";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2026";
-fileInfo "version" "2026";
-fileInfo "cutIdentifier" "202507081222-4d6919b75c";
-fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "4523B94F-4C5A-626D-EE43-DE9BE1B4C656";
+fileInfo "product" "Maya 2025";
+fileInfo "version" "2025";
+fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
+fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
+fileInfo "UUID" "834C5F9E-4FBC-216E-6C6A-928D4654959D";
+fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "681B7346-4D66-609C-3EC1-429764BA586F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 39.900685378714925 11.462262018078532 -18.214667926251337 ;
-	setAttr ".r" -type "double3" -11.399999999991097 -610.80000000007033 0 ;
+	setAttr ".t" -type "double3" 46.424519117368199 29.976018101346249 -15.678045412343049 ;
+	setAttr ".r" -type "double3" -29.999999999975081 -628.40000000001487 5.0888874903416268e-14 ;
 	setAttr ".rpt" -type "double3" -1.9134157218128132e-15 3.2147083126339009e-15 1.0657037235953275e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "18818233-4810-FBFE-BDC2-BB91B4113F25";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 35.885307363354585;
+	setAttr ".coi" 45.969107381602527;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 8.0559442043304443 1.9619259210303426 10.775803565979004 ;
+	setAttr ".tp" -type "double3" 8.0559442043304443 1.9619259210303426 10.763477802276611 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "935B3F48-4A16-47D7-FE14-A48041A19516";
@@ -3653,15 +3655,15 @@ createNode mesh -n "pCubeShape40" -p "pCube40";
 	setAttr ".pt[6]" -type "float3" 0 -3.3621583 0 ;
 	setAttr ".pt[7]" -type "float3" 0 -3.3621583 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DD823A54-4536-A602-2376-6B966959F5CF";
-	setAttr -s 8 ".lnk";
-	setAttr -s 8 ".slnk";
+	rename -uid "9DF070BB-4936-B259-4493-7CA44B01EEA7";
+	setAttr -s 9 ".lnk";
+	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B9D5E2F2-43E7-381F-E285-B090811C1532";
+	rename -uid "C5C84282-4674-19E2-7512-DBAA85F8C6F8";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D10C1745-48F0-6138-8AA1-709825597070";
+	rename -uid "151CE196-41EC-BC49-5871-749A668FAC17";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "CDBFB615-497B-A664-FC06-2EB933514C58";
+	rename -uid "05CCA530-4A1E-5497-974F-2C842B3A3BC6";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -3669,7 +3671,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "D4417160-4745-9B92-08B0-1FBDD1A39937";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "966FFDD4-44A3-5660-14F1-C9BA8962F540";
+	rename -uid "75A9EE93-4E59-2532-70CE-778B57CAC82D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "87FA4E18-424C-4C99-43B5-F48DD573C5A3";
 	setAttr ".g" yes;
@@ -3689,7 +3691,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1821\n            -height 1066\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1134\n            -height 794\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -3711,13 +3713,9 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
-		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
-		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n"
-		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
-		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1821\\n    -height 1066\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1821\\n    -height 1066\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1134\\n    -height 794\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1134\\n    -height 794\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -3803,24 +3801,6 @@ createNode shadingEngine -n "lambert4SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "3B1B59EC-4638-6351-098C-AEB6DAEF835F";
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "B45658B9-451E-1D30-0EEA-B382EA41B2EB";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -242.14349151753191 -748.48771755549922 ;
-	setAttr ".tgi[0].vh" -type "double2" 1055.475504538769 27.702727791939626 ;
-	setAttr -s 4 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 190;
-	setAttr ".tgi[0].ni[0].y" -150;
-	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 385.71429443359375;
-	setAttr ".tgi[0].ni[1].y" -150;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" 467.14285278320312;
-	setAttr ".tgi[0].ni[2].y" -385.71429443359375;
-	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 160;
-	setAttr ".tgi[0].ni[3].y" -385.71429443359375;
-	setAttr ".tgi[0].ni[3].nvs" 1923;
 createNode polyCylinder -n "polyCylinder3";
 	rename -uid "9AB2851D-47C5-9078-515E-2B87F4FC49D6";
 	setAttr ".sc" 1;
@@ -3830,10 +3810,54 @@ createNode polyCube -n "polyCube6";
 	setAttr ".cuv" 4;
 createNode reference -n "Asset2RN";
 	rename -uid "ABD96F7C-4041-0F7E-98A4-32AE0431A517";
+	setAttr -s 43 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Asset2RN"
 		"Asset2RN" 0
-		"Asset2RN" 1805
+		"Asset2RN" 269
 		2 "|Asset2:Piano1" "translate" " -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1" "rotate" " -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1" "scale" " -type \"double3\" 1 1 1"
@@ -3847,24 +3871,9 @@ createNode reference -n "Asset2RN";
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24" "scalePivot" " -type \"double3\" 7.97011678467505913 -0.046775480202588815 10.25079966976653623"
 		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pnts" 
-		" -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pnts[0]" 
-		" -type \"float3\" 7.70327520000000021 0.10921499 11.29706"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pnts[1]" 
-		" -type \"float3\" 7.32288979999999956 0.10921499 10.915974"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pnts[2]" 
-		" -type \"float3\" 7.685667 0.11243017 11.301156"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pnts[3]" 
-		" -type \"float3\" 7.35900589999999966 0.11243017 10.973707"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pnts[4]" 
-		" -type \"float3\" 7.65651179999999965 0.11243017 11.338284"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pnts[5]" 
-		" -type \"float3\" 7.32985069999999972 0.11243017 11.010836"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pnts[6]" 
-		" -type \"float3\" 7.65500880000000006 0.10921499 11.358525"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pnts[7]" 
-		" -type \"float3\" 7.27481410000000039 0.10921499 10.977197"
+		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24" "pt[0:7]" 
+		" -s 8 -type \"float3\" 7.70327520000000021 0.10921499 11.29706 7.32288979999999956 0.10921499 10.915974 7.685667 0.11243017 11.301156 7.35900589999999966 0.11243017 10.973707 7.65651179999999965 0.11243017 11.338284 7.32985069999999972 0.11243017 11.010836 7.65500880000000006 0.10921499 11.358525 7.27481410000000039 0.10921499 10.977197"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys" "rotatePivot" 
@@ -3874,23 +3883,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape" 
-		"pnts[0]" " -type \"float3\" 11.324796 0.10921499 6.68515779999999982"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape" 
-		"pnts[1]" " -type \"float3\" 10.94441 0.10921499 6.30407190000000028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape" 
-		"pnts[2]" " -type \"float3\" 11.307187 0.11243017 6.68925479999999961"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape" 
-		"pnts[3]" " -type \"float3\" 10.980527 0.11243017 6.36180539999999972"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape" 
-		"pnts[4]" " -type \"float3\" 11.278032 0.11243017 6.72638270000000027"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape" 
-		"pnts[5]" " -type \"float3\" 10.951371 0.11243017 6.39893339999999977"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape" 
-		"pnts[6]" " -type \"float3\" 11.276529 0.10921499 6.74662350000000011"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape" 
-		"pnts[7]" " -type \"float3\" 10.896335 0.10921499 6.36529490000000031"
+		"pt[0:7]" " -s 8 -type \"float3\" 11.324796 0.10921499 6.68515779999999982 10.94441 0.10921499 6.30407190000000028 11.307187 0.11243017 6.68925479999999961 10.980527 0.11243017 6.36180539999999972 11.278032 0.11243017 6.72638270000000027 10.951371 0.11243017 6.39893339999999977 11.276529 0.10921499 6.74662350000000011 10.896335 0.10921499 6.36529490000000031"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3" "rotatePivot" 
@@ -3900,23 +3894,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3" 
-		"pnts[0]" " -type \"float3\" 10.732815 0.10921499 7.43902869999999972"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3" 
-		"pnts[1]" " -type \"float3\" 10.352429 0.10921499 7.05794239999999995"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3" 
-		"pnts[2]" " -type \"float3\" 10.715206 0.11243017 7.44312519999999989"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3" 
-		"pnts[3]" " -type \"float3\" 10.388545 0.11243017 7.1156763999999999"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3" 
-		"pnts[4]" " -type \"float3\" 10.686051 0.11243017 7.48025369999999956"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3" 
-		"pnts[5]" " -type \"float3\" 10.35939 0.11243017 7.15280439999999995"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3" 
-		"pnts[6]" " -type \"float3\" 10.684548 0.10921499 7.50049450000000029"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3" 
-		"pnts[7]" " -type \"float3\" 10.304354 0.10921499 7.1191658999999996"
+		"pt[0:7]" " -s 8 -type \"float3\" 10.732815 0.10921499 7.43902869999999972 10.352429 0.10921499 7.05794239999999995 10.715206 0.11243017 7.44312519999999989 10.388545 0.11243017 7.1156763999999999 10.686051 0.11243017 7.48025369999999956 10.35939 0.11243017 7.15280439999999995 10.684548 0.10921499 7.50049450000000029 10.304354 0.10921499 7.1191658999999996"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12" "rotatePivot" 
@@ -3926,23 +3905,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12" 
-		"pnts[0]" " -type \"float3\" 8.97768210000000089 0.10921499 9.674139"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12" 
-		"pnts[1]" " -type \"float3\" 8.59729770000000038 0.10921499 9.2930527000000005"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12" 
-		"pnts[2]" " -type \"float3\" 8.96007439999999988 0.11243017 9.678236"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12" 
-		"pnts[3]" " -type \"float3\" 8.63341330000000085 0.11243017 9.35078619999999994"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12" 
-		"pnts[4]" " -type \"float3\" 8.93091869999999943 0.11243017 9.71536350000000049"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12" 
-		"pnts[5]" " -type \"float3\" 8.60425760000000039 0.11243017 9.38791469999999961"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12" 
-		"pnts[6]" " -type \"float3\" 8.92941569999999984 0.10921499 9.73560430000000032"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12" 
-		"pnts[7]" " -type \"float3\" 8.549221 0.10921499 9.35427570000000053"
+		"pt[0:7]" " -s 8 -type \"float3\" 8.97768210000000089 0.10921499 9.674139 8.59729770000000038 0.10921499 9.2930527000000005 8.96007439999999988 0.11243017 9.678236 8.63341330000000085 0.11243017 9.35078619999999994 8.93091869999999943 0.11243017 9.71536350000000049 8.60425760000000039 0.11243017 9.38791469999999961 8.92941569999999984 0.10921499 9.73560430000000032 8.549221 0.10921499 9.35427570000000053"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10" "rotatePivot" 
@@ -3952,23 +3916,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10" 
-		"pnts[0]" " -type \"float3\" 10.270625 0.10921499 8.02761360000000046"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10" 
-		"pnts[1]" " -type \"float3\" 9.89023970000000041 0.10921499 7.6465272999999998"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10" 
-		"pnts[2]" " -type \"float3\" 10.253017 0.11243017 8.03171060000000026"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10" 
-		"pnts[3]" " -type \"float3\" 9.92635630000000013 0.11243017 7.70426080000000013"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10" 
-		"pnts[4]" " -type \"float3\" 10.223862 0.11243017 8.06883810000000068"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10" 
-		"pnts[5]" " -type \"float3\" 9.89720059999999968 0.11243017 7.74138929999999981"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10" 
-		"pnts[6]" " -type \"float3\" 10.222359 0.10921499 8.08907890000000052"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10" 
-		"pnts[7]" " -type \"float3\" 9.842164 0.10921499 7.70775029999999983"
+		"pt[0:7]" " -s 8 -type \"float3\" 10.270625 0.10921499 8.02761360000000046 9.89023970000000041 0.10921499 7.6465272999999998 10.253017 0.11243017 8.03171060000000026 9.92635630000000013 0.11243017 7.70426080000000013 10.223862 0.11243017 8.06883810000000068 9.89720059999999968 0.11243017 7.74138929999999981 10.222359 0.10921499 8.08907890000000052 9.842164 0.10921499 7.70775029999999983"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1" "scale" " -type \"double3\" 1 1 1"
@@ -3982,481 +3931,19 @@ createNode reference -n "Asset2RN";
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
 		"pnts" " -s 202"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[0]" " -type \"float3\" 10.841545 0.025377514 5.84337"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[1]" " -type \"float3\" 10.835159 0.025377514 5.87596510000000016"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[2]" " -type \"float3\" 10.838335 0.025377514 5.91009380000000029"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[3]" " -type \"float3\" 10.850759 0.025377514 5.94241620000000026"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[4]" " -type \"float3\" 10.871215 0.025377514 5.969768"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[5]" " -type \"float3\" 10.897701 0.025377514 5.98947240000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[6]" " -type \"float3\" 10.927626 0.025377514 5.99960040000000028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[7]" " -type \"float3\" 10.958058 0.025377514 5.99916029999999978"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[8]" " -type \"float3\" 10.98602 0.025377514 5.98819540000000039"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[9]" " -type \"float3\" 11.008776 0.025377514 5.9677781999999997"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[10]" " -type \"float3\" 11.024095 0.025377514 5.93990849999999959"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[11]" " -type \"float3\" 11.030479 0.025377514 5.90731430000000035"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[12]" " -type \"float3\" 11.027305 0.025377514 5.87318560000000023"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[13]" " -type \"float3\" 11.014881 0.025377514 5.84086320000000025"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[14]" " -type \"float3\" 10.994426 0.025377514 5.81351040000000019"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[15]" " -type \"float3\" 10.967937 0.025377514 5.79380659999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[16]" " -type \"float3\" 10.938014 0.025377514 5.78367849999999972"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[17]" " -type \"float3\" 10.907581 0.025377514 5.78411909999999985"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[18]" " -type \"float3\" 10.879619 0.025377514 5.79508449999999975"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[19]" " -type \"float3\" 10.856864 0.025377514 5.8155007000000003"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[20]" " -type \"float3\" 10.803873 0.11881959 5.82344819999999963"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[21]" " -type \"float3\" 10.794853 0.11881959 5.86949539999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[22]" " -type \"float3\" 10.799337 0.11881959 5.91771080000000005"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[23]" " -type \"float3\" 10.816889 0.11881959 5.96337320000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[24]" " -type \"float3\" 10.845788 0.11881959 6.00201459999999987"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[25]" " -type \"float3\" 10.883207 0.11881959 6.029851"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[26]" " -type \"float3\" 10.925482 0.11881959 6.04415849999999999"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[27]" " -type \"float3\" 10.968475 0.11881959 6.04353759999999962"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[28]" " -type \"float3\" 11.007978 0.11881959 6.02804610000000007"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[29]" " -type \"float3\" 11.040124 0.11881959 5.99920269999999967"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[30]" " -type \"float3\" 11.061767 0.11881959 5.95983079999999976"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[31]" " -type \"float3\" 11.070786 0.11881959 5.913784"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[32]" " -type \"float3\" 11.066301 0.11881959 5.86556859999999958"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[33]" " -type \"float3\" 11.04875 0.11881959 5.81990620000000014"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[34]" " -type \"float3\" 11.019851 0.11881959 5.78126479999999976"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[35]" " -type \"float3\" 10.982432 0.11881959 5.75342850000000006"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[36]" " -type \"float3\" 10.940158 0.11881959 5.73912050000000029"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[37]" " -type \"float3\" 10.897164 0.11881959 5.73974229999999963"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[38]" " -type \"float3\" 10.857661 0.11881959 5.75523279999999993"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[39]" " -type \"float3\" 10.825516 0.11881959 5.78407620000000033"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[40]" " -type \"float3\" 10.93282 0.025377514 5.89163920000000019"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[41]" " -type \"float3\" 10.93282 0.11976384 5.89163920000000019"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[42]" " -type \"float3\" 10.818537 0.1162913 5.83120249999999984"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[43]" " -type \"float3\" 10.837718 0.11629117 5.796308"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[44]" " -type \"float3\" 10.866208 0.1162913 5.77074529999999974"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[45]" " -type \"float3\" 10.901218 0.1162913 5.75701619999999981"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[46]" " -type \"float3\" 10.939323 0.1162913 5.75646449999999987"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[47]" " -type \"float3\" 10.97679 0.1162913 5.76914549999999959"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[48]" " -type \"float3\" 11.009953 0.1162913 5.79381660000000043"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[49]" " -type \"float3\" 11.035566 0.1162913 5.82806349999999984"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[50]" " -type \"float3\" 11.051122 0.1162913 5.86853309999999961"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[51]" " -type \"float3\" 11.055097 0.1162913 5.91126590000000007"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[52]" " -type \"float3\" 11.047103 0.1162913 5.952076"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[53]" " -type \"float3\" 11.027921 0.11629117 5.98697039999999969"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[54]" " -type \"float3\" 10.999431 0.1162913 6.01253409999999988"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[55]" " -type \"float3\" 10.96442 0.1162913 6.02626319999999982"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[56]" " -type \"float3\" 10.926317 0.1162913 6.026814"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[57]" " -type \"float3\" 10.888849 0.1162913 6.0141334999999998"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[58]" " -type \"float3\" 10.855686 0.1162913 5.98946239999999985"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[59]" " -type \"float3\" 10.830073 0.1162913 5.95521550000000044"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[60]" " -type \"float3\" 10.814518 0.1162913 5.91474580000000039"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[61]" " -type \"float3\" 10.810542 0.1162913 5.872014"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[62]" " -type \"float3\" 10.873532 0.030215880000000001 5.86028669999999963"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[63]" " -type \"float3\" 10.883483 0.030215880000000001 5.84218409999999988"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[64]" " -type \"float3\" 10.898263 0.030215880000000001 5.82892230000000033"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[65]" " -type \"float3\" 10.916426 0.030215880000000001 5.82179979999999997"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[66]" " -type \"float3\" 10.936193 0.030215880000000001 5.82151409999999991"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[67]" " -type \"float3\" 10.95563 0.030215880000000001 5.82809259999999973"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[68]" " -type \"float3\" 10.972835 0.030215880000000001 5.84089179999999963"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[69]" " -type \"float3\" 10.986122 0.030215880000000001 5.85865779999999958"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[70]" " -type \"float3\" 10.994191 0.030215880000000001 5.87965249999999973"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[71]" " -type \"float3\" 10.996254 0.030215880000000001 5.90182070000000003"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[72]" " -type \"float3\" 10.992106 0.030215880000000001 5.9229927"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[73]" " -type \"float3\" 10.982156 0.030215880000000001 5.9410949000000004"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[74]" " -type \"float3\" 10.967376 0.030215880000000001 5.95435710000000018"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[75]" " -type \"float3\" 10.949213 0.030215880000000001 5.9614786999999998"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[76]" " -type \"float3\" 10.929445 0.030215880000000001 5.96176529999999971"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[77]" " -type \"float3\" 10.910008 0.030215880000000001 5.95518639999999966"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[78]" " -type \"float3\" 10.892804 0.030215880000000001 5.94238759999999999"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[79]" " -type \"float3\" 10.879517 0.030215880000000001 5.92462160000000004"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[80]" " -type \"float3\" 10.871447 0.030215880000000001 5.90362640000000027"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[81]" " -type \"float3\" 10.869385 0.030215880000000001 5.88145830000000025"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[82]" " -type \"float3\" 10.853115 0.11474276999999999 5.84948970000000035"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[83]" " -type \"float3\" 10.866492 0.11474264000000001 5.82515240000000034"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[84]" " -type \"float3\" 10.886364 0.11474276999999999 5.80732390000000009"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[85]" " -type \"float3\" 10.91078 0.11474276999999999 5.797749"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[86]" " -type \"float3\" 10.937356 0.11474276999999999 5.79736470000000015"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[87]" " -type \"float3\" 10.963486 0.11474276999999999 5.80620910000000023"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[88]" " -type \"float3\" 10.986615 0.11474276999999999 5.82341529999999974"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[89]" " -type \"float3\" 11.004478 0.11474276999999999 5.8473001"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[90]" " -type \"float3\" 11.015327 0.11474276999999999 5.87552450000000004"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[91]" " -type \"float3\" 11.0181 0.11474276999999999 5.90532639999999986"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[92]" " -type \"float3\" 11.012525 0.11474276999999999 5.93378929999999993"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[93]" " -type \"float3\" 10.999146 0.11474264000000001 5.95812610000000031"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[94]" " -type \"float3\" 10.979277 0.11474276999999999 5.975955"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[95]" " -type \"float3\" 10.954859 0.11474276999999999 5.9855299000000004"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[96]" " -type \"float3\" 10.928285 0.11474276999999999 5.98591419999999985"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[97]" " -type \"float3\" 10.902153 0.11474276999999999 5.97707030000000028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[98]" " -type \"float3\" 10.879025 0.11474276999999999 5.95986409999999989"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[99]" " -type \"float3\" 10.861161 0.11474276999999999 5.93597939999999991"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[100]" " -type \"float3\" 10.850312 0.11474276999999999 5.90775439999999996"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[101]" " -type \"float3\" 10.84754 0.11474276999999999 5.87795160000000028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[102]" " -type \"float3\" 10.856009 0.028613079 5.85101989999999983"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[103]" " -type \"float3\" 10.848352 0.027668521000000001 5.84697150000000043"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[104]" " -type \"float3\" 10.844069 0.026565124999999998 5.84470560000000017"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[105]" " -type \"float3\" 10.858966 0.026565811000000002 5.81760739999999998"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[106]" " -type \"float3\" 10.862529 0.027668562000000001 5.82117940000000011"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[107]" " -type \"float3\" 10.868896 0.028612576000000001 5.82756190000000007"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[108]" " -type \"float3\" 10.88109 0.026565124999999998 5.79775430000000025"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[109]" " -type \"float3\" 10.883587 0.027668521000000001 5.80228710000000003"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[110]" " -type \"float3\" 10.888049 0.028613079 5.81038519999999981"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[111]" " -type \"float3\" 10.908278 0.026564747 5.78709170000000039"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[112]" " -type \"float3\" 10.909464 0.027668769999999999 5.79214330000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[113]" " -type \"float3\" 10.911584 0.028614418999999999 5.80117559999999965"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[114]" " -type \"float3\" 10.93787 0.026564834999999998 5.786664"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[115]" " -type \"float3\" 10.937626 0.027669231999999998 5.79174140000000026"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[116]" " -type \"float3\" 10.937188 0.028616073999999998 5.80082650000000033"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[117]" " -type \"float3\" 10.966967 0.026565327999999999 5.79651259999999979"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[118]" " -type \"float3\" 10.965314 0.027669699999999998 5.80111650000000001"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[119]" " -type \"float3\" 10.962355 0.028617403999999999 5.809361"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[120]" " -type \"float3\" 10.99272 0.026566033999999999 5.81567290000000003"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[121]" " -type \"float3\" 10.98982 0.027670017000000002 5.81934980000000035"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[122]" " -type \"float3\" 10.984626 0.028617928000000001 5.82593729999999965"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[123]" " -type \"float3\" 11.01261 0.026565987999999999 5.842268"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[124]" " -type \"float3\" 11.00875 0.027669741000000001 5.84465650000000014"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[125]" " -type \"float3\" 11.001839 0.028616921999999999 5.84893269999999976"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[126]" " -type \"float3\" 11.024691 0.026565926 5.87369629999999976"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[127]" " -type \"float3\" 11.02025 0.027669299000000001 5.87456270000000025"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[128]" " -type \"float3\" 11.012306 0.028615280999999999 5.87611479999999986"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[129]" " -type \"float3\" 11.027777 0.026565856999999998 5.90688040000000036"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[130]" " -type \"float3\" 11.023192 0.027668852000000001 5.90614460000000019"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[131]" " -type \"float3\" 11.014997 0.028613619999999999 5.904829"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[132]" " -type \"float3\" 11.021569 0.026565815999999999 5.93857239999999997"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[133]" " -type \"float3\" 11.017286 0.027668567000000002 5.93630890000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[134]" " -type \"float3\" 11.009635 0.028612576000000001 5.93226190000000031"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[135]" " -type \"float3\" 11.006674 0.026565815999999999 5.96567150000000002"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[136]" " -type \"float3\" 11.00311 0.027668567000000002 5.96209960000000017"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[137]" " -type \"float3\" 10.996742 0.028612582000000001 5.95571659999999969"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[138]" " -type \"float3\" 10.98455 0.026565124999999998 5.98552470000000003"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[139]" " -type \"float3\" 10.982051 0.027668521000000001 5.98099280000000011"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[140]" " -type \"float3\" 10.97759 0.028613079 5.97289370000000019"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[141]" " -type \"float3\" 10.95736 0.026564747 5.99618719999999961"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[142]" " -type \"float3\" 10.956175 0.027668769999999999 5.99113559999999978"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[143]" " -type \"float3\" 10.954055 0.028614423999999999 5.98210379999999997"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[144]" " -type \"float3\" 10.92777 0.026564834999999998 5.9966153999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[145]" " -type \"float3\" 10.928013 0.027669231999999998 5.991538"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[146]" " -type \"float3\" 10.928451 0.028616079999999999 5.98245290000000018"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[147]" " -type \"float3\" 10.898673 0.026565327999999999 5.98676630000000021"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[148]" " -type \"float3\" 10.900325 0.027669699999999998 5.98216250000000027"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[149]" " -type \"float3\" 10.903285 0.028617403999999999 5.973918"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[150]" " -type \"float3\" 10.87292 0.026566033999999999 5.96760610000000025"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[151]" " -type \"float3\" 10.875819 0.027670017000000002 5.9639287000000003"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[152]" " -type \"float3\" 10.881013 0.028617928000000001 5.95734209999999997"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[153]" " -type \"float3\" 10.853029 0.026565987999999999 5.94101139999999983"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[154]" " -type \"float3\" 10.856889 0.027669741000000001 5.938622"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[155]" " -type \"float3\" 10.8638 0.028616921999999999 5.93434620000000024"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[156]" " -type \"float3\" 10.840949 0.026565926 5.90958309999999987"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[157]" " -type \"float3\" 10.845388 0.027669299000000001 5.90871570000000013"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[158]" " -type \"float3\" 10.853333 0.028615280999999999 5.90716459999999977"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[159]" " -type \"float3\" 10.837862 0.026565856999999998 5.87639859999999992"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[160]" " -type \"float3\" 10.842446 0.027668852000000001 5.87713480000000033"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[161]" " -type \"float3\" 10.850642 0.028613619999999999 5.87844989999999967"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[162]" " -type \"float3\" 10.833582 0.025325686 5.83915950000000006"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[163]" " -type \"float3\" 10.826641 0.025325686 5.87459750000000014"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[164]" " -type \"float3\" 10.829579 0.026617687000000001 5.87506869999999992"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[165]" " -type \"float3\" 10.836327 0.026616883000000001 5.84061149999999962"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[166]" " -type \"float3\" 10.830092 0.025325686 5.91170409999999968"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[167]" " -type \"float3\" 10.832935 0.026617754 5.91114850000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[168]" " -type \"float3\" 10.843599 0.025325686 5.946846"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[169]" " -type \"float3\" 10.846068 0.026617827 5.94531770000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[170]" " -type \"float3\" 10.865841 0.025325686 5.976584"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[171]" " -type \"float3\" 10.867695 0.026617864000000001 5.97423269999999995"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[172]" " -type \"float3\" 10.894637 0.025325686 5.99800730000000026"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[173]" " -type \"float3\" 10.895694 0.026617095 5.99506519999999998"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[174]" " -type \"float3\" 10.927173 0.025325686 6.00901789999999991"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[175]" " -type \"float3\" 10.927329 0.026616570999999999 6.00577260000000024"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[176]" " -type \"float3\" 10.96026 0.025325686 6.00853970000000004"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[177]" " -type \"float3\" 10.959501 0.026616482 6.00530770000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[178]" " -type \"float3\" 10.990662 0.025325686 5.99661780000000011"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[179]" " -type \"float3\" 10.989062 0.026616883000000001 5.99371429999999972"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[180]" " -type \"float3\" 11.015402 0.025325686 5.97442009999999968"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[181]" " -type \"float3\" 11.013116 0.026617635000000001 5.97212929999999975"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[182]" " -type \"float3\" 11.032058 0.025325686 5.944119"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[183]" " -type \"float3\" 11.029311 0.026617635000000001 5.942667"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[184]" " -type \"float3\" 11.038999 0.025325686 5.90868190000000038"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[185]" " -type \"float3\" 11.036061 0.026617687000000001 5.90820979999999984"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[186]" " -type \"float3\" 11.035547 0.025325686 5.87157540000000022"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[187]" " -type \"float3\" 11.032704 0.026617754 5.87213090000000015"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[188]" " -type \"float3\" 11.022039 0.025325686 5.83643339999999977"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[189]" " -type \"float3\" 11.01957 0.026617827 5.83796119999999963"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[190]" " -type \"float3\" 10.9998 0.025325686 5.806695"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[191]" " -type \"float3\" 10.997945 0.026617864000000001 5.80904669999999967"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[192]" " -type \"float3\" 10.971002 0.025325686 5.78527259999999988"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[193]" " -type \"float3\" 10.969946 0.026617095 5.78821419999999964"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[194]" " -type \"float3\" 10.938467 0.025325686 5.774261"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[195]" " -type \"float3\" 10.938311 0.026616570999999999 5.77750640000000004"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[196]" " -type \"float3\" 10.905379 0.025325686 5.77473969999999959"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[197]" " -type \"float3\" 10.906137 0.026616482 5.77797170000000015"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[198]" " -type \"float3\" 10.874978 0.025325686 5.78666109999999989"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[199]" " -type \"float3\" 10.876577 0.026616883000000001 5.78956409999999977"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[200]" " -type \"float3\" 10.850239 0.025325686 5.80885889999999971"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
-		"pnts[201]" " -type \"float3\" 10.852524 0.026617641000000001 5.81114960000000025"
-		
+		"pt[0:165]" (" -type \"float3\" 10.841545 0.025377514 5.84337 10.835159 0.025377514 5.87596510000000016 10.838335 0.025377514 5.91009380000000029 10.850759 0.025377514 5.94241620000000026 10.871215 0.025377514 5.969768 10.897701 0.025377514 5.98947240000000036 10.927626 0.025377514 5.99960040000000028 10.958058 0.025377514 5.99916029999999978 10.98602 0.025377514 5.98819540000000039 11.008776 0.025377514 5.9677781999999997 11.024095 0.025377514 5.93990849999999959 11.030479 0.025377514 5.90731430000000035 11.027305 0.025377514 5.87318560000000023 11.014881 0.025377514 5.84086320000000025 10.994426 0.025377514 5.81351040000000019 10.967937 0.025377514 5.79380659999999992 10.938014 0.025377514 5.78367849999999972 10.907581 0.025377514 5.78411909999999985 10.879619 0.025377514 5.79508449999999975 10.856864 0.025377514 5.8155007000000003 10.803873 0.11881959 5.82344819999999963 10.794853 0.11881959 5.86949539999999992 10.799337 0.11881959 5.91771080000000005 10.816889 0.11881959 5.96337320000000037 10.845788 0.11881959 6.0020145"
+		+ "9999999987 10.883207 0.11881959 6.029851 10.925482 0.11881959 6.04415849999999999 10.968475 0.11881959 6.04353759999999962 11.007978 0.11881959 6.02804610000000007 11.040124 0.11881959 5.99920269999999967 11.061767 0.11881959 5.95983079999999976 11.070786 0.11881959 5.913784 11.066301 0.11881959 5.86556859999999958 11.04875 0.11881959 5.81990620000000014 11.019851 0.11881959 5.78126479999999976 10.982432 0.11881959 5.75342850000000006 10.940158 0.11881959 5.73912050000000029 10.897164 0.11881959 5.73974229999999963 10.857661 0.11881959 5.75523279999999993 10.825516 0.11881959 5.78407620000000033 10.93282 0.025377514 5.89163920000000019 10.93282 0.11976384 5.89163920000000019 10.818537 0.1162913 5.83120249999999984 10.837718 0.11629117 5.796308 10.866208 0.1162913 5.77074529999999974 10.901218 0.1162913 5.75701619999999981 10.939323 0.1162913 5.75646449999999987 10.97679 0.1162913 5.76914549999999959 11.009953 0.1162913 5.79381660000000043 11.035566 0.1162913 5.82806349999999984 11.051122 0.1162913 5.868533099"
+		+ "99999961 11.055097 0.1162913 5.91126590000000007 11.047103 0.1162913 5.952076 11.027921 0.11629117 5.98697039999999969 10.999431 0.1162913 6.01253409999999988 10.96442 0.1162913 6.02626319999999982 10.926317 0.1162913 6.026814 10.888849 0.1162913 6.0141334999999998 10.855686 0.1162913 5.98946239999999985 10.830073 0.1162913 5.95521550000000044 10.814518 0.1162913 5.91474580000000039 10.810542 0.1162913 5.872014 10.873532 0.030215880000000001 5.86028669999999963 10.883483 0.030215880000000001 5.84218409999999988 10.898263 0.030215880000000001 5.82892230000000033 10.916426 0.030215880000000001 5.82179979999999997 10.936193 0.030215880000000001 5.82151409999999991 10.95563 0.030215880000000001 5.82809259999999973 10.972835 0.030215880000000001 5.84089179999999963 10.986122 0.030215880000000001 5.85865779999999958 10.994191 0.030215880000000001 5.87965249999999973 10.996254 0.030215880000000001 5.90182070000000003 10.992106 0.030215880000000001 5.9229927 10.982156 0.030215880000000001 5.9410949000000004 10.967376"
+		+ " 0.030215880000000001 5.95435710000000018 10.949213 0.030215880000000001 5.9614786999999998 10.929445 0.030215880000000001 5.96176529999999971 10.910008 0.030215880000000001 5.95518639999999966 10.892804 0.030215880000000001 5.94238759999999999 10.879517 0.030215880000000001 5.92462160000000004 10.871447 0.030215880000000001 5.90362640000000027 10.869385 0.030215880000000001 5.88145830000000025 10.853115 0.11474276999999999 5.84948970000000035 10.866492 0.11474264000000001 5.82515240000000034 10.886364 0.11474276999999999 5.80732390000000009 10.91078 0.11474276999999999 5.797749 10.937356 0.11474276999999999 5.79736470000000015 10.963486 0.11474276999999999 5.80620910000000023 10.986615 0.11474276999999999 5.82341529999999974 11.004478 0.11474276999999999 5.8473001 11.015327 0.11474276999999999 5.87552450000000004 11.0181 0.11474276999999999 5.90532639999999986 11.012525 0.11474276999999999 5.93378929999999993 10.999146 0.11474264000000001 5.95812610000000031 10.979277 0.11474276999999999 5.975955 10.954859 0"
+		+ ".11474276999999999 5.9855299000000004 10.928285 0.11474276999999999 5.98591419999999985 10.902153 0.11474276999999999 5.97707030000000028 10.879025 0.11474276999999999 5.95986409999999989 10.861161 0.11474276999999999 5.93597939999999991 10.850312 0.11474276999999999 5.90775439999999996 10.84754 0.11474276999999999 5.87795160000000028 10.856009 0.028613079 5.85101989999999983 10.848352 0.027668521000000001 5.84697150000000043 10.844069 0.026565124999999998 5.84470560000000017 10.858966 0.026565811000000002 5.81760739999999998 10.862529 0.027668562000000001 5.82117940000000011 10.868896 0.028612576000000001 5.82756190000000007 10.88109 0.026565124999999998 5.79775430000000025 10.883587 0.027668521000000001 5.80228710000000003 10.888049 0.028613079 5.81038519999999981 10.908278 0.026564747 5.78709170000000039 10.909464 0.027668769999999999 5.79214330000000022 10.911584 0.028614418999999999 5.80117559999999965 10.93787 0.026564834999999998 5.786664 10.937626 0.027669231999999998 5.79174140000000026 10.937188 0.0"
+		+ "28616073999999998 5.80082650000000033 10.966967 0.026565327999999999 5.79651259999999979 10.965314 0.027669699999999998 5.80111650000000001 10.962355 0.028617403999999999 5.809361 10.99272 0.026566033999999999 5.81567290000000003 10.98982 0.027670017000000002 5.81934980000000035 10.984626 0.028617928000000001 5.82593729999999965 11.01261 0.026565987999999999 5.842268 11.00875 0.027669741000000001 5.84465650000000014 11.001839 0.028616921999999999 5.84893269999999976 11.024691 0.026565926 5.87369629999999976 11.02025 0.027669299000000001 5.87456270000000025 11.012306 0.028615280999999999 5.87611479999999986 11.027777 0.026565856999999998 5.90688040000000036 11.023192 0.027668852000000001 5.90614460000000019 11.014997 0.028613619999999999 5.904829 11.021569 0.026565815999999999 5.93857239999999997 11.017286 0.027668567000000002 5.93630890000000022 11.009635 0.028612576000000001 5.93226190000000031 11.006674 0.026565815999999999 5.96567150000000002 11.00311 0.027668567000000002 5.96209960000000017 10.996742 0.02"
+		+ "8612582000000001 5.95571659999999969 10.98455 0.026565124999999998 5.98552470000000003 10.982051 0.027668521000000001 5.98099280000000011 10.97759 0.028613079 5.97289370000000019 10.95736 0.026564747 5.99618719999999961 10.956175 0.027668769999999999 5.99113559999999978 10.954055 0.028614423999999999 5.98210379999999997 10.92777 0.026564834999999998 5.9966153999999996 10.928013 0.027669231999999998 5.991538 10.928451 0.028616079999999999 5.98245290000000018 10.898673 0.026565327999999999 5.98676630000000021 10.900325 0.027669699999999998 5.98216250000000027 10.903285 0.028617403999999999 5.973918 10.87292 0.026566033999999999 5.96760610000000025 10.875819 0.027670017000000002 5.9639287000000003 10.881013 0.028617928000000001 5.95734209999999997 10.853029 0.026565987999999999 5.94101139999999983 10.856889 0.027669741000000001 5.938622 10.8638 0.028616921999999999 5.93434620000000024 10.840949 0.026565926 5.90958309999999987 10.845388 0.027669299000000001 5.90871570000000013 10.853333 0.028615280999999999 5.907"
+		+ "16459999999977 10.837862 0.026565856999999998 5.87639859999999992 10.842446 0.027668852000000001 5.87713480000000033 10.850642 0.028613619999999999 5.87844989999999967 10.833582 0.025325686 5.83915950000000006 10.826641 0.025325686 5.87459750000000014 10.829579 0.026617687000000001 5.87506869999999992 10.836327 0.026616883000000001 5.84061149999999962"
+		)
+		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1" 
+		"pt[166:201]" (" 10.830092 0.025325686 5.91170409999999968 10.832935 0.026617754 5.91114850000000036 10.843599 0.025325686 5.946846 10.846068 0.026617827 5.94531770000000037 10.865841 0.025325686 5.976584 10.867695 0.026617864000000001 5.97423269999999995 10.894637 0.025325686 5.99800730000000026 10.895694 0.026617095 5.99506519999999998 10.927173 0.025325686 6.00901789999999991 10.927329 0.026616570999999999 6.00577260000000024 10.96026 0.025325686 6.00853970000000004 10.959501 0.026616482 6.00530770000000036 10.990662 0.025325686 5.99661780000000011 10.989062 0.026616883000000001 5.99371429999999972 11.015402 0.025325686 5.97442009999999968 11.013116 0.026617635000000001 5.97212929999999975 11.032058 0.025325686 5.944119 11.029311 0.026617635000000001 5.942667 11.038999 0.025325686 5.90868190000000038 11.036061 0.026617687000000001 5.90820979999999984 11.035547 0.025325686 5.87157540000000022 11.032704 0.026617754 5.87213090000000015 11.022039 0.025325686 5.83643339999999977 11.01957 0.026617827 5.83796119999999963 10.9998"
+		+ " 0.025325686 5.806695 10.997945 0.026617864000000001 5.80904669999999967 10.971002 0.025325686 5.78527259999999988 10.969946 0.026617095 5.78821419999999964 10.938467 0.025325686 5.774261 10.938311 0.026616570999999999 5.77750640000000004 10.905379 0.025325686 5.77473969999999959 10.906137 0.026616482 5.77797170000000015 10.874978 0.025325686 5.78666109999999989 10.876577 0.026616883000000001 5.78956409999999977 10.850239 0.025325686 5.80885889999999971 10.852524 0.026617641000000001 5.81114960000000025"
+		)
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19" "rotatePivot" 
@@ -4466,23 +3953,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19" 
-		"pnts[0]" " -type \"float3\" 8.5215197000000007 0.10921499 10.255049"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19" 
-		"pnts[1]" " -type \"float3\" 8.14113520000000079 0.10921499 9.87396239999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19" 
-		"pnts[2]" " -type \"float3\" 8.503912 0.11243017 10.259145"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19" 
-		"pnts[3]" " -type \"float3\" 8.17725090000000066 0.11243017 9.93169589999999936"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19" 
-		"pnts[4]" " -type \"float3\" 8.47475720000000088 0.11243017 10.296273"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19" 
-		"pnts[5]" " -type \"float3\" 8.14809610000000006 0.11243017 9.96882440000000081"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19" 
-		"pnts[6]" " -type \"float3\" 8.47325419999999951 0.10921499 10.316514"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19" 
-		"pnts[7]" " -type \"float3\" 8.09305950000000074 0.10921499 9.93518539999999994"
+		"pt[0:7]" " -s 8 -type \"float3\" 8.5215197000000007 0.10921499 10.255049 8.14113520000000079 0.10921499 9.87396239999999992 8.503912 0.11243017 10.259145 8.17725090000000066 0.11243017 9.93169589999999936 8.47475720000000088 0.11243017 10.296273 8.14809610000000006 0.11243017 9.96882440000000081 8.47325419999999951 0.10921499 10.316514 8.09305950000000074 0.10921499 9.93518539999999994"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys" "rotatePivot" 
@@ -4494,1534 +3966,43 @@ createNode reference -n "Asset2RN";
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
 		"pnts" " -s 636"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[0]" " -type \"float3\" 11.41501 0.090759336999999995 6.56647590000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[1]" " -type \"float3\" 10.87387 0.090759336999999995 6.02403020000000033"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[2]" " -type \"float3\" 11.41501 0.11076413 6.56647590000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[3]" " -type \"float3\" 10.87387 0.11076413 6.02403020000000033"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[4]" " -type \"float3\" 11.298184 0.11076413 6.71525049999999979"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[5]" " -type \"float3\" 10.757044 0.11076413 6.17280479999999976"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[6]" " -type \"float3\" 11.181358 0.11076413 6.8640251000000001"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[7]" " -type \"float3\" 10.640218 0.11076413 6.321579"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[8]" " -type \"float3\" 11.064532 0.11076413 7.01279970000000041"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[9]" " -type \"float3\" 10.523392 0.11076413 6.47035409999999978"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[10]" " -type \"float3\" 10.947706 0.11076413 7.16157440000000012"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[11]" " -type \"float3\" 10.406566 0.11076413 6.61912870000000009"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[12]" " -type \"float3\" 10.83088 0.11076413 7.310349"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[13]" " -type \"float3\" 10.28974 0.11076413 6.7679033000000004"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[14]" " -type \"float3\" 10.714053 0.11076413 7.45912410000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[15]" " -type \"float3\" 10.172914 0.11076413 6.91667840000000034"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[16]" " -type \"float3\" 10.597227 0.11076413 7.60789820000000017"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[17]" " -type \"float3\" 10.056087 0.11076413 7.06545260000000042"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[18]" " -type \"float3\" 10.480401 0.11076413 7.75667289999999987"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[19]" " -type \"float3\" 9.93926139999999947 0.11076413 7.21422719999999984"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[20]" " -type \"float3\" 10.363575 0.11076413 7.905448"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[21]" " -type \"float3\" 9.82243539999999982 0.11076413 7.36300180000000015"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[22]" " -type \"float3\" 10.246749 0.11076413 8.05422309999999975"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[23]" " -type \"float3\" 9.70560930000000077 0.11076413 7.51177690000000009"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[24]" " -type \"float3\" 10.129923 0.11076413 8.20299720000000043"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[25]" " -type \"float3\" 9.58878329999999934 0.11076413 7.66055110000000017"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[26]" " -type \"float3\" 10.013097 0.11076413 8.35177140000000051"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[27]" " -type \"float3\" 9.4719572000000003 0.11076413 7.80932569999999959"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[28]" " -type \"float3\" 9.89627079999999992 0.11076413 8.50054650000000045"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[29]" " -type \"float3\" 9.35513109999999948 0.11076413 7.9581002999999999"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[30]" " -type \"float3\" 9.77944470000000088 0.11076413 8.64932059999999936"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[31]" " -type \"float3\" 9.23830509999999983 0.11076413 8.10687539999999984"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[32]" " -type \"float3\" 9.66261860000000006 0.11076413 8.7980956999999993"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[33]" " -type \"float3\" 9.121479 0.11076413 8.25564959999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[34]" " -type \"float3\" 9.54579260000000041 0.11076413 8.94686989999999938"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[35]" " -type \"float3\" 9.004653 0.11076413 8.40442370000000061"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[36]" " -type \"float3\" 9.42896750000000061 0.11076413 9.095644"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[37]" " -type \"float3\" 8.88782690000000031 0.11076413 8.55319880000000055"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[38]" " -type \"float3\" 9.31214139999999979 0.11076413 9.2444191"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[39]" " -type \"float3\" 8.77100090000000066 0.11076413 8.701973"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[40]" " -type \"float3\" 9.19531540000000014 0.11076413 9.39319320000000069"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[41]" " -type \"float3\" 8.65417479999999983 0.11076413 8.85074810000000056"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[42]" " -type \"float3\" 9.07848929999999932 0.11076413 9.54196830000000062"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[43]" " -type \"float3\" 8.53734870000000079 0.11076413 8.99952219999999947"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[44]" " -type \"float3\" 8.96166320000000027 0.11076413 9.6907425000000007"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[45]" " -type \"float3\" 8.42052269999999936 0.11076413 9.14829639999999955"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[46]" " -type \"float3\" 8.84483720000000062 0.11076413 9.83951659999999961"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[47]" " -type \"float3\" 8.30369660000000032 0.11076413 9.29707149999999949"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[48]" " -type \"float3\" 8.7280110999999998 0.11076413 9.98829169999999955"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[49]" " -type \"float3\" 8.18687060000000066 0.11076413 9.44584560000000018"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[50]" " -type \"float3\" 8.61118510000000015 0.11076413 10.137066"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[51]" " -type \"float3\" 8.07004449999999984 0.11076413 9.59462070000000011"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[52]" " -type \"float3\" 8.494359 0.11076413 10.285841"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[53]" " -type \"float3\" 7.95321890000000042 0.11076413 9.74339490000000019"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[54]" " -type \"float3\" 8.377533 0.11076413 10.434615"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[55]" " -type \"float3\" 7.83639289999999988 0.11076413 9.89217"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[56]" " -type \"float3\" 8.26070690000000063 0.11076413 10.58339"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[57]" " -type \"float3\" 7.71956679999999995 0.11076413 10.040944"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[58]" " -type \"float3\" 8.14388079999999981 0.11076413 10.732164"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[59]" " -type \"float3\" 7.6027408000000003 0.11076413 10.189718"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[60]" " -type \"float3\" 8.02705480000000016 0.11076413 10.880939"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[61]" " -type \"float3\" 7.48591470000000037 0.11076413 10.338493"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[62]" " -type \"float3\" 7.91022870000000022 0.11076413 11.029714"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[63]" " -type \"float3\" 7.36908860000000043 0.11076413 10.487267"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[64]" " -type \"float3\" 7.79340269999999968 0.11076413 11.178488"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[65]" " -type \"float3\" 7.25226259999999989 0.11076413 10.636043"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[66]" " -type \"float3\" 7.67657659999999975 0.11076413 11.327263"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[67]" " -type \"float3\" 7.13543649999999996 0.11076413 10.784817"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[68]" " -type \"float3\" 7.5597506000000001 0.11076413 11.476037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[69]" " -type \"float3\" 7.01861050000000031 0.11076413 10.933592"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[70]" " -type \"float3\" 7.442925 0.11076413 11.624812"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[71]" " -type \"float3\" 6.90178440000000037 0.11076413 11.082366"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[72]" " -type \"float3\" 7.32609840000000023 0.11076413 11.773586"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[73]" " -type \"float3\" 6.78495839999999983 0.11076413 11.231141"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[74]" " -type \"float3\" 7.20927290000000021 0.11076413 11.92236"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[75]" " -type \"float3\" 6.66813280000000042 0.11076413 11.379915"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[76]" " -type \"float3\" 7.09244680000000027 0.11076413 12.071136"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[77]" " -type \"float3\" 6.55130619999999997 0.11076413 11.52869"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[78]" " -type \"float3\" 6.97562030000000011 0.11076413 12.219911"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[79]" " -type \"float3\" 6.43448020000000032 0.11076413 11.677464"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[80]" " -type \"float3\" 6.8587946999999998 0.11076413 12.368685"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[81]" " -type \"float3\" 6.31765460000000001 0.11076413 11.826239"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[82]" " -type \"float3\" 6.74196859999999987 0.11076413 12.517459"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[83]" " -type \"float3\" 6.20082860000000036 0.11076413 11.975014"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[84]" " -type \"float3\" 6.62514260000000021 0.11076413 12.666234"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[85]" " -type \"float3\" 6.08400250000000042 0.11076413 12.123788"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[86]" " -type \"float3\" 6.50831650000000028 0.11076413 12.815008"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[87]" " -type \"float3\" 5.9671763999999996 0.11076413 12.272563"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[88]" " -type \"float3\" 6.39149 0.11076413 12.963783"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[89]" " -type \"float3\" 5.85034990000000032 0.11076413 12.421338"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[90]" " -type \"float3\" 6.27466439999999981 0.11076413 13.112558"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[91]" " -type \"float3\" 5.73352380000000039 0.11076413 12.570112"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[92]" " -type \"float3\" 6.15783789999999964 0.11076413 13.261333"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[93]" " -type \"float3\" 5.61669779999999985 0.11076413 12.718886"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[94]" " -type \"float3\" 6.04101179999999971 0.11076413 13.410108"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[95]" " -type \"float3\" 5.49987129999999969 0.11076413 12.867661"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[96]" " -type \"float3\" 5.92418530000000043 0.11076413 13.558883"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[97]" " -type \"float3\" 5.38304519999999975 0.11076413 13.016437"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[98]" " -type \"float3\" 5.80735919999999961 0.11076413 13.707657"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[99]" " -type \"float3\" 5.26621909999999982 0.11076413 13.165212"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[100]" " -type \"float3\" 5.69053319999999996 0.11076413 13.856432"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[101]" " -type \"float3\" 5.14939259999999965 0.11076413 13.313987"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[102]" " -type \"float3\" 5.57370710000000003 0.11076413 14.005206"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[103]" " -type \"float3\" 5.032567 0.11076413 13.462761"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[104]" " -type \"float3\" 5.45688059999999986 0.11076413 14.153981"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[105]" " -type \"float3\" 4.91574050000000007 0.11076413 13.611536"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[106]" " -type \"float3\" 5.34005740000000007 0.11076413 14.302752"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[107]" " -type \"float3\" 4.79891730000000027 0.11076413 13.760307"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[108]" " -type \"float3\" 5.34005740000000007 0.090759336999999995 14.302752"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[109]" " -type \"float3\" 4.79891730000000027 0.090759336999999995 13.760307"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[110]" " -type \"float3\" 5.45688339999999972 0.090759336999999995 14.153978"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[111]" " -type \"float3\" 4.91574340000000021 0.090759336999999995 13.611532"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[112]" " -type \"float3\" 5.57370949999999965 0.090759336999999995 14.005203"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[113]" " -type \"float3\" 5.03256890000000023 0.090759336999999995 13.462758"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[114]" " -type \"float3\" 5.69053550000000019 0.090759336999999995 13.856429"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[115]" " -type \"float3\" 5.14939549999999979 0.090759336999999995 13.313983"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[116]" " -type \"float3\" 5.80736160000000012 0.090759336999999995 13.707654"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[117]" " -type \"float3\" 5.26622150000000033 0.090759336999999995 13.165209"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[118]" " -type \"float3\" 5.92418770000000006 0.090759336999999995 13.55888"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[119]" " -type \"float3\" 5.38304760000000027 0.090759336999999995 13.016434"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[120]" " -type \"float3\" 6.04101420000000022 0.090759336999999995 13.410105"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[121]" " -type \"float3\" 5.49987410000000043 0.090759336999999995 12.867659"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[122]" " -type \"float3\" 6.15783979999999964 0.090759336999999995 13.261331"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[123]" " -type \"float3\" 5.61669969999999985 0.090759336999999995 12.718884"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[124]" " -type \"float3\" 6.27466580000000018 0.090759336999999995 13.112556"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[125]" " -type \"float3\" 5.73352579999999978 0.090759336999999995 12.570109"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[126]" " -type \"float3\" 6.39149239999999974 0.090759336999999995 12.96378"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[127]" " -type \"float3\" 5.85035180000000032 0.090759336999999995 12.421335"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[128]" " -type \"float3\" 6.50831840000000028 0.090759336999999995 12.815006"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[129]" " -type \"float3\" 5.9671782999999996 0.090759336999999995 12.27256"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[130]" " -type \"float3\" 6.62514450000000021 0.090759336999999995 12.666231"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[131]" " -type \"float3\" 6.08400440000000042 0.090759336999999995 12.123786"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[132]" " -type \"float3\" 6.74197049999999987 0.090759336999999995 12.517457"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[133]" " -type \"float3\" 6.20083050000000036 0.090759336999999995 11.975011"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[134]" " -type \"float3\" 6.8587965999999998 0.090759336999999995 12.368682"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[135]" " -type \"float3\" 6.31765650000000001 0.090759336999999995 11.826237"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[136]" " -type \"float3\" 6.97562269999999973 0.090759336999999995 12.219908"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[137]" " -type \"float3\" 6.43448259999999994 0.090759336999999995 11.677462"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[138]" " -type \"float3\" 7.09244870000000027 0.090759336999999995 12.071133"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[139]" " -type \"float3\" 6.55130859999999959 0.090759336999999995 11.528687"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[140]" " -type \"float3\" 7.20927480000000021 0.090759336999999995 11.922359"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[141]" " -type \"float3\" 6.66813470000000041 0.090759336999999995 11.379912"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[142]" " -type \"float3\" 7.32610079999999986 0.090759336999999995 11.773584"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[143]" " -type \"float3\" 6.78496070000000007 0.090759336999999995 11.231138"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[144]" " -type \"float3\" 7.44292640000000016 0.090759336999999995 11.624809"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[145]" " -type \"float3\" 6.90178630000000037 0.090759336999999995 11.082364"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[146]" " -type \"float3\" 7.5597525000000001 0.090759336999999995 11.476035"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[147]" " -type \"float3\" 7.01861240000000031 0.090759336999999995 10.933589"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[148]" " -type \"float3\" 7.67657849999999975 0.090759336999999995 11.32726"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[149]" " -type \"float3\" 7.13543839999999996 0.090759336999999995 10.784815"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[150]" " -type \"float3\" 7.79340459999999968 0.090759336999999995 11.178486"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[151]" " -type \"float3\" 7.25226449999999989 0.090759336999999995 10.63604"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[152]" " -type \"float3\" 7.91023060000000022 0.090759336999999995 11.029711"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[153]" " -type \"float3\" 7.36909059999999982 0.090759336999999995 10.487266"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[154]" " -type \"float3\" 8.02705669999999927 0.090759336999999995 10.880937"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[155]" " -type \"float3\" 7.48591660000000036 0.090759336999999995 10.33849"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[156]" " -type \"float3\" 8.14388280000000009 0.090759336999999995 10.732162"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[157]" " -type \"float3\" 7.6027427000000003 0.090759336999999995 10.189716"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[158]" " -type \"float3\" 8.26070879999999974 0.090759336999999995 10.583387"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[159]" " -type \"float3\" 7.71956869999999995 0.090759336999999995 10.040942"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[160]" " -type \"float3\" 8.37753490000000056 0.090759336999999995 10.434613"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[161]" " -type \"float3\" 7.83639479999999988 0.090759336999999995 9.89216709999999999"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[162]" " -type \"float3\" 8.49436090000000021 0.090759336999999995 10.285838"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[163]" " -type \"float3\" 7.95322080000000042 0.090759336999999995 9.74339289999999991"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[164]" " -type \"float3\" 8.611187 0.090759336999999995 10.137064"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[165]" " -type \"float3\" 8.07004640000000073 0.090759336999999995 9.59461779999999997"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[166]" " -type \"float3\" 8.728013 0.090759336999999995 9.98828890000000058"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[167]" " -type \"float3\" 8.18687249999999977 0.090759336999999995 9.44584369999999929"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[168]" " -type \"float3\" 8.84483909999999973 0.090759336999999995 9.8395147000000005"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[169]" " -type \"float3\" 8.30369849999999943 0.090759336999999995 9.29706859999999935"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[170]" " -type \"float3\" 8.96166520000000055 0.090759336999999995 9.69074059999999982"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[171]" " -type \"float3\" 8.42052460000000025 0.090759336999999995 9.14829439999999927"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[172]" " -type \"float3\" 9.07849120000000021 0.090759336999999995 9.54196549999999988"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[173]" " -type \"float3\" 8.53735069999999929 0.090759336999999995 8.99952030000000036"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[174]" " -type \"float3\" 9.19531729999999925 0.090759336999999995 9.3931912999999998"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[175]" " -type \"float3\" 8.65417670000000072 0.090759336999999995 8.85074520000000042"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[176]" " -type \"float3\" 9.31214330000000068 0.090759336999999995 9.24441619999999986"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[177]" " -type \"float3\" 8.77100279999999977 0.090759336999999995 8.70197109999999974"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[178]" " -type \"float3\" 9.42896939999999972 0.090759336999999995 9.09564209999999917"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[179]" " -type \"float3\" 8.88782879999999942 0.090759336999999995 8.553196"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[180]" " -type \"float3\" 9.54579449999999952 0.090759336999999995 8.94686790000000087"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[181]" " -type \"float3\" 9.00465490000000024 0.090759336999999995 8.40442179999999972"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[182]" " -type \"float3\" 9.6626215000000002 0.090759336999999995 8.79809279999999916"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[183]" " -type \"float3\" 9.12148089999999989 0.090759336999999995 8.25564669999999978"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[184]" " -type \"float3\" 9.77944759999999924 0.090759336999999995 8.64931769999999922"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[185]" " -type \"float3\" 9.238307 0.090759336999999995 8.10687260000000087"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[186]" " -type \"float3\" 9.89627270000000081 0.090759336999999995 8.50054360000000031"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[187]" " -type \"float3\" 9.35513309999999976 0.090759336999999995 7.95809790000000028"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[188]" " -type \"float3\" 10.013099 0.090759336999999995 8.35176940000000023"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[189]" " -type \"float3\" 9.47195909999999941 0.090759336999999995 7.80932329999999997"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[190]" " -type \"float3\" 10.129925 0.090759336999999995 8.20299430000000029"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[191]" " -type \"float3\" 9.58878520000000023 0.090759336999999995 7.66054869999999966"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[192]" " -type \"float3\" 10.246751 0.090759336999999995 8.05422019999999961"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[193]" " -type \"float3\" 9.70561119999999988 0.090759336999999995 7.51177410000000023"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[194]" " -type \"float3\" 10.363578 0.090759336999999995 7.90544509999999967"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[195]" " -type \"float3\" 9.8224373000000007 0.090759336999999995 7.36299939999999964"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[196]" " -type \"float3\" 10.480403 0.090759336999999995 7.75667050000000025"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[197]" " -type \"float3\" 9.93926330000000036 0.090759336999999995 7.21422480000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[198]" " -type \"float3\" 10.597229 0.090759336999999995 7.60789589999999993"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[199]" " -type \"float3\" 10.056089 0.090759336999999995 7.0654501999999999"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[200]" " -type \"float3\" 10.714056 0.090759336999999995 7.4591208"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[201]" " -type \"float3\" 10.172915 0.090759336999999995 6.91667509999999996"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[202]" " -type \"float3\" 10.830882 0.090759336999999995 7.31034610000000029"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[203]" " -type \"float3\" 10.289742 0.090759336999999995 6.7679"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[204]" " -type \"float3\" 10.947708 0.090759336999999995 7.16157149999999998"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[205]" " -type \"float3\" 10.406569 0.090759336999999995 6.61912539999999971"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[206]" " -type \"float3\" 11.064534 0.090759336999999995 7.01279640000000004"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[207]" " -type \"float3\" 10.523395 0.090759336999999995 6.47035070000000001"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[208]" " -type \"float3\" 11.18136 0.090759336999999995 6.86402230000000024"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[209]" " -type \"float3\" 10.640221 0.090759336999999995 6.3215760999999997"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[210]" " -type \"float3\" 11.298186 0.090759336999999995 6.7152472000000003"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[211]" " -type \"float3\" 10.757047 0.090759336999999995 6.17280150000000027"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[212]" " -type \"float3\" 11.41501 0.10914382 6.56647590000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[213]" " -type \"float3\" 11.298184 0.10914382 6.71525"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[214]" " -type \"float3\" 11.181358 0.10914382 6.8640251000000001"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[215]" " -type \"float3\" 11.064532 0.10914382 7.01279970000000041"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[216]" " -type \"float3\" 10.947706 0.10914382 7.16157440000000012"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[217]" " -type \"float3\" 10.83088 0.10914382 7.310349"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[218]" " -type \"float3\" 10.714054 0.10914382 7.45912359999999985"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[219]" " -type \"float3\" 10.597228 0.10914382 7.60789820000000017"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[220]" " -type \"float3\" 10.480401 0.10914382 7.75667289999999987"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[221]" " -type \"float3\" 10.363575 0.10914382 7.905448"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[222]" " -type \"float3\" 10.24675 0.10914382 8.05422210000000049"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[223]" " -type \"float3\" 10.129923 0.10914382 8.20299720000000043"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[224]" " -type \"float3\" 10.013097 0.10914382 8.35177140000000051"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[225]" " -type \"float3\" 9.89627079999999992 0.10914382 8.50054650000000045"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[226]" " -type \"float3\" 9.77944470000000088 0.10914382 8.64932059999999936"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[227]" " -type \"float3\" 9.66261959999999931 0.10914382 8.79809470000000005"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[228]" " -type \"float3\" 9.54579350000000026 0.10914382 8.94686989999999938"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[229]" " -type \"float3\" 9.42896750000000061 0.10914382 9.095644"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[230]" " -type \"float3\" 9.31214139999999979 0.10914382 9.2444191"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[231]" " -type \"float3\" 9.19531540000000014 0.10914382 9.39319320000000069"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[232]" " -type \"float3\" 9.07848929999999932 0.10914382 9.54196830000000062"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[233]" " -type \"float3\" 8.96166320000000027 0.10914382 9.6907425000000007"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[234]" " -type \"float3\" 8.84483720000000062 0.10914382 9.83951659999999961"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[235]" " -type \"float3\" 8.7280110999999998 0.10914382 9.98829169999999955"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[236]" " -type \"float3\" 8.61118510000000015 0.10914382 10.137066"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[237]" " -type \"float3\" 8.494359 0.10914382 10.285841"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[238]" " -type \"float3\" 8.377533 0.10914382 10.434615"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[239]" " -type \"float3\" 8.26070690000000063 0.10914382 10.583389"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[240]" " -type \"float3\" 8.14388079999999981 0.10914382 10.732164"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[241]" " -type \"float3\" 8.02705480000000016 0.10914382 10.880939"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[242]" " -type \"float3\" 7.91022919999999985 0.10914382 11.029714"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[243]" " -type \"float3\" 7.79340309999999992 0.10914382 11.178488"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[244]" " -type \"float3\" 7.67657710000000026 0.10914382 11.327263"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[245]" " -type \"float3\" 7.559751 0.10914382 11.476037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[246]" " -type \"float3\" 7.442925 0.10914382 11.624811"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[247]" " -type \"float3\" 7.32609889999999986 0.10914382 11.773586"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[248]" " -type \"float3\" 7.20927290000000021 0.10914382 11.92236"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[249]" " -type \"float3\" 7.09244680000000027 0.10914382 12.071136"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[250]" " -type \"float3\" 6.97562070000000034 0.10914382 12.219911"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[251]" " -type \"float3\" 6.8587946999999998 0.10914382 12.368685"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[252]" " -type \"float3\" 6.74196859999999987 0.10914382 12.517459"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[253]" " -type \"float3\" 6.62514260000000021 0.10914382 12.666234"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[254]" " -type \"float3\" 6.50831650000000028 0.10914382 12.815008"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[255]" " -type \"float3\" 6.39149049999999974 0.10914382 12.963783"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[256]" " -type \"float3\" 6.27466439999999981 0.10914382 13.112558"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[257]" " -type \"float3\" 6.15783789999999964 0.10914382 13.261333"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[258]" " -type \"float3\" 6.04101179999999971 0.10914382 13.410108"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[259]" " -type \"float3\" 5.92418530000000043 0.10914382 13.558883"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[260]" " -type \"float3\" 5.80735919999999961 0.10914382 13.707657"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[261]" " -type \"float3\" 5.69053319999999996 0.10914382 13.856432"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[262]" " -type \"float3\" 5.57370710000000003 0.10914382 14.005206"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[263]" " -type \"float3\" 5.456881 0.10914382 14.153981"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[264]" " -type \"float3\" 5.34005740000000007 0.10914382 14.302752"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[265]" " -type \"float3\" 4.79891730000000027 0.10914382 13.760307"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[266]" " -type \"float3\" 4.915741 0.10914382 13.611535"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[267]" " -type \"float3\" 5.032567 0.10914382 13.462761"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[268]" " -type \"float3\" 5.14939310000000017 0.10914382 13.313986"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[269]" " -type \"float3\" 5.26621909999999982 0.10914382 13.165212"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[270]" " -type \"float3\" 5.38304519999999975 0.10914382 13.016437"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[271]" " -type \"float3\" 5.49987129999999969 0.10914382 12.867661"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[272]" " -type \"float3\" 5.61669779999999985 0.10914382 12.718886"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[273]" " -type \"float3\" 5.73352380000000039 0.10914382 12.570112"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[274]" " -type \"float3\" 5.85034990000000032 0.10914382 12.421337"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[275]" " -type \"float3\" 5.9671763999999996 0.10914382 12.272563"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[276]" " -type \"float3\" 6.08400250000000042 0.10914382 12.123788"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[277]" " -type \"float3\" 6.20082860000000036 0.10914382 11.975013"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[278]" " -type \"float3\" 6.31765460000000001 0.10914382 11.826239"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[279]" " -type \"float3\" 6.43448069999999994 0.10914382 11.677464"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[280]" " -type \"float3\" 6.55130619999999997 0.10914382 11.52869"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[281]" " -type \"float3\" 6.66813280000000042 0.10914382 11.379915"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[282]" " -type \"float3\" 6.78495880000000007 0.10914382 11.23114"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[283]" " -type \"float3\" 6.9017849 0.10914382 11.082366"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[284]" " -type \"float3\" 7.018611 0.10914382 10.933591"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[285]" " -type \"float3\" 7.135437 0.10914382 10.784817"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[286]" " -type \"float3\" 7.25226310000000041 0.10914382 10.636043"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[287]" " -type \"float3\" 7.36908860000000043 0.10914382 10.487267"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[288]" " -type \"float3\" 7.48591470000000037 0.10914382 10.338493"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[289]" " -type \"float3\" 7.6027408000000003 0.10914382 10.189718"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[290]" " -type \"float3\" 7.71956679999999995 0.10914382 10.040944"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[291]" " -type \"float3\" 7.83639289999999988 0.10914382 9.892169"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[292]" " -type \"float3\" 7.95321890000000042 0.10914382 9.74339490000000019"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[293]" " -type \"float3\" 8.07004550000000087 0.10914382 9.59461980000000025"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[294]" " -type \"float3\" 8.18687060000000066 0.10914382 9.44584560000000018"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[295]" " -type \"float3\" 8.30369660000000032 0.10914382 9.29707149999999949"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[296]" " -type \"float3\" 8.42052269999999936 0.10914382 9.14829639999999955"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[297]" " -type \"float3\" 8.53734870000000079 0.10914382 8.99952219999999947"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[298]" " -type \"float3\" 8.65417479999999983 0.10914382 8.85074709999999953"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[299]" " -type \"float3\" 8.77100090000000066 0.10914382 8.701973"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[300]" " -type \"float3\" 8.88782690000000031 0.10914382 8.55319880000000055"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[301]" " -type \"float3\" 9.004653 0.10914382 8.40442370000000061"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[302]" " -type \"float3\" 9.121479 0.10914382 8.25564959999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[303]" " -type \"float3\" 9.23830509999999983 0.10914382 8.10687449999999998"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[304]" " -type \"float3\" 9.35513109999999948 0.10914382 7.9581002999999999"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[305]" " -type \"float3\" 9.4719572000000003 0.10914382 7.80932569999999959"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[306]" " -type \"float3\" 9.58878329999999934 0.10914382 7.66055110000000017"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[307]" " -type \"float3\" 9.70560930000000077 0.10914382 7.51177639999999958"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[308]" " -type \"float3\" 9.82243539999999982 0.10914382 7.36300180000000015"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[309]" " -type \"float3\" 9.93926139999999947 0.10914382 7.21422719999999984"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[310]" " -type \"float3\" 10.056087 0.10914382 7.06545260000000042"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[311]" " -type \"float3\" 10.172914 0.10914382 6.916678"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[312]" " -type \"float3\" 10.28974 0.10914382 6.76790290000000017"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[313]" " -type \"float3\" 10.406566 0.10914382 6.61912819999999957"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[314]" " -type \"float3\" 10.523392 0.10914382 6.47035360000000015"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[315]" " -type \"float3\" 10.640218 0.10914382 6.321579"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[316]" " -type \"float3\" 10.757044 0.10914382 6.17280440000000041"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[317]" " -type \"float3\" 10.87387 0.10914382 6.02403020000000033"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[318]" " -type \"float3\" 4.7812070999999996 0.10954886 13.734259"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[319]" " -type \"float3\" 4.77982849999999981 0.10926245 13.738743"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[320]" " -type \"float3\" 4.78165629999999986 0.10914382 13.743005"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[321]" " -type \"float3\" 4.89847989999999989 0.10914382 13.594233"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[322]" " -type \"float3\" 4.89558460000000029 0.10926245 13.591331"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[323]" " -type \"float3\" 4.89438529999999972 0.10954886 13.590129"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[324]" " -type \"float3\" 4.7812070999999996 0.11035909000000001 13.734259"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[325]" " -type \"float3\" 4.77982849999999981 0.11064551 13.738743"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[326]" " -type \"float3\" 4.78165629999999986 0.11076413 13.743005"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[327]" " -type \"float3\" 4.89438529999999972 0.11035909000000001 13.590129"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[328]" " -type \"float3\" 4.89558460000000029 0.11064551 13.591331"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[329]" " -type \"float3\" 4.89847989999999989 0.11076413 13.594234"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[330]" " -type \"float3\" 5.015306 0.10914382 13.445458"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[331]" " -type \"float3\" 5.01241109999999956 0.10926245 13.442555"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[332]" " -type \"float3\" 5.01121190000000016 0.10954886 13.441354"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[333]" " -type \"float3\" 5.01121190000000016 0.11035909000000001 13.441354"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[334]" " -type \"float3\" 5.01241059999999994 0.11064551 13.442556"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[335]" " -type \"float3\" 5.015306 0.11076413 13.445458"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[336]" " -type \"float3\" 5.13213209999999975 0.10914382 13.296683"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[337]" " -type \"float3\" 5.12923720000000039 0.10926245 13.293781"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[338]" " -type \"float3\" 5.12803789999999982 0.10954886 13.292579"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[339]" " -type \"float3\" 5.12803749999999958 0.11035909000000001 13.29258"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[340]" " -type \"float3\" 5.12923669999999987 0.11064551 13.293781"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[341]" " -type \"float3\" 5.13213209999999975 0.11076413 13.296684"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[342]" " -type \"float3\" 5.24895810000000029 0.10914382 13.147909"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[343]" " -type \"float3\" 5.24606320000000004 0.10926245 13.145007"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[344]" " -type \"float3\" 5.244864 0.10954886 13.143805"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[345]" " -type \"float3\" 5.244864 0.11035909000000001 13.143805"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[346]" " -type \"float3\" 5.24606320000000004 0.11064551 13.145007"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[347]" " -type \"float3\" 5.24895810000000029 0.11076413 13.147909"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[348]" " -type \"float3\" 5.36578420000000023 0.10914382 12.999134"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[349]" " -type \"float3\" 5.36288929999999997 0.10926245 12.996232"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[350]" " -type \"float3\" 5.36169 0.10954886 12.99503"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[351]" " -type \"float3\" 5.36169 0.11035909000000001 12.99503"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[352]" " -type \"float3\" 5.36288929999999997 0.11064551 12.996232"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[353]" " -type \"float3\" 5.36578420000000023 0.11076413 12.999134"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[354]" " -type \"float3\" 5.48261070000000039 0.10914382 12.850359"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[355]" " -type \"float3\" 5.47971529999999962 0.10926245 12.847457"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[356]" " -type \"float3\" 5.47851610000000022 0.10954886 12.846255"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[357]" " -type \"float3\" 5.47851610000000022 0.11035909000000001 12.846255"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[358]" " -type \"float3\" 5.47971529999999962 0.11064551 12.847457"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[359]" " -type \"float3\" 5.48261070000000039 0.11076413 12.850359"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[360]" " -type \"float3\" 5.59943719999999967 0.10914382 12.701584"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[361]" " -type \"float3\" 5.59654190000000007 0.10926245 12.698682"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[362]" " -type \"float3\" 5.59534260000000039 0.10954886 12.69748"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[363]" " -type \"float3\" 5.59534260000000039 0.11035909000000001 12.69748"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[364]" " -type \"float3\" 5.59654190000000007 0.11064551 12.698682"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[365]" " -type \"float3\" 5.59943719999999967 0.11076413 12.701584"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[366]" " -type \"float3\" 5.7162632999999996 0.10914382 12.55281"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[367]" " -type \"float3\" 5.71336789999999972 0.10926245 12.549908"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[368]" " -type \"float3\" 5.71216870000000032 0.10954886 12.548705"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[369]" " -type \"float3\" 5.71216870000000032 0.11035909000000001 12.548705"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[370]" " -type \"float3\" 5.71336789999999972 0.11064551 12.549908"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[371]" " -type \"float3\" 5.7162632999999996 0.11076413 12.55281"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[372]" " -type \"float3\" 5.83308940000000042 0.10914382 12.404035"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[373]" " -type \"float3\" 5.830194 0.10926245 12.401133"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[374]" " -type \"float3\" 5.82899480000000025 0.10954886 12.399931"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[375]" " -type \"float3\" 5.82899480000000025 0.11035909000000001 12.399931"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[376]" " -type \"float3\" 5.830194 0.11064551 12.401133"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[377]" " -type \"float3\" 5.83308889999999991 0.11076413 12.404036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[378]" " -type \"float3\" 5.94991540000000008 0.10914382 12.25526"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[379]" " -type \"float3\" 5.94702049999999982 0.10926245 12.252357"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[380]" " -type \"float3\" 5.94582130000000042 0.10954886 12.251156"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[381]" " -type \"float3\" 5.94582079999999991 0.11035909000000001 12.251156"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[382]" " -type \"float3\" 5.94702009999999959 0.11064551 12.252358"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[383]" " -type \"float3\" 5.94991540000000008 0.11076413 12.25526"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[384]" " -type \"float3\" 6.06674150000000001 0.10914382 12.106485"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[385]" " -type \"float3\" 6.06384659999999975 0.10926245 12.103583"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[386]" " -type \"float3\" 6.06264730000000007 0.10954886 12.102381"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[387]" " -type \"float3\" 6.06264689999999984 0.11035909000000001 12.102382"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[388]" " -type \"float3\" 6.06384610000000013 0.11064551 12.103583"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[389]" " -type \"float3\" 6.06674150000000001 0.11076413 12.106485"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[390]" " -type \"float3\" 6.18356749999999966 0.10914382 11.95771"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[391]" " -type \"float3\" 6.18067260000000029 0.10926245 11.954808"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[392]" " -type \"float3\" 6.17947340000000001 0.10954886 11.953607"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[393]" " -type \"float3\" 6.17947340000000001 0.11035909000000001 11.953607"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[394]" " -type \"float3\" 6.18067220000000006 0.11064551 11.954809"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[395]" " -type \"float3\" 6.18356749999999966 0.11076413 11.957711"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[396]" " -type \"float3\" 6.30039359999999959 0.10914382 11.808936"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[397]" " -type \"float3\" 6.29749870000000023 0.10926245 11.806034"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[398]" " -type \"float3\" 6.29629949999999994 0.10954886 11.804832"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[399]" " -type \"float3\" 6.29629949999999994 0.11035909000000001 11.804832"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[400]" " -type \"float3\" 6.29749870000000023 0.11064551 11.806034"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[401]" " -type \"float3\" 6.30039359999999959 0.11076413 11.808936"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[402]" " -type \"float3\" 6.41721960000000013 0.10914382 11.660162"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[403]" " -type \"float3\" 6.41432429999999965 0.10926245 11.65726"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[404]" " -type \"float3\" 6.413125 0.10954886 11.656057"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[405]" " -type \"float3\" 6.413125 0.11035909000000001 11.656057"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[406]" " -type \"float3\" 6.41432429999999965 0.11064551 11.65726"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[407]" " -type \"float3\" 6.41721960000000013 0.11076413 11.660162"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[408]" " -type \"float3\" 6.53404570000000007 0.10914382 11.511387"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[409]" " -type \"float3\" 6.53115030000000019 0.10926245 11.508485"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[410]" " -type \"float3\" 6.5299510999999999 0.10954886 11.507283"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[411]" " -type \"float3\" 6.5299510999999999 0.11035909000000001 11.507283"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[412]" " -type \"float3\" 6.53115030000000019 0.11064551 11.508485"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[413]" " -type \"float3\" 6.53404570000000007 0.11076413 11.511387"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[414]" " -type \"float3\" 6.6508718 0.10914382 11.362613"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[415]" " -type \"float3\" 6.64797640000000012 0.10926245 11.359711"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[416]" " -type \"float3\" 6.64677760000000006 0.10954886 11.358508"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[417]" " -type \"float3\" 6.64677760000000006 0.11035909000000001 11.358508"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[418]" " -type \"float3\" 6.64797640000000012 0.11064551 11.359711"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[419]" " -type \"float3\" 6.6508718 0.11076413 11.362613"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[420]" " -type \"float3\" 6.76769779999999965 0.10914382 11.213838"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[421]" " -type \"float3\" 6.76480250000000005 0.10926245 11.210936"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[422]" " -type \"float3\" 6.7636037 0.10954886 11.209734"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[423]" " -type \"float3\" 6.76360320000000037 0.11035909000000001 11.209734"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[424]" " -type \"float3\" 6.76480250000000005 0.11064551 11.210936"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[425]" " -type \"float3\" 6.76769779999999965 0.11076413 11.213839"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[426]" " -type \"float3\" 6.88452389999999959 0.10914382 11.065063"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[427]" " -type \"float3\" 6.881629 0.10926245 11.062161"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[428]" " -type \"float3\" 6.88042969999999965 0.10954886 11.060959"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[429]" " -type \"float3\" 6.8804293000000003 0.11035909000000001 11.060959"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[430]" " -type \"float3\" 6.8816284999999997 0.11064551 11.062161"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[431]" " -type \"float3\" 6.88452389999999959 0.11076413 11.065063"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[432]" " -type \"float3\" 7.00134990000000013 0.10914382 10.916288"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[433]" " -type \"float3\" 6.99845459999999964 0.10926245 10.913386"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[434]" " -type \"float3\" 6.99725579999999958 0.10954886 10.912185"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[435]" " -type \"float3\" 6.99725529999999996 0.11035909000000001 10.912185"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[436]" " -type \"float3\" 6.99845459999999964 0.11064551 10.913387"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[437]" " -type \"float3\" 7.00134990000000013 0.11076413 10.916289"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[438]" " -type \"float3\" 7.118176 0.10914382 10.767514"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[439]" " -type \"float3\" 7.11528060000000018 0.10926245 10.764612"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[440]" " -type \"float3\" 7.11408139999999989 0.10954886 10.76341"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[441]" " -type \"float3\" 7.11408139999999989 0.11035909000000001 10.76341"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[442]" " -type \"float3\" 7.11528060000000018 0.11064551 10.764612"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[443]" " -type \"float3\" 7.118176 0.11076413 10.767514"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[444]" " -type \"float3\" 7.235002 0.10914382 10.61874"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[445]" " -type \"float3\" 7.23210670000000011 0.10926245 10.615837"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[446]" " -type \"float3\" 7.23090740000000043 0.10954886 10.614635"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[447]" " -type \"float3\" 7.23090740000000043 0.11035909000000001 10.614635"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[448]" " -type \"float3\" 7.23210670000000011 0.11064551 10.615838"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[449]" " -type \"float3\" 7.23500160000000037 0.11076413 10.61874"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[450]" " -type \"float3\" 7.35182809999999964 0.10914382 10.469965"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[451]" " -type \"float3\" 7.34893269999999976 0.10926245 10.467063"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[452]" " -type \"float3\" 7.34773350000000036 0.10954886 10.465861"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[453]" " -type \"float3\" 7.34773350000000036 0.11035909000000001 10.465861"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[454]" " -type \"float3\" 7.34893269999999976 0.11064551 10.467063"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[455]" " -type \"float3\" 7.35182760000000002 0.11076413 10.469965"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[456]" " -type \"float3\" 7.46865419999999958 0.10914382 10.321191"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[457]" " -type \"float3\" 7.4657587999999997 0.10926245 10.318289"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[458]" " -type \"float3\" 7.46455960000000029 0.10954886 10.317086"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[459]" " -type \"float3\" 7.46455960000000029 0.11035909000000001 10.317086"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[460]" " -type \"float3\" 7.4657587999999997 0.11064551 10.318289"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[461]" " -type \"float3\" 7.46865369999999995 0.11076413 10.321191"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[462]" " -type \"float3\" 7.5854796999999996 0.10914382 10.172416"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[463]" " -type \"float3\" 7.58258489999999963 0.10926245 10.169514"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[464]" " -type \"float3\" 7.58138559999999995 0.10954886 10.168312"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[465]" " -type \"float3\" 7.58138559999999995 0.11035909000000001 10.168312"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[466]" " -type \"float3\" 7.58258489999999963 0.11064551 10.169514"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[467]" " -type \"float3\" 7.5854796999999996 0.11076413 10.172416"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[468]" " -type \"float3\" 7.70230580000000042 0.10914382 10.023642"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[469]" " -type \"float3\" 7.69941090000000017 0.10926245 10.02074"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[470]" " -type \"float3\" 7.69821169999999988 0.10954886 10.019537"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[471]" " -type \"float3\" 7.69821169999999988 0.11035909000000001 10.019537"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[472]" " -type \"float3\" 7.69941090000000017 0.11064551 10.02074"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[473]" " -type \"float3\" 7.70230580000000042 0.11076413 10.023642"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[474]" " -type \"float3\" 7.81913190000000036 0.10914382 9.87486649999999955"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[475]" " -type \"float3\" 7.816237 0.10926245 9.8719645000000007"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[476]" " -type \"float3\" 7.81503770000000042 0.10954886 9.87076279999999961"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[477]" " -type \"float3\" 7.81503770000000042 0.11035909000000001 9.87076279999999961"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[478]" " -type \"float3\" 7.81623649999999959 0.11064551 9.8719645000000007"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[479]" " -type \"float3\" 7.81913190000000036 0.11076413 9.87486739999999941"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[480]" " -type \"float3\" 7.93595790000000001 0.10914382 9.72609229999999947"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[481]" " -type \"float3\" 7.933063 0.10926245 9.72319030000000062"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[482]" " -type \"float3\" 7.93186380000000035 0.10954886 9.72198769999999968"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[483]" " -type \"float3\" 7.93186380000000035 0.11035909000000001 9.72198769999999968"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[484]" " -type \"float3\" 7.93306260000000041 0.11064551 9.72319030000000062"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[485]" " -type \"float3\" 7.93595790000000001 0.11076413 9.72609229999999947"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[486]" " -type \"float3\" 8.052784 0.10914382 9.57731719999999953"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[487]" " -type \"float3\" 8.04988859999999917 0.10926245 9.57441520000000068"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[488]" " -type \"float3\" 8.04868980000000001 0.10954886 9.57321360000000077"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[489]" " -type \"float3\" 8.04868980000000001 0.11035909000000001 9.57321360000000077"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[490]" " -type \"float3\" 8.04988859999999917 0.11064551 9.57441619999999993"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[491]" " -type \"float3\" 8.052784 0.11076413 9.57731820000000056"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[492]" " -type \"float3\" 8.16961 0.10914382 9.42854310000000062"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[493]" " -type \"float3\" 8.16671469999999999 0.10926245 9.42564109999999999"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[494]" " -type \"float3\" 8.16551590000000083 0.10954886 9.42443940000000069"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[495]" " -type \"float3\" 8.16551590000000083 0.11035909000000001 9.42443940000000069"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[496]" " -type \"float3\" 8.16671469999999999 0.11064551 9.42564109999999999"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[497]" " -type \"float3\" 8.16961 0.11076413 9.42854310000000062"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[498]" " -type \"float3\" 8.28643609999999953 0.10914382 9.27976890000000054"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[499]" " -type \"float3\" 8.28354069999999965 0.10926245 9.27686689999999992"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[500]" " -type \"float3\" 8.282342 0.10954886 9.27566430000000075"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[501]" " -type \"float3\" 8.282342 0.11035909000000001 9.27566430000000075"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[502]" " -type \"float3\" 8.28354069999999965 0.11064551 9.27686689999999992"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[503]" " -type \"float3\" 8.28643609999999953 0.11076413 9.27976890000000054"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[504]" " -type \"float3\" 8.40326209999999918 0.10914382 9.1309938000000006"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[505]" " -type \"float3\" 8.40036680000000047 0.10926245 9.12809179999999998"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[506]" " -type \"float3\" 8.399168 0.10954886 9.12689020000000006"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[507]" " -type \"float3\" 8.399168 0.11035909000000001 9.12689020000000006"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[508]" " -type \"float3\" 8.40036680000000047 0.11064551 9.12809179999999998"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[509]" " -type \"float3\" 8.40326209999999918 0.11076413 9.1309938000000006"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[510]" " -type \"float3\" 8.5200882 0.10914382 8.98221969999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[511]" " -type \"float3\" 8.51719280000000012 0.10926245 8.97931769999999929"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[512]" " -type \"float3\" 8.51599410000000034 0.10954886 8.97811510000000013"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[513]" " -type \"float3\" 8.51599410000000034 0.11035909000000001 8.97811510000000013"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[514]" " -type \"float3\" 8.51719280000000012 0.11064551 8.97931769999999929"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[515]" " -type \"float3\" 8.5200882 0.11076413 8.98221969999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[516]" " -type \"float3\" 8.63691430000000082 0.10914382 8.83344459999999998"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[517]" " -type \"float3\" 8.63401889999999916 0.10926245 8.83054259999999935"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[518]" " -type \"float3\" 8.6328201 0.10954886 8.82934090000000005"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[519]" " -type \"float3\" 8.63281920000000014 0.11035909000000001 8.82934090000000005"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[520]" " -type \"float3\" 8.63401889999999916 0.11064551 8.83054349999999921"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[521]" " -type \"float3\" 8.63691430000000082 0.11076413 8.83344549999999984"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[522]" " -type \"float3\" 8.75374030000000047 0.10914382 8.6846703999999999"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[523]" " -type \"float3\" 8.750845 0.10926245 8.68176839999999927"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[524]" " -type \"float3\" 8.74964620000000082 0.10954886 8.68056580000000011"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[525]" " -type \"float3\" 8.74964519999999979 0.11035909000000001 8.68056679999999936"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[526]" " -type \"float3\" 8.750845 0.11064551 8.68176839999999927"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[527]" " -type \"float3\" 8.75374030000000047 0.11076413 8.6846703999999999"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[528]" " -type \"float3\" 8.87056639999999952 0.10914382 8.53589529999999996"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[529]" " -type \"float3\" 8.867671 0.10926245 8.53299329999999934"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[530]" " -type \"float3\" 8.86647220000000047 0.10954886 8.53179169999999942"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[531]" " -type \"float3\" 8.86647130000000061 0.11035909000000001 8.53179169999999942"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[532]" " -type \"float3\" 8.867671 0.11064551 8.53299430000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[533]" " -type \"float3\" 8.87056639999999952 0.11076413 8.53589629999999921"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[534]" " -type \"float3\" 8.98739239999999917 0.10914382 8.38712119999999928"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[535]" " -type \"float3\" 8.98449710000000046 0.10926245 8.38421920000000043"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[536]" " -type \"float3\" 8.98329829999999951 0.10954886 8.38301749999999934"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[537]" " -type \"float3\" 8.98329730000000026 0.11035909000000001 8.38301749999999934"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[538]" " -type \"float3\" 8.98449710000000046 0.11064551 8.38421920000000043"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[539]" " -type \"float3\" 8.98739239999999917 0.11076413 8.38712119999999928"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[540]" " -type \"float3\" 9.10421849999999999 0.10914382 8.23834710000000037"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[541]" " -type \"float3\" 9.10132310000000011 0.10926245 8.235445"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[542]" " -type \"float3\" 9.10012339999999931 0.10954886 8.23424239999999941"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[543]" " -type \"float3\" 9.10012339999999931 0.11035909000000001 8.23424239999999941"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[544]" " -type \"float3\" 9.10132310000000011 0.11064551 8.235445"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[545]" " -type \"float3\" 9.10421750000000074 0.11076413 8.23834710000000037"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[546]" " -type \"float3\" 9.22104449999999964 0.10914382 8.089572"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[547]" " -type \"float3\" 9.21814919999999915 0.10926245 8.08666990000000041"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[548]" " -type \"float3\" 9.21694950000000013 0.10954886 8.0854683000000005"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[549]" " -type \"float3\" 9.21694950000000013 0.11035909000000001 8.0854683000000005"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[550]" " -type \"float3\" 9.21814919999999915 0.11064551 8.08666990000000041"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[551]" " -type \"float3\" 9.22104359999999978 0.11076413 8.08957290000000029"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[552]" " -type \"float3\" 9.33786959999999944 0.10914382 7.94079780000000035"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[553]" " -type \"float3\" 9.33497520000000058 0.10926245 7.93789579999999972"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[554]" " -type \"float3\" 9.33377549999999978 0.10954886 7.93669370000000018"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[555]" " -type \"float3\" 9.33377549999999978 0.11035909000000001 7.93669370000000018"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[556]" " -type \"float3\" 9.33497520000000058 0.11064551 7.93789579999999972"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[557]" " -type \"float3\" 9.33786959999999944 0.11076413 7.94079780000000035"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[558]" " -type \"float3\" 9.45469669999999951 0.10914382 7.79202320000000004"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[559]" " -type \"float3\" 9.45180129999999963 0.10926245 7.7891212000000003"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[560]" " -type \"float3\" 9.4506016000000006 0.10954886 7.787919"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[561]" " -type \"float3\" 9.4506016000000006 0.11035909000000001 7.787919"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[562]" " -type \"float3\" 9.45180129999999963 0.11064551 7.7891212000000003"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[563]" " -type \"float3\" 9.45469669999999951 0.11076413 7.79202320000000004"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[564]" " -type \"float3\" 9.5715217999999993 0.10914382 7.64324859999999973"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[565]" " -type \"float3\" 9.56862740000000045 0.10926245 7.64034649999999971"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[566]" " -type \"float3\" 9.56742760000000025 0.10954886 7.63914440000000017"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[567]" " -type \"float3\" 9.56742760000000025 0.11035909000000001 7.63914440000000017"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[568]" " -type \"float3\" 9.56862740000000045 0.11064551 7.64034649999999971"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[569]" " -type \"float3\" 9.5715217999999993 0.11076413 7.64324859999999973"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[570]" " -type \"float3\" 9.68834879999999998 0.10914382 7.49447390000000002"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[571]" " -type \"float3\" 9.6854534000000001 0.10926245 7.49157190000000028"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[572]" " -type \"float3\" 9.6842536999999993 0.10954886 7.49036979999999986"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[573]" " -type \"float3\" 9.6842536999999993 0.11035909000000001 7.49037030000000037"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[574]" " -type \"float3\" 9.68545250000000024 0.11064551 7.49157239999999991"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[575]" " -type \"float3\" 9.68834780000000073 0.11076413 7.49447439999999965"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[576]" " -type \"float3\" 9.80517389999999978 0.10914382 7.34569929999999971"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[577]" " -type \"float3\" 9.80227949999999915 0.10926245 7.34279729999999997"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[578]" " -type \"float3\" 9.80107980000000012 0.10954886 7.34159520000000043"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[579]" " -type \"float3\" 9.80107980000000012 0.11035909000000001 7.34159520000000043"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[580]" " -type \"float3\" 9.80227949999999915 0.11064551 7.34279729999999997"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[581]" " -type \"float3\" 9.80517389999999978 0.11076413 7.34569929999999971"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[582]" " -type \"float3\" 9.92199989999999943 0.10914382 7.19692470000000029"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[583]" " -type \"float3\" 9.91910550000000057 0.10926245 7.19402269999999966"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[584]" " -type \"float3\" 9.91790579999999977 0.10954886 7.19282049999999984"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[585]" " -type \"float3\" 9.91790579999999977 0.11035909000000001 7.19282049999999984"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[586]" " -type \"float3\" 9.91910550000000057 0.11064551 7.19402269999999966"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[587]" " -type \"float3\" 9.92199989999999943 0.11076413 7.19692470000000029"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[588]" " -type \"float3\" 10.038827 0.10914382 7.04815009999999997"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[589]" " -type \"float3\" 10.035932 0.10926245 7.04524759999999972"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[590]" " -type \"float3\" 10.034733 0.10954886 7.0440453999999999"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[591]" " -type \"float3\" 10.034732 0.11035909000000001 7.04404590000000042"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[592]" " -type \"float3\" 10.035932 0.11064551 7.045248"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[593]" " -type \"float3\" 10.038827 0.11076413 7.04815009999999997"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[594]" " -type \"float3\" 10.155653 0.10914382 6.899375"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[595]" " -type \"float3\" 10.152758 0.10926245 6.89647290000000002"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[596]" " -type \"float3\" 10.151559 0.10954886 6.89527079999999959"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[597]" " -type \"float3\" 10.151558 0.11035909000000001 6.8952713000000001"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[598]" " -type \"float3\" 10.152758 0.11064551 6.89647339999999964"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[599]" " -type \"float3\" 10.155652 0.11076413 6.89937540000000027"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[600]" " -type \"float3\" 10.272479 0.10914382 6.75060030000000033"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[601]" " -type \"float3\" 10.269584 0.10926245 6.7476982999999997"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[602]" " -type \"float3\" 10.268385 0.10954886 6.74649620000000017"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[603]" " -type \"float3\" 10.268384 0.11035909000000001 6.74649669999999979"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[604]" " -type \"float3\" 10.269584 0.11064551 6.74769880000000022"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[605]" " -type \"float3\" 10.272479 0.11076413 6.75060079999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[606]" " -type \"float3\" 10.389305 0.10914382 6.60182570000000002"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[607]" " -type \"float3\" 10.38641 0.10926245 6.59892370000000028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[608]" " -type \"float3\" 10.385211 0.10954886 6.59772159999999985"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[609]" " -type \"float3\" 10.38521 0.11035909000000001 6.59772210000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[610]" " -type \"float3\" 10.38641 0.11064551 6.59892419999999991"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[611]" " -type \"float3\" 10.389305 0.11076413 6.60182619999999964"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[612]" " -type \"float3\" 10.506131 0.10914382 6.45305109999999971"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[613]" " -type \"float3\" 10.503236 0.10926245 6.45014909999999997"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[614]" " -type \"float3\" 10.502037 0.10954886 6.448947"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[615]" " -type \"float3\" 10.502036 0.11035909000000001 6.44894739999999977"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[616]" " -type \"float3\" 10.503236 0.11064551 6.45014909999999997"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[617]" " -type \"float3\" 10.506131 0.11076413 6.45305160000000022"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[618]" " -type \"float3\" 10.622957 0.10914382 6.30427650000000028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[619]" " -type \"float3\" 10.620062 0.10926245 6.30137440000000026"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[620]" " -type \"float3\" 10.618863 0.10954886 6.30017229999999984"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[621]" " -type \"float3\" 10.618863 0.11035909000000001 6.30017229999999984"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[622]" " -type \"float3\" 10.620062 0.11064551 6.30137440000000026"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[623]" " -type \"float3\" 10.622957 0.11076413 6.30427650000000028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[624]" " -type \"float3\" 10.739783 0.10914382 6.15550179999999969"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[625]" " -type \"float3\" 10.736888 0.10926245 6.15259979999999995"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[626]" " -type \"float3\" 10.735689 0.10954886 6.15139770000000041"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[627]" " -type \"float3\" 10.735689 0.11035909000000001 6.15139770000000041"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[628]" " -type \"float3\" 10.736888 0.11064551 6.15259979999999995"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[629]" " -type \"float3\" 10.739783 0.11076413 6.1555023000000002"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[630]" " -type \"float3\" 10.856609 0.10914382 6.00672769999999989"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[631]" " -type \"float3\" 10.852647 0.10926245 6.00518420000000042"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[632]" " -type \"float3\" 10.84887 0.10954886 6.00726509999999969"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[633]" " -type \"float3\" 10.84887 0.11035909000000001 6.00726509999999969"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[634]" " -type \"float3\" 10.852647 0.11064551 6.00518420000000042"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
-		"pnts[635]" " -type \"float3\" 10.856609 0.11076413 6.00672769999999989"
+		"pt[0:165]" (" -type \"float3\" 11.41501 0.090759336999999995 6.56647590000000037 10.87387 0.090759336999999995 6.02403020000000033 11.41501 0.11076413 6.56647590000000037 10.87387 0.11076413 6.02403020000000033 11.298184 0.11076413 6.71525049999999979 10.757044 0.11076413 6.17280479999999976 11.181358 0.11076413 6.8640251000000001 10.640218 0.11076413 6.321579 11.064532 0.11076413 7.01279970000000041 10.523392 0.11076413 6.47035409999999978 10.947706 0.11076413 7.16157440000000012 10.406566 0.11076413 6.61912870000000009 10.83088 0.11076413 7.310349 10.28974 0.11076413 6.7679033000000004 10.714053 0.11076413 7.45912410000000037 10.172914 0.11076413 6.91667840000000034 10.597227 0.11076413 7.60789820000000017 10.056087 0.11076413 7.06545260000000042 10.480401 0.11076413 7.75667289999999987 9.93926139999999947 0.11076413 7.21422719999999984 10.363575 0.11076413 7.905448 9.82243539999999982 0.11076413 7.36300180000000015 10.246749 0.11076413 8.05422309999999975 9.70560930000000077 0.11076413 7.51177690000000009 10.129923 0.110"
+		+ "76413 8.20299720000000043 9.58878329999999934 0.11076413 7.66055110000000017 10.013097 0.11076413 8.35177140000000051 9.4719572000000003 0.11076413 7.80932569999999959 9.89627079999999992 0.11076413 8.50054650000000045 9.35513109999999948 0.11076413 7.9581002999999999 9.77944470000000088 0.11076413 8.64932059999999936 9.23830509999999983 0.11076413 8.10687539999999984 9.66261860000000006 0.11076413 8.7980956999999993 9.121479 0.11076413 8.25564959999999992 9.54579260000000041 0.11076413 8.94686989999999938 9.004653 0.11076413 8.40442370000000061 9.42896750000000061 0.11076413 9.095644 8.88782690000000031 0.11076413 8.55319880000000055 9.31214139999999979 0.11076413 9.2444191 8.77100090000000066 0.11076413 8.701973 9.19531540000000014 0.11076413 9.39319320000000069 8.65417479999999983 0.11076413 8.85074810000000056 9.07848929999999932 0.11076413 9.54196830000000062 8.53734870000000079 0.11076413 8.99952219999999947 8.96166320000000027 0.11076413 9.6907425000000007 8.42052269999999936 0.11076413 9.1482963999999"
+		+ "9955 8.84483720000000062 0.11076413 9.83951659999999961 8.30369660000000032 0.11076413 9.29707149999999949 8.7280110999999998 0.11076413 9.98829169999999955 8.18687060000000066 0.11076413 9.44584560000000018 8.61118510000000015 0.11076413 10.137066 8.07004449999999984 0.11076413 9.59462070000000011 8.494359 0.11076413 10.285841 7.95321890000000042 0.11076413 9.74339490000000019 8.377533 0.11076413 10.434615 7.83639289999999988 0.11076413 9.89217 8.26070690000000063 0.11076413 10.58339 7.71956679999999995 0.11076413 10.040944 8.14388079999999981 0.11076413 10.732164 7.6027408000000003 0.11076413 10.189718 8.02705480000000016 0.11076413 10.880939 7.48591470000000037 0.11076413 10.338493 7.91022870000000022 0.11076413 11.029714 7.36908860000000043 0.11076413 10.487267 7.79340269999999968 0.11076413 11.178488 7.25226259999999989 0.11076413 10.636043 7.67657659999999975 0.11076413 11.327263 7.13543649999999996 0.11076413 10.784817 7.5597506000000001 0.11076413 11.476037 7.01861050000000031 0.11076413 10.933592 7.4"
+		+ "42925 0.11076413 11.624812 6.90178440000000037 0.11076413 11.082366 7.32609840000000023 0.11076413 11.773586 6.78495839999999983 0.11076413 11.231141 7.20927290000000021 0.11076413 11.92236 6.66813280000000042 0.11076413 11.379915 7.09244680000000027 0.11076413 12.071136 6.55130619999999997 0.11076413 11.52869 6.97562030000000011 0.11076413 12.219911 6.43448020000000032 0.11076413 11.677464 6.8587946999999998 0.11076413 12.368685 6.31765460000000001 0.11076413 11.826239 6.74196859999999987 0.11076413 12.517459 6.20082860000000036 0.11076413 11.975014 6.62514260000000021 0.11076413 12.666234 6.08400250000000042 0.11076413 12.123788 6.50831650000000028 0.11076413 12.815008 5.9671763999999996 0.11076413 12.272563 6.39149 0.11076413 12.963783 5.85034990000000032 0.11076413 12.421338 6.27466439999999981 0.11076413 13.112558 5.73352380000000039 0.11076413 12.570112 6.15783789999999964 0.11076413 13.261333 5.61669779999999985 0.11076413 12.718886 6.04101179999999971 0.11076413 13.410108 5.49987129999999969 0.1107641"
+		+ "3 12.867661 5.92418530000000043 0.11076413 13.558883 5.38304519999999975 0.11076413 13.016437 5.80735919999999961 0.11076413 13.707657 5.26621909999999982 0.11076413 13.165212 5.69053319999999996 0.11076413 13.856432 5.14939259999999965 0.11076413 13.313987 5.57370710000000003 0.11076413 14.005206 5.032567 0.11076413 13.462761 5.45688059999999986 0.11076413 14.153981 4.91574050000000007 0.11076413 13.611536 5.34005740000000007 0.11076413 14.302752 4.79891730000000027 0.11076413 13.760307 5.34005740000000007 0.090759336999999995 14.302752 4.79891730000000027 0.090759336999999995 13.760307 5.45688339999999972 0.090759336999999995 14.153978 4.91574340000000021 0.090759336999999995 13.611532 5.57370949999999965 0.090759336999999995 14.005203 5.03256890000000023 0.090759336999999995 13.462758 5.69053550000000019 0.090759336999999995 13.856429 5.14939549999999979 0.090759336999999995 13.313983 5.80736160000000012 0.090759336999999995 13.707654 5.26622150000000033 0.090759336999999995 13.165209 5.92418770000000006 0"
+		+ ".090759336999999995 13.55888 5.38304760000000027 0.090759336999999995 13.016434 6.04101420000000022 0.090759336999999995 13.410105 5.49987410000000043 0.090759336999999995 12.867659 6.15783979999999964 0.090759336999999995 13.261331 5.61669969999999985 0.090759336999999995 12.718884 6.27466580000000018 0.090759336999999995 13.112556 5.73352579999999978 0.090759336999999995 12.570109 6.39149239999999974 0.090759336999999995 12.96378 5.85035180000000032 0.090759336999999995 12.421335 6.50831840000000028 0.090759336999999995 12.815006 5.9671782999999996 0.090759336999999995 12.27256 6.62514450000000021 0.090759336999999995 12.666231 6.08400440000000042 0.090759336999999995 12.123786 6.74197049999999987 0.090759336999999995 12.517457 6.20083050000000036 0.090759336999999995 11.975011 6.8587965999999998 0.090759336999999995 12.368682 6.31765650000000001 0.090759336999999995 11.826237 6.97562269999999973 0.090759336999999995 12.219908 6.43448259999999994 0.090759336999999995 11.677462 7.09244870000000027 0.09075933"
+		+ "6999999995 12.071133 6.55130859999999959 0.090759336999999995 11.528687 7.20927480000000021 0.090759336999999995 11.922359 6.66813470000000041 0.090759336999999995 11.379912 7.32610079999999986 0.090759336999999995 11.773584 6.78496070000000007 0.090759336999999995 11.231138 7.44292640000000016 0.090759336999999995 11.624809 6.90178630000000037 0.090759336999999995 11.082364 7.5597525000000001 0.090759336999999995 11.476035 7.01861240000000031 0.090759336999999995 10.933589 7.67657849999999975 0.090759336999999995 11.32726 7.13543839999999996 0.090759336999999995 10.784815 7.79340459999999968 0.090759336999999995 11.178486 7.25226449999999989 0.090759336999999995 10.63604 7.91023060000000022 0.090759336999999995 11.029711 7.36909059999999982 0.090759336999999995 10.487266 8.02705669999999927 0.090759336999999995 10.880937 7.48591660000000036 0.090759336999999995 10.33849 8.14388280000000009 0.090759336999999995 10.732162 7.6027427000000003 0.090759336999999995 10.189716 8.26070879999999974 0.09075933699999999"
+		+ "5 10.583387 7.71956869999999995 0.090759336999999995 10.040942 8.37753490000000056 0.090759336999999995 10.434613 7.83639479999999988 0.090759336999999995 9.89216709999999999 8.49436090000000021 0.090759336999999995 10.285838 7.95322080000000042 0.090759336999999995 9.74339289999999991 8.611187 0.090759336999999995 10.137064 8.07004640000000073 0.090759336999999995 9.59461779999999997"
+		)
+		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
+		"pt[166:331]" (" 8.728013 0.090759336999999995 9.98828890000000058 8.18687249999999977 0.090759336999999995 9.44584369999999929 8.84483909999999973 0.090759336999999995 9.8395147000000005 8.30369849999999943 0.090759336999999995 9.29706859999999935 8.96166520000000055 0.090759336999999995 9.69074059999999982 8.42052460000000025 0.090759336999999995 9.14829439999999927 9.07849120000000021 0.090759336999999995 9.54196549999999988 8.53735069999999929 0.090759336999999995 8.99952030000000036 9.19531729999999925 0.090759336999999995 9.3931912999999998 8.65417670000000072 0.090759336999999995 8.85074520000000042 9.31214330000000068 0.090759336999999995 9.24441619999999986 8.77100279999999977 0.090759336999999995 8.70197109999999974 9.42896939999999972 0.090759336999999995 9.09564209999999917 8.88782879999999942 0.090759336999999995 8.553196 9.54579449999999952 0.090759336999999995 8.94686790000000087 9.00465490000000024 0.090759336999999995 8.40442179999999972 9.6626215000000002 0.090759336999999995 8.79809279999999916 9.121480899"
+		+ "99999989 0.090759336999999995 8.25564669999999978 9.77944759999999924 0.090759336999999995 8.64931769999999922 9.238307 0.090759336999999995 8.10687260000000087 9.89627270000000081 0.090759336999999995 8.50054360000000031 9.35513309999999976 0.090759336999999995 7.95809790000000028 10.013099 0.090759336999999995 8.35176940000000023 9.47195909999999941 0.090759336999999995 7.80932329999999997 10.129925 0.090759336999999995 8.20299430000000029 9.58878520000000023 0.090759336999999995 7.66054869999999966 10.246751 0.090759336999999995 8.05422019999999961 9.70561119999999988 0.090759336999999995 7.51177410000000023 10.363578 0.090759336999999995 7.90544509999999967 9.8224373000000007 0.090759336999999995 7.36299939999999964 10.480403 0.090759336999999995 7.75667050000000025 9.93926330000000036 0.090759336999999995 7.21422480000000022 10.597229 0.090759336999999995 7.60789589999999993 10.056089 0.090759336999999995 7.0654501999999999 10.714056 0.090759336999999995 7.4591208 10.172915 0.090759336999999995 6.9166750"
+		+ "9999999996 10.830882 0.090759336999999995 7.31034610000000029 10.289742 0.090759336999999995 6.7679 10.947708 0.090759336999999995 7.16157149999999998 10.406569 0.090759336999999995 6.61912539999999971 11.064534 0.090759336999999995 7.01279640000000004 10.523395 0.090759336999999995 6.47035070000000001 11.18136 0.090759336999999995 6.86402230000000024 10.640221 0.090759336999999995 6.3215760999999997 11.298186 0.090759336999999995 6.7152472000000003 10.757047 0.090759336999999995 6.17280150000000027 11.41501 0.10914382 6.56647590000000037 11.298184 0.10914382 6.71525 11.181358 0.10914382 6.8640251000000001 11.064532 0.10914382 7.01279970000000041 10.947706 0.10914382 7.16157440000000012 10.83088 0.10914382 7.310349 10.714054 0.10914382 7.45912359999999985 10.597228 0.10914382 7.60789820000000017 10.480401 0.10914382 7.75667289999999987 10.363575 0.10914382 7.905448 10.24675 0.10914382 8.05422210000000049 10.129923 0.10914382 8.20299720000000043 10.013097 0.10914382 8.35177140000000051 9.89627079999999992 0.10"
+		+ "914382 8.50054650000000045 9.77944470000000088 0.10914382 8.64932059999999936 9.66261959999999931 0.10914382 8.79809470000000005 9.54579350000000026 0.10914382 8.94686989999999938 9.42896750000000061 0.10914382 9.095644 9.31214139999999979 0.10914382 9.2444191 9.19531540000000014 0.10914382 9.39319320000000069 9.07848929999999932 0.10914382 9.54196830000000062 8.96166320000000027 0.10914382 9.6907425000000007 8.84483720000000062 0.10914382 9.83951659999999961 8.7280110999999998 0.10914382 9.98829169999999955 8.61118510000000015 0.10914382 10.137066 8.494359 0.10914382 10.285841 8.377533 0.10914382 10.434615 8.26070690000000063 0.10914382 10.583389 8.14388079999999981 0.10914382 10.732164 8.02705480000000016 0.10914382 10.880939 7.91022919999999985 0.10914382 11.029714 7.79340309999999992 0.10914382 11.178488 7.67657710000000026 0.10914382 11.327263 7.559751 0.10914382 11.476037 7.442925 0.10914382 11.624811 7.32609889999999986 0.10914382 11.773586 7.20927290000000021 0.10914382 11.92236 7.09244680000000027 0."
+		+ "10914382 12.071136 6.97562070000000034 0.10914382 12.219911 6.8587946999999998 0.10914382 12.368685 6.74196859999999987 0.10914382 12.517459 6.62514260000000021 0.10914382 12.666234 6.50831650000000028 0.10914382 12.815008 6.39149049999999974 0.10914382 12.963783 6.27466439999999981 0.10914382 13.112558 6.15783789999999964 0.10914382 13.261333 6.04101179999999971 0.10914382 13.410108 5.92418530000000043 0.10914382 13.558883 5.80735919999999961 0.10914382 13.707657 5.69053319999999996 0.10914382 13.856432 5.57370710000000003 0.10914382 14.005206 5.456881 0.10914382 14.153981 5.34005740000000007 0.10914382 14.302752 4.79891730000000027 0.10914382 13.760307 4.915741 0.10914382 13.611535 5.032567 0.10914382 13.462761 5.14939310000000017 0.10914382 13.313986 5.26621909999999982 0.10914382 13.165212 5.38304519999999975 0.10914382 13.016437 5.49987129999999969 0.10914382 12.867661 5.61669779999999985 0.10914382 12.718886 5.73352380000000039 0.10914382 12.570112 5.85034990000000032 0.10914382 12.421337 5.967176399999"
+		+ "9996 0.10914382 12.272563 6.08400250000000042 0.10914382 12.123788 6.20082860000000036 0.10914382 11.975013 6.31765460000000001 0.10914382 11.826239 6.43448069999999994 0.10914382 11.677464 6.55130619999999997 0.10914382 11.52869 6.66813280000000042 0.10914382 11.379915 6.78495880000000007 0.10914382 11.23114 6.9017849 0.10914382 11.082366 7.018611 0.10914382 10.933591 7.135437 0.10914382 10.784817 7.25226310000000041 0.10914382 10.636043 7.36908860000000043 0.10914382 10.487267 7.48591470000000037 0.10914382 10.338493 7.6027408000000003 0.10914382 10.189718 7.71956679999999995 0.10914382 10.040944 7.83639289999999988 0.10914382 9.892169 7.95321890000000042 0.10914382 9.74339490000000019 8.07004550000000087 0.10914382 9.59461980000000025 8.18687060000000066 0.10914382 9.44584560000000018 8.30369660000000032 0.10914382 9.29707149999999949 8.42052269999999936 0.10914382 9.14829639999999955 8.53734870000000079 0.10914382 8.99952219999999947 8.65417479999999983 0.10914382 8.85074709999999953 8.77100090000000066 0"
+		+ ".10914382 8.701973 8.88782690000000031 0.10914382 8.55319880000000055 9.004653 0.10914382 8.40442370000000061 9.121479 0.10914382 8.25564959999999992 9.23830509999999983 0.10914382 8.10687449999999998 9.35513109999999948 0.10914382 7.9581002999999999 9.4719572000000003 0.10914382 7.80932569999999959 9.58878329999999934 0.10914382 7.66055110000000017 9.70560930000000077 0.10914382 7.51177639999999958 9.82243539999999982 0.10914382 7.36300180000000015 9.93926139999999947 0.10914382 7.21422719999999984 10.056087 0.10914382 7.06545260000000042 10.172914 0.10914382 6.916678 10.28974 0.10914382 6.76790290000000017 10.406566 0.10914382 6.61912819999999957 10.523392 0.10914382 6.47035360000000015 10.640218 0.10914382 6.321579 10.757044 0.10914382 6.17280440000000041 10.87387 0.10914382 6.02403020000000033 4.7812070999999996 0.10954886 13.734259 4.77982849999999981 0.10926245 13.738743 4.78165629999999986 0.10914382 13.743005 4.89847989999999989 0.10914382 13.594233 4.89558460000000029 0.10926245 13.591331 4.894385299"
+		+ "99999972 0.10954886 13.590129 4.7812070999999996 0.11035909000000001 13.734259 4.77982849999999981 0.11064551 13.738743 4.78165629999999986 0.11076413 13.743005 4.89438529999999972 0.11035909000000001 13.590129 4.89558460000000029 0.11064551 13.591331 4.89847989999999989 0.11076413 13.594234 5.015306 0.10914382 13.445458 5.01241109999999956 0.10926245 13.442555"
+		)
+		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
+		"pt[332:497]" (" 5.01121190000000016 0.10954886 13.441354 5.01121190000000016 0.11035909000000001 13.441354 5.01241059999999994 0.11064551 13.442556 5.015306 0.11076413 13.445458 5.13213209999999975 0.10914382 13.296683 5.12923720000000039 0.10926245 13.293781 5.12803789999999982 0.10954886 13.292579 5.12803749999999958 0.11035909000000001 13.29258 5.12923669999999987 0.11064551 13.293781 5.13213209999999975 0.11076413 13.296684 5.24895810000000029 0.10914382 13.147909 5.24606320000000004 0.10926245 13.145007 5.244864 0.10954886 13.143805 5.244864 0.11035909000000001 13.143805 5.24606320000000004 0.11064551 13.145007 5.24895810000000029 0.11076413 13.147909 5.36578420000000023 0.10914382 12.999134 5.36288929999999997 0.10926245 12.996232 5.36169 0.10954886 12.99503 5.36169 0.11035909000000001 12.99503 5.36288929999999997 0.11064551 12.996232 5.36578420000000023 0.11076413 12.999134 5.48261070000000039 0.10914382 12.850359 5.47971529999999962 0.10926245 12.847457 5.47851610000000022 0.10954886 12.846255 5.47851610000000022 0."
+		+ "11035909000000001 12.846255 5.47971529999999962 0.11064551 12.847457 5.48261070000000039 0.11076413 12.850359 5.59943719999999967 0.10914382 12.701584 5.59654190000000007 0.10926245 12.698682 5.59534260000000039 0.10954886 12.69748 5.59534260000000039 0.11035909000000001 12.69748 5.59654190000000007 0.11064551 12.698682 5.59943719999999967 0.11076413 12.701584 5.7162632999999996 0.10914382 12.55281 5.71336789999999972 0.10926245 12.549908 5.71216870000000032 0.10954886 12.548705 5.71216870000000032 0.11035909000000001 12.548705 5.71336789999999972 0.11064551 12.549908 5.7162632999999996 0.11076413 12.55281 5.83308940000000042 0.10914382 12.404035 5.830194 0.10926245 12.401133 5.82899480000000025 0.10954886 12.399931 5.82899480000000025 0.11035909000000001 12.399931 5.830194 0.11064551 12.401133 5.83308889999999991 0.11076413 12.404036 5.94991540000000008 0.10914382 12.25526 5.94702049999999982 0.10926245 12.252357 5.94582130000000042 0.10954886 12.251156 5.94582079999999991 0.11035909000000001 12.251156 5.947"
+		+ "02009999999959 0.11064551 12.252358 5.94991540000000008 0.11076413 12.25526 6.06674150000000001 0.10914382 12.106485 6.06384659999999975 0.10926245 12.103583 6.06264730000000007 0.10954886 12.102381 6.06264689999999984 0.11035909000000001 12.102382 6.06384610000000013 0.11064551 12.103583 6.06674150000000001 0.11076413 12.106485 6.18356749999999966 0.10914382 11.95771 6.18067260000000029 0.10926245 11.954808 6.17947340000000001 0.10954886 11.953607 6.17947340000000001 0.11035909000000001 11.953607 6.18067220000000006 0.11064551 11.954809 6.18356749999999966 0.11076413 11.957711 6.30039359999999959 0.10914382 11.808936 6.29749870000000023 0.10926245 11.806034 6.29629949999999994 0.10954886 11.804832 6.29629949999999994 0.11035909000000001 11.804832 6.29749870000000023 0.11064551 11.806034 6.30039359999999959 0.11076413 11.808936 6.41721960000000013 0.10914382 11.660162 6.41432429999999965 0.10926245 11.65726 6.413125 0.10954886 11.656057 6.413125 0.11035909000000001 11.656057 6.41432429999999965 0.11064551 11."
+		+ "65726 6.41721960000000013 0.11076413 11.660162 6.53404570000000007 0.10914382 11.511387 6.53115030000000019 0.10926245 11.508485 6.5299510999999999 0.10954886 11.507283 6.5299510999999999 0.11035909000000001 11.507283 6.53115030000000019 0.11064551 11.508485 6.53404570000000007 0.11076413 11.511387 6.6508718 0.10914382 11.362613 6.64797640000000012 0.10926245 11.359711 6.64677760000000006 0.10954886 11.358508 6.64677760000000006 0.11035909000000001 11.358508 6.64797640000000012 0.11064551 11.359711 6.6508718 0.11076413 11.362613 6.76769779999999965 0.10914382 11.213838 6.76480250000000005 0.10926245 11.210936 6.7636037 0.10954886 11.209734 6.76360320000000037 0.11035909000000001 11.209734 6.76480250000000005 0.11064551 11.210936 6.76769779999999965 0.11076413 11.213839 6.88452389999999959 0.10914382 11.065063 6.881629 0.10926245 11.062161 6.88042969999999965 0.10954886 11.060959 6.8804293000000003 0.11035909000000001 11.060959 6.8816284999999997 0.11064551 11.062161 6.88452389999999959 0.11076413 11.065063 7."
+		+ "00134990000000013 0.10914382 10.916288 6.99845459999999964 0.10926245 10.913386 6.99725579999999958 0.10954886 10.912185 6.99725529999999996 0.11035909000000001 10.912185 6.99845459999999964 0.11064551 10.913387 7.00134990000000013 0.11076413 10.916289 7.118176 0.10914382 10.767514 7.11528060000000018 0.10926245 10.764612 7.11408139999999989 0.10954886 10.76341 7.11408139999999989 0.11035909000000001 10.76341 7.11528060000000018 0.11064551 10.764612 7.118176 0.11076413 10.767514 7.235002 0.10914382 10.61874 7.23210670000000011 0.10926245 10.615837 7.23090740000000043 0.10954886 10.614635 7.23090740000000043 0.11035909000000001 10.614635 7.23210670000000011 0.11064551 10.615838 7.23500160000000037 0.11076413 10.61874 7.35182809999999964 0.10914382 10.469965 7.34893269999999976 0.10926245 10.467063 7.34773350000000036 0.10954886 10.465861 7.34773350000000036 0.11035909000000001 10.465861 7.34893269999999976 0.11064551 10.467063 7.35182760000000002 0.11076413 10.469965 7.46865419999999958 0.10914382 10.321191 7."
+		+ "4657587999999997 0.10926245 10.318289 7.46455960000000029 0.10954886 10.317086 7.46455960000000029 0.11035909000000001 10.317086 7.4657587999999997 0.11064551 10.318289 7.46865369999999995 0.11076413 10.321191 7.5854796999999996 0.10914382 10.172416 7.58258489999999963 0.10926245 10.169514 7.58138559999999995 0.10954886 10.168312 7.58138559999999995 0.11035909000000001 10.168312 7.58258489999999963 0.11064551 10.169514 7.5854796999999996 0.11076413 10.172416 7.70230580000000042 0.10914382 10.023642 7.69941090000000017 0.10926245 10.02074 7.69821169999999988 0.10954886 10.019537 7.69821169999999988 0.11035909000000001 10.019537 7.69941090000000017 0.11064551 10.02074 7.70230580000000042 0.11076413 10.023642 7.81913190000000036 0.10914382 9.87486649999999955 7.816237 0.10926245 9.8719645000000007 7.81503770000000042 0.10954886 9.87076279999999961 7.81503770000000042 0.11035909000000001 9.87076279999999961 7.81623649999999959 0.11064551 9.8719645000000007 7.81913190000000036 0.11076413 9.87486739999999941 7.9359"
+		+ "5790000000001 0.10914382 9.72609229999999947 7.933063 0.10926245 9.72319030000000062 7.93186380000000035 0.10954886 9.72198769999999968 7.93186380000000035 0.11035909000000001 9.72198769999999968 7.93306260000000041 0.11064551 9.72319030000000062 7.93595790000000001 0.11076413 9.72609229999999947 8.052784 0.10914382 9.57731719999999953 8.04988859999999917 0.10926245 9.57441520000000068 8.04868980000000001 0.10954886 9.57321360000000077 8.04868980000000001 0.11035909000000001 9.57321360000000077 8.04988859999999917 0.11064551 9.57441619999999993 8.052784 0.11076413 9.57731820000000056 8.16961 0.10914382 9.42854310000000062 8.16671469999999999 0.10926245 9.42564109999999999 8.16551590000000083 0.10954886 9.42443940000000069 8.16551590000000083 0.11035909000000001 9.42443940000000069 8.16671469999999999 0.11064551 9.42564109999999999 8.16961 0.11076413 9.42854310000000062"
+		)
+		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape" 
+		"pt[498:635]" (" 8.28643609999999953 0.10914382 9.27976890000000054 8.28354069999999965 0.10926245 9.27686689999999992 8.282342 0.10954886 9.27566430000000075 8.282342 0.11035909000000001 9.27566430000000075 8.28354069999999965 0.11064551 9.27686689999999992 8.28643609999999953 0.11076413 9.27976890000000054 8.40326209999999918 0.10914382 9.1309938000000006 8.40036680000000047 0.10926245 9.12809179999999998 8.399168 0.10954886 9.12689020000000006 8.399168 0.11035909000000001 9.12689020000000006 8.40036680000000047 0.11064551 9.12809179999999998 8.40326209999999918 0.11076413 9.1309938000000006 8.5200882 0.10914382 8.98221969999999992 8.51719280000000012 0.10926245 8.97931769999999929 8.51599410000000034 0.10954886 8.97811510000000013 8.51599410000000034 0.11035909000000001 8.97811510000000013 8.51719280000000012 0.11064551 8.97931769999999929 8.5200882 0.11076413 8.98221969999999992 8.63691430000000082 0.10914382 8.83344459999999998 8.63401889999999916 0.10926245 8.83054259999999935 8.6328201 0.10954886 8.82934090000000005 8"
+		+ ".63281920000000014 0.11035909000000001 8.82934090000000005 8.63401889999999916 0.11064551 8.83054349999999921 8.63691430000000082 0.11076413 8.83344549999999984 8.75374030000000047 0.10914382 8.6846703999999999 8.750845 0.10926245 8.68176839999999927 8.74964620000000082 0.10954886 8.68056580000000011 8.74964519999999979 0.11035909000000001 8.68056679999999936 8.750845 0.11064551 8.68176839999999927 8.75374030000000047 0.11076413 8.6846703999999999 8.87056639999999952 0.10914382 8.53589529999999996 8.867671 0.10926245 8.53299329999999934 8.86647220000000047 0.10954886 8.53179169999999942 8.86647130000000061 0.11035909000000001 8.53179169999999942 8.867671 0.11064551 8.53299430000000037 8.87056639999999952 0.11076413 8.53589629999999921 8.98739239999999917 0.10914382 8.38712119999999928 8.98449710000000046 0.10926245 8.38421920000000043 8.98329829999999951 0.10954886 8.38301749999999934 8.98329730000000026 0.11035909000000001 8.38301749999999934 8.98449710000000046 0.11064551 8.38421920000000043 8.9873923999999"
+		+ "9917 0.11076413 8.38712119999999928 9.10421849999999999 0.10914382 8.23834710000000037 9.10132310000000011 0.10926245 8.235445 9.10012339999999931 0.10954886 8.23424239999999941 9.10012339999999931 0.11035909000000001 8.23424239999999941 9.10132310000000011 0.11064551 8.235445 9.10421750000000074 0.11076413 8.23834710000000037 9.22104449999999964 0.10914382 8.089572 9.21814919999999915 0.10926245 8.08666990000000041 9.21694950000000013 0.10954886 8.0854683000000005 9.21694950000000013 0.11035909000000001 8.0854683000000005 9.21814919999999915 0.11064551 8.08666990000000041 9.22104359999999978 0.11076413 8.08957290000000029 9.33786959999999944 0.10914382 7.94079780000000035 9.33497520000000058 0.10926245 7.93789579999999972 9.33377549999999978 0.10954886 7.93669370000000018 9.33377549999999978 0.11035909000000001 7.93669370000000018 9.33497520000000058 0.11064551 7.93789579999999972 9.33786959999999944 0.11076413 7.94079780000000035 9.45469669999999951 0.10914382 7.79202320000000004 9.45180129999999963 0.10926"
+		+ "245 7.7891212000000003 9.4506016000000006 0.10954886 7.787919 9.4506016000000006 0.11035909000000001 7.787919 9.45180129999999963 0.11064551 7.7891212000000003 9.45469669999999951 0.11076413 7.79202320000000004 9.5715217999999993 0.10914382 7.64324859999999973 9.56862740000000045 0.10926245 7.64034649999999971 9.56742760000000025 0.10954886 7.63914440000000017 9.56742760000000025 0.11035909000000001 7.63914440000000017 9.56862740000000045 0.11064551 7.64034649999999971 9.5715217999999993 0.11076413 7.64324859999999973 9.68834879999999998 0.10914382 7.49447390000000002 9.6854534000000001 0.10926245 7.49157190000000028 9.6842536999999993 0.10954886 7.49036979999999986 9.6842536999999993 0.11035909000000001 7.49037030000000037 9.68545250000000024 0.11064551 7.49157239999999991 9.68834780000000073 0.11076413 7.49447439999999965 9.80517389999999978 0.10914382 7.34569929999999971 9.80227949999999915 0.10926245 7.34279729999999997 9.80107980000000012 0.10954886 7.34159520000000043 9.80107980000000012 0.1103590900000"
+		+ "0001 7.34159520000000043 9.80227949999999915 0.11064551 7.34279729999999997 9.80517389999999978 0.11076413 7.34569929999999971 9.92199989999999943 0.10914382 7.19692470000000029 9.91910550000000057 0.10926245 7.19402269999999966 9.91790579999999977 0.10954886 7.19282049999999984 9.91790579999999977 0.11035909000000001 7.19282049999999984 9.91910550000000057 0.11064551 7.19402269999999966 9.92199989999999943 0.11076413 7.19692470000000029 10.038827 0.10914382 7.04815009999999997 10.035932 0.10926245 7.04524759999999972 10.034733 0.10954886 7.0440453999999999 10.034732 0.11035909000000001 7.04404590000000042 10.035932 0.11064551 7.045248 10.038827 0.11076413 7.04815009999999997 10.155653 0.10914382 6.899375 10.152758 0.10926245 6.89647290000000002 10.151559 0.10954886 6.89527079999999959 10.151558 0.11035909000000001 6.8952713000000001 10.152758 0.11064551 6.89647339999999964 10.155652 0.11076413 6.89937540000000027 10.272479 0.10914382 6.75060030000000033 10.269584 0.10926245 6.7476982999999997 10.268385 0.109"
+		+ "54886 6.74649620000000017 10.268384 0.11035909000000001 6.74649669999999979 10.269584 0.11064551 6.74769880000000022 10.272479 0.11076413 6.75060079999999996 10.389305 0.10914382 6.60182570000000002 10.38641 0.10926245 6.59892370000000028 10.385211 0.10954886 6.59772159999999985 10.38521 0.11035909000000001 6.59772210000000037 10.38641 0.11064551 6.59892419999999991 10.389305 0.11076413 6.60182619999999964 10.506131 0.10914382 6.45305109999999971 10.503236 0.10926245 6.45014909999999997 10.502037 0.10954886 6.448947 10.502036 0.11035909000000001 6.44894739999999977 10.503236 0.11064551 6.45014909999999997 10.506131 0.11076413 6.45305160000000022 10.622957 0.10914382 6.30427650000000028 10.620062 0.10926245 6.30137440000000026 10.618863 0.10954886 6.30017229999999984 10.618863 0.11035909000000001 6.30017229999999984 10.620062 0.11064551 6.30137440000000026 10.622957 0.11076413 6.30427650000000028 10.739783 0.10914382 6.15550179999999969 10.736888 0.10926245 6.15259979999999995 10.735689 0.10954886 6.1513977000"
+		+ "0000041 10.735689 0.11035909000000001 6.15139770000000041 10.736888 0.11064551 6.15259979999999995 10.739783 0.11076413 6.1555023000000002 10.856609 0.10914382 6.00672769999999989 10.852647 0.10926245 6.00518420000000042 10.84887 0.10954886 6.00726509999999969 10.84887 0.11035909000000001 6.00726509999999969 10.852647 0.11064551 6.00518420000000042 10.856609 0.11076413 6.00672769999999989"
+		)
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6" "rotatePivot" 
@@ -6031,23 +4012,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape" 
-		"pnts[0]" " -type \"float3\" 9.69143490000000085 0.10921499 8.76519489999999912"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape" 
-		"pnts[1]" " -type \"float3\" 9.31105039999999917 0.10921499 8.38410949999999922"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape" 
-		"pnts[2]" " -type \"float3\" 9.67382719999999985 0.11243017 8.76929190000000069"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape" 
-		"pnts[3]" " -type \"float3\" 9.34716610000000081 0.11243017 8.441843"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape" 
-		"pnts[4]" " -type \"float3\" 9.64467239999999926 0.11243017 8.8064202999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape" 
-		"pnts[5]" " -type \"float3\" 9.31801130000000022 0.11243017 8.47897050000000085"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape" 
-		"pnts[6]" " -type \"float3\" 9.64316939999999967 0.10921499 8.82666110000000081"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape" 
-		"pnts[7]" " -type \"float3\" 9.26297469999999912 0.10921499 8.44533249999999924"
+		"pt[0:7]" " -s 8 -type \"float3\" 9.69143490000000085 0.10921499 8.76519489999999912 9.31105039999999917 0.10921499 8.38410949999999922 9.67382719999999985 0.11243017 8.76929190000000069 9.34716610000000081 0.11243017 8.441843 9.64467239999999926 0.11243017 8.8064202999999992 9.31801130000000022 0.11243017 8.47897050000000085 9.64316939999999967 0.10921499 8.82666110000000081 9.26297469999999912 0.10921499 8.44533249999999924"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4" "rotatePivot" 
@@ -6057,23 +4023,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4" 
-		"pnts[0]" " -type \"float3\" 10.614172 0.10921499 7.590116"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4" 
-		"pnts[1]" " -type \"float3\" 10.233788 0.10921499 7.20903019999999994"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4" 
-		"pnts[2]" " -type \"float3\" 10.596564 0.11243017 7.594213"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4" 
-		"pnts[3]" " -type \"float3\" 10.269903 0.11243017 7.2667641999999999"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4" 
-		"pnts[4]" " -type \"float3\" 10.567409 0.11243017 7.631341"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4" 
-		"pnts[5]" " -type \"float3\" 10.240748 0.11243017 7.30389209999999967"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4" 
-		"pnts[6]" " -type \"float3\" 10.565906 0.10921499 7.65158179999999977"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4" 
-		"pnts[7]" " -type \"float3\" 10.185712 0.10921499 7.27025319999999997"
+		"pt[0:7]" " -s 8 -type \"float3\" 10.614172 0.10921499 7.590116 10.233788 0.10921499 7.20903019999999994 10.596564 0.11243017 7.594213 10.269903 0.11243017 7.2667641999999999 10.567409 0.11243017 7.631341 10.240748 0.11243017 7.30389209999999967 10.565906 0.10921499 7.65158179999999977 10.185712 0.10921499 7.27025319999999997"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7" "rotatePivot" 
@@ -6083,23 +4034,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7" 
-		"pnts[0]" " -type \"float3\" 9.795927 0.10921499 8.63212779999999924"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7" 
-		"pnts[1]" " -type \"float3\" 9.41554260000000021 0.10921499 8.25104140000000008"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7" 
-		"pnts[2]" " -type \"float3\" 9.77831940000000088 0.11243017 8.63622469999999964"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7" 
-		"pnts[3]" " -type \"float3\" 9.45165820000000068 0.11243017 8.30877489999999952"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7" 
-		"pnts[4]" " -type \"float3\" 9.74916359999999926 0.11243017 8.67335220000000007"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7" 
-		"pnts[5]" " -type \"float3\" 9.42250349999999948 0.11243017 8.34590339999999919"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7" 
-		"pnts[6]" " -type \"float3\" 9.74766059999999968 0.10921499 8.693593"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7" 
-		"pnts[7]" " -type \"float3\" 9.367466 0.10921499 8.31226440000000011"
+		"pt[0:7]" " -s 8 -type \"float3\" 9.795927 0.10921499 8.63212779999999924 9.41554260000000021 0.10921499 8.25104140000000008 9.77831940000000088 0.11243017 8.63622469999999964 9.45165820000000068 0.11243017 8.30877489999999952 9.74916359999999926 0.11243017 8.67335220000000007 9.42250349999999948 0.11243017 8.34590339999999919 9.74766059999999968 0.10921499 8.693593 9.367466 0.10921499 8.31226440000000011"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13" "rotatePivot" 
@@ -6109,23 +4045,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13" 
-		"pnts[0]" " -type \"float3\" 9.09632490000000082 0.10921499 9.52305130000000055"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13" 
-		"pnts[1]" " -type \"float3\" 8.71593949999999928 0.10921499 9.14196489999999962"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13" 
-		"pnts[2]" " -type \"float3\" 9.07871629999999996 0.11243017 9.52714819999999918"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13" 
-		"pnts[3]" " -type \"float3\" 8.75205519999999915 0.11243017 9.19969940000000008"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13" 
-		"pnts[4]" " -type \"float3\" 9.04956149999999937 0.11243017 9.56427670000000063"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13" 
-		"pnts[5]" " -type \"float3\" 8.72290040000000033 0.11243017 9.23682690000000051"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13" 
-		"pnts[6]" " -type \"float3\" 9.04805849999999978 0.10921499 9.58451750000000047"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13" 
-		"pnts[7]" " -type \"float3\" 8.66786379999999923 0.10921499 9.20318890000000067"
+		"pt[0:7]" " -s 8 -type \"float3\" 9.09632490000000082 0.10921499 9.52305130000000055 8.71593949999999928 0.10921499 9.14196489999999962 9.07871629999999996 0.11243017 9.52714819999999918 8.75205519999999915 0.11243017 9.19969940000000008 9.04956149999999937 0.11243017 9.56427670000000063 8.72290040000000033 0.11243017 9.23682690000000051 9.04805849999999978 0.10921499 9.58451750000000047 8.66786379999999923 0.10921499 9.20318890000000067"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14" "rotatePivot" 
@@ -6135,23 +4056,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14" 
-		"pnts[0]" " -type \"float3\" 9.33976550000000039 0.10921499 9.21303649999999941"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14" 
-		"pnts[1]" " -type \"float3\" 8.95938010000000062 0.10921499 8.8319510999999995"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14" 
-		"pnts[2]" " -type \"float3\" 9.32215689999999952 0.11243017 9.2171334999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14" 
-		"pnts[3]" " -type \"float3\" 8.99549580000000049 0.11243017 8.88968470000000011"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14" 
-		"pnts[4]" " -type \"float3\" 9.29300210000000071 0.11243017 9.254262"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14" 
-		"pnts[5]" " -type \"float3\" 8.966341 0.11243017 8.92681220000000053"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14" 
-		"pnts[6]" " -type \"float3\" 9.29149909999999934 0.10921499 9.27450280000000049"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14" 
-		"pnts[7]" " -type \"float3\" 8.91130449999999996 0.10921499 8.8931742000000007"
+		"pt[0:7]" " -s 8 -type \"float3\" 9.33976550000000039 0.10921499 9.21303649999999941 8.95938010000000062 0.10921499 8.8319510999999995 9.32215689999999952 0.11243017 9.2171334999999992 8.99549580000000049 0.11243017 8.88968470000000011 9.29300210000000071 0.11243017 9.254262 8.966341 0.11243017 8.92681220000000053 9.29149909999999934 0.10921499 9.27450280000000049 8.91130449999999996 0.10921499 8.8931742000000007"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5" "rotatePivot" 
@@ -6161,23 +4067,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape" 
-		"pnts[0]" " -type \"float3\" 10.50968 0.10921499 7.72318410000000011"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape" 
-		"pnts[1]" " -type \"float3\" 10.129295 0.10921499 7.34209780000000034"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape" 
-		"pnts[2]" " -type \"float3\" 10.492072 0.11243017 7.72728060000000028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape" 
-		"pnts[3]" " -type \"float3\" 10.165411 0.11243017 7.39983180000000029"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape" 
-		"pnts[4]" " -type \"float3\" 10.462917 0.11243017 7.76440860000000033"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape" 
-		"pnts[5]" " -type \"float3\" 10.136256 0.11243017 7.43695970000000006"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape" 
-		"pnts[6]" " -type \"float3\" 10.461414 0.10921499 7.78464940000000016"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape" 
-		"pnts[7]" " -type \"float3\" 10.08122 0.10921499 7.40332080000000037"
+		"pt[0:7]" " -s 8 -type \"float3\" 10.50968 0.10921499 7.72318410000000011 10.129295 0.10921499 7.34209780000000034 10.492072 0.11243017 7.72728060000000028 10.165411 0.11243017 7.39983180000000029 10.462917 0.11243017 7.76440860000000033 10.136256 0.11243017 7.43695970000000006 10.461414 0.10921499 7.78464940000000016 10.08122 0.10921499 7.40332080000000037"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1" "rotatePivot" 
@@ -6187,23 +4078,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1" 
-		"pnts[0]" " -type \"float3\" 11.08887 0.10921499 6.98560189999999981"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1" 
-		"pnts[1]" " -type \"float3\" 10.708486 0.10921499 6.604516"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1" 
-		"pnts[2]" " -type \"float3\" 11.071262 0.11243017 6.9896988999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1" 
-		"pnts[3]" " -type \"float3\" 10.744601 0.11243017 6.66224959999999999"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1" 
-		"pnts[4]" " -type \"float3\" 11.042108 0.11243017 7.02682689999999965"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1" 
-		"pnts[5]" " -type \"float3\" 10.715446 0.11243017 6.69937749999999976"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1" 
-		"pnts[6]" " -type \"float3\" 11.040605 0.10921499 7.0470676000000001"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1" 
-		"pnts[7]" " -type \"float3\" 10.660409 0.10921499 6.6657390999999997"
+		"pt[0:7]" " -s 8 -type \"float3\" 11.08887 0.10921499 6.98560189999999981 10.708486 0.10921499 6.604516 11.071262 0.11243017 6.9896988999999996 10.744601 0.11243017 6.66224959999999999 11.042108 0.11243017 7.02682689999999965 10.715446 0.11243017 6.69937749999999976 11.040605 0.10921499 7.0470676000000001 10.660409 0.10921499 6.6657390999999997"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2" "rotatePivot" 
@@ -6213,23 +4089,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2" 
-		"pnts[0]" " -type \"float3\" 10.976255 0.10921499 7.129014"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2" 
-		"pnts[1]" " -type \"float3\" 10.59587 0.10921499 6.74792810000000021"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2" 
-		"pnts[2]" " -type \"float3\" 10.958647 0.11243017 7.133111"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2" 
-		"pnts[3]" " -type \"float3\" 10.631986 0.11243017 6.80566169999999993"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2" 
-		"pnts[4]" " -type \"float3\" 10.929492 0.11243017 7.170239"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2" 
-		"pnts[5]" " -type \"float3\" 10.602831 0.11243017 6.84278959999999969"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2" 
-		"pnts[6]" " -type \"float3\" 10.927989 0.10921499 7.19047980000000031"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2" 
-		"pnts[7]" " -type \"float3\" 10.547794 0.10921499 6.80915119999999963"
+		"pt[0:7]" " -s 8 -type \"float3\" 10.976255 0.10921499 7.129014 10.59587 0.10921499 6.74792810000000021 10.958647 0.11243017 7.133111 10.631986 0.11243017 6.80566169999999993 10.929492 0.11243017 7.170239 10.602831 0.11243017 6.84278959999999969 10.927989 0.10921499 7.19047980000000031 10.547794 0.10921499 6.80915119999999963"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11" "rotatePivot" 
@@ -6239,23 +4100,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape" 
-		"pnts[0]" " -type \"float3\" 8.87318989999999985 0.10921499 9.80720619999999954"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape" 
-		"pnts[1]" " -type \"float3\" 8.49280549999999934 0.10921499 9.42612079999999963"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape" 
-		"pnts[2]" " -type \"float3\" 8.85558220000000063 0.11243017 9.81130309999999994"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape" 
-		"pnts[3]" " -type \"float3\" 8.52892109999999981 0.11243017 9.48385430000000085"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape" 
-		"pnts[4]" " -type \"float3\" 8.82642749999999943 0.11243017 9.84843159999999962"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape" 
-		"pnts[5]" " -type \"float3\" 8.49976629999999922 0.11243017 9.52098269999999935"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape" 
-		"pnts[6]" " -type \"float3\" 8.82492449999999984 0.10921499 9.86867239999999946"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape" 
-		"pnts[7]" " -type \"float3\" 8.44472979999999929 0.10921499 9.48734379999999966"
+		"pt[0:7]" " -s 8 -type \"float3\" 8.87318989999999985 0.10921499 9.80720619999999954 8.49280549999999934 0.10921499 9.42612079999999963 8.85558220000000063 0.11243017 9.81130309999999994 8.52892109999999981 0.11243017 9.48385430000000085 8.82642749999999943 0.11243017 9.84843159999999962 8.49976629999999922 0.11243017 9.52098269999999935 8.82492449999999984 0.10921499 9.86867239999999946 8.44472979999999929 0.10921499 9.48734379999999966"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8" "rotatePivot" 
@@ -6265,23 +4111,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8" 
-		"pnts[0]" " -type \"float3\" 9.91456990000000005 0.10921499 8.48104"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8" 
-		"pnts[1]" " -type \"float3\" 9.53418450000000028 0.10921499 8.09995370000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8" 
-		"pnts[2]" " -type \"float3\" 9.89696119999999979 0.11243017 8.485137"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8" 
-		"pnts[3]" " -type \"float3\" 9.57030110000000001 0.11243017 8.15768719999999981"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8" 
-		"pnts[4]" " -type \"float3\" 9.8678063999999992 0.11243017 8.52226450000000035"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8" 
-		"pnts[5]" " -type \"float3\" 9.54114530000000016 0.11243017 8.19481560000000009"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8" 
-		"pnts[6]" " -type \"float3\" 9.86630339999999961 0.10921499 8.54250530000000019"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8" 
-		"pnts[7]" " -type \"float3\" 9.48610880000000023 0.10921499 8.16117670000000039"
+		"pt[0:7]" " -s 8 -type \"float3\" 9.91456990000000005 0.10921499 8.48104 9.53418450000000028 0.10921499 8.09995370000000037 9.89696119999999979 0.11243017 8.485137 9.57030110000000001 0.11243017 8.15768719999999981 9.8678063999999992 0.11243017 8.52226450000000035 9.54114530000000016 0.11243017 8.19481560000000009 9.86630339999999961 0.10921499 8.54250530000000019 9.48610880000000023 0.10921499 8.16117670000000039"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9" "rotatePivot" 
@@ -6291,23 +4122,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9" 
-		"pnts[0]" " -type \"float3\" 10.15801 0.10921499 8.17102530000000016"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9" 
-		"pnts[1]" " -type \"float3\" 9.77762509999999985 0.10921499 7.78993939999999974"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9" 
-		"pnts[2]" " -type \"float3\" 10.140402 0.11243017 8.17512229999999995"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9" 
-		"pnts[3]" " -type \"float3\" 9.81374070000000032 0.11243017 7.84767339999999969"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9" 
-		"pnts[4]" " -type \"float3\" 10.111247 0.11243017 8.21225070000000024"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9" 
-		"pnts[5]" " -type \"float3\" 9.784586 0.11243017 7.88480139999999974"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9" 
-		"pnts[6]" " -type \"float3\" 10.109744 0.10921499 8.23249150000000007"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9" 
-		"pnts[7]" " -type \"float3\" 9.72954939999999979 0.10921499 7.85116239999999976"
+		"pt[0:7]" " -s 8 -type \"float3\" 10.15801 0.10921499 8.17102530000000016 9.77762509999999985 0.10921499 7.78993939999999974 10.140402 0.11243017 8.17512229999999995 9.81374070000000032 0.11243017 7.84767339999999969 10.111247 0.11243017 8.21225070000000024 9.784586 0.11243017 7.88480139999999974 10.109744 0.10921499 8.23249150000000007 9.72954939999999979 0.10921499 7.85116239999999976"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30" "rotatePivot" 
@@ -6317,23 +4133,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30" 
-		"pnts[0]" " -type \"float3\" 6.99764490000000006 0.10921499 12.19566"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30" 
-		"pnts[1]" " -type \"float3\" 6.61726 0.10921499 11.814573"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30" 
-		"pnts[2]" " -type \"float3\" 6.98003670000000032 0.11243017 12.199756"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30" 
-		"pnts[3]" " -type \"float3\" 6.65337560000000039 0.11243017 11.872307"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30" 
-		"pnts[4]" " -type \"float3\" 6.950882 0.11243017 12.236884"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30" 
-		"pnts[5]" " -type \"float3\" 6.6242207999999998 0.11243017 11.909435"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30" 
-		"pnts[6]" " -type \"float3\" 6.949379 0.10921499 12.257125"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30" 
-		"pnts[7]" " -type \"float3\" 6.56918429999999987 0.10921499 11.875796"
+		"pt[0:7]" " -s 8 -type \"float3\" 6.99764490000000006 0.10921499 12.19566 6.61726 0.10921499 11.814573 6.98003670000000032 0.11243017 12.199756 6.65337560000000039 0.11243017 11.872307 6.950882 0.11243017 12.236884 6.6242207999999998 0.11243017 11.909435 6.949379 0.10921499 12.257125 6.56918429999999987 0.10921499 11.875796"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15" "rotatePivot" 
@@ -6343,23 +4144,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15" 
-		"pnts[0]" " -type \"float3\" 9.45238020000000034 0.10921499 9.06962490000000088"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15" 
-		"pnts[1]" " -type \"float3\" 9.07199570000000044 0.10921499 8.68853859999999933"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15" 
-		"pnts[2]" " -type \"float3\" 9.43477249999999934 0.11243017 9.07372190000000067"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15" 
-		"pnts[3]" " -type \"float3\" 9.1081114000000003 0.11243017 8.74627210000000055"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15" 
-		"pnts[4]" " -type \"float3\" 9.40561680000000067 0.11243017 9.11084939999999932"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15" 
-		"pnts[5]" " -type \"float3\" 9.07895569999999985 0.11243017 8.78340050000000083"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15" 
-		"pnts[6]" " -type \"float3\" 9.4041137999999993 0.10921499 9.13109019999999916"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15" 
-		"pnts[7]" " -type \"float3\" 9.02391910000000053 0.10921499 8.74976159999999936"
+		"pt[0:7]" " -s 8 -type \"float3\" 9.45238020000000034 0.10921499 9.06962490000000088 9.07199570000000044 0.10921499 8.68853859999999933 9.43477249999999934 0.11243017 9.07372190000000067 9.1081114000000003 0.11243017 8.74627210000000055 9.40561680000000067 0.11243017 9.11084939999999932 9.07895569999999985 0.11243017 8.78340050000000083 9.4041137999999993 0.10921499 9.13109019999999916 9.02391910000000053 0.10921499 8.74976159999999936"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21" "rotatePivot" 
@@ -6369,23 +4155,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape" 
-		"pnts[0]" " -type \"float3\" 7.23670010000000019 0.10921499 11.89123"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape" 
-		"pnts[1]" " -type \"float3\" 6.85631509999999977 0.10921499 11.510143"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape" 
-		"pnts[2]" " -type \"float3\" 7.21909189999999956 0.11243017 11.895327"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape" 
-		"pnts[3]" " -type \"float3\" 6.89243079999999964 0.11243017 11.567877"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape" 
-		"pnts[4]" " -type \"float3\" 7.18993660000000023 0.11243017 11.932454"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape" 
-		"pnts[5]" " -type \"float3\" 6.863276 0.11243017 11.605005"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape" 
-		"pnts[6]" " -type \"float3\" 7.18843359999999976 0.10921499 11.952695"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape" 
-		"pnts[7]" " -type \"float3\" 6.8082395 0.10921499 11.571366"
+		"pt[0:7]" " -s 8 -type \"float3\" 7.23670010000000019 0.10921499 11.89123 6.85631509999999977 0.10921499 11.510143 7.21909189999999956 0.11243017 11.895327 6.89243079999999964 0.11243017 11.567877 7.18993660000000023 0.11243017 11.932454 6.863276 0.11243017 11.605005 7.18843359999999976 0.10921499 11.952695 6.8082395 0.10921499 11.571366"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22" "rotatePivot" 
@@ -6395,23 +4166,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22" 
-		"pnts[0]" " -type \"float3\" 7.34119220000000006 0.10921499 11.758162"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22" 
-		"pnts[1]" " -type \"float3\" 6.96080680000000029 0.10921499 11.377076"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22" 
-		"pnts[2]" " -type \"float3\" 7.32358409999999971 0.11243017 11.762259"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22" 
-		"pnts[3]" " -type \"float3\" 6.996923 0.11243017 11.43481"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22" 
-		"pnts[4]" " -type \"float3\" 7.29442880000000038 0.11243017 11.799387"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22" 
-		"pnts[5]" " -type \"float3\" 6.96776820000000008 0.11243017 11.471937"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22" 
-		"pnts[6]" " -type \"float3\" 7.2929257999999999 0.10921499 11.819628"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22" 
-		"pnts[7]" " -type \"float3\" 6.91273119999999963 0.10921499 11.438299"
+		"pt[0:7]" " -s 8 -type \"float3\" 7.34119220000000006 0.10921499 11.758162 6.96080680000000029 0.10921499 11.377076 7.32358409999999971 0.11243017 11.762259 6.996923 0.11243017 11.43481 7.29442880000000038 0.11243017 11.799387 6.96776820000000008 0.11243017 11.471937 7.2929257999999999 0.10921499 11.819628 6.91273119999999963 0.10921499 11.438299"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31" "rotatePivot" 
@@ -6421,23 +4177,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape" 
-		"pnts[0]" " -type \"float3\" 5.60021020000000025 0.10921499 13.975252"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape" 
-		"pnts[1]" " -type \"float3\" 5.2198247999999996 0.10921499 13.594167"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape" 
-		"pnts[2]" " -type \"float3\" 5.582602 0.11243017 13.979349"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape" 
-		"pnts[3]" " -type \"float3\" 5.25594089999999969 0.11243017 13.6519"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape" 
-		"pnts[4]" " -type \"float3\" 5.55344679999999968 0.11243017 14.016478"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape" 
-		"pnts[5]" " -type \"float3\" 5.22678569999999976 0.11243017 13.689028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape" 
-		"pnts[6]" " -type \"float3\" 5.5519438000000001 0.10921499 14.036718"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape" 
-		"pnts[7]" " -type \"float3\" 5.17174910000000043 0.10921499 13.65539"
+		"pt[0:7]" " -s 8 -type \"float3\" 5.60021020000000025 0.10921499 13.975252 5.2198247999999996 0.10921499 13.594167 5.582602 0.11243017 13.979349 5.25594089999999969 0.11243017 13.6519 5.55344679999999968 0.11243017 14.016478 5.22678569999999976 0.11243017 13.689028 5.5519438000000001 0.10921499 14.036718 5.17174910000000043 0.10921499 13.65539"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28" "rotatePivot" 
@@ -6447,23 +4188,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28" 
-		"pnts[0]" " -type \"float3\" 6.6415892000000003 0.10921499 12.649086"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28" 
-		"pnts[1]" " -type \"float3\" 6.26120419999999989 0.10921499 12.268"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28" 
-		"pnts[2]" " -type \"float3\" 6.623981 0.11243017 12.653183"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28" 
-		"pnts[3]" " -type \"float3\" 6.29731989999999975 0.11243017 12.325733"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28" 
-		"pnts[4]" " -type \"float3\" 6.59482619999999997 0.11243017 12.69031"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28" 
-		"pnts[5]" " -type \"float3\" 6.26816510000000005 0.11243017 12.362862"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28" 
-		"pnts[6]" " -type \"float3\" 6.59332320000000038 0.10921499 12.710551"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28" 
-		"pnts[7]" " -type \"float3\" 6.21312860000000011 0.10921499 12.329223"
+		"pt[0:7]" " -s 8 -type \"float3\" 6.6415892000000003 0.10921499 12.649086 6.26120419999999989 0.10921499 12.268 6.623981 0.11243017 12.653183 6.29731989999999975 0.11243017 12.325733 6.59482619999999997 0.11243017 12.69031 6.26816510000000005 0.11243017 12.362862 6.59332320000000038 0.10921499 12.710551 6.21312860000000011 0.10921499 12.329223"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29" "rotatePivot" 
@@ -6473,23 +4199,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29" 
-		"pnts[0]" " -type \"float3\" 6.88502979999999987 0.10921499 12.339071"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29" 
-		"pnts[1]" " -type \"float3\" 6.50464489999999973 0.10921499 11.957985"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29" 
-		"pnts[2]" " -type \"float3\" 6.86742160000000013 0.11243017 12.343168"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29" 
-		"pnts[3]" " -type \"float3\" 6.5407605000000002 0.11243017 12.015718"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29" 
-		"pnts[4]" " -type \"float3\" 6.83826680000000042 0.11243017 12.380296"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29" 
-		"pnts[5]" " -type \"float3\" 6.51160569999999961 0.11243017 12.052847"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29" 
-		"pnts[6]" " -type \"float3\" 6.83676390000000023 0.10921499 12.400537"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29" 
-		"pnts[7]" " -type \"float3\" 6.45656919999999968 0.10921499 12.019208"
+		"pt[0:7]" " -s 8 -type \"float3\" 6.88502979999999987 0.10921499 12.339071 6.50464489999999973 0.10921499 11.957985 6.86742160000000013 0.11243017 12.343168 6.5407605000000002 0.11243017 12.015718 6.83826680000000042 0.11243017 12.380296 6.51160569999999961 0.11243017 12.052847 6.83676390000000023 0.10921499 12.400537 6.45656919999999968 0.10921499 12.019208"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack" "scale" " -type \"double3\" 1 1 1"
@@ -6503,497 +4214,19 @@ createNode reference -n "Asset2RN";
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
 		"pnts" " -s 198"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[0]" " -type \"float3\" 12.576164 0.0043889224000000001 7.34570840000000036"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[1]" " -type \"float3\" 11.578574 0.0043889224000000001 6.34571120000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[2]" " -type \"float3\" 12.576164 0.31739146000000001 7.34570840000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[3]" " -type \"float3\" 11.578574 0.31739146000000001 6.34571120000000022"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[4]" " -type \"float3\" 6.13822319999999966 0.31739146000000001 15.510426"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[5]" " -type \"float3\" 5.14063309999999962 0.31739146000000001 14.510429"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[6]" " -type \"float3\" 6.13822319999999966 0.0043889224000000001 15.510426"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[7]" " -type \"float3\" 5.14063309999999962 0.0043889224000000001 14.510429"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[8]" " -type \"float3\" 12.576164 0.16195960000000001 7.34570840000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[9]" " -type \"float3\" 6.13822319999999966 0.16195960000000001 15.510426"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[10]" " -type \"float3\" 5.14063309999999962 0.16195960000000001 14.510429"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[11]" " -type \"float3\" 11.578574 0.16195960000000001 6.34571120000000022"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[12]" " -type \"float3\" 6.13822319999999966 0.30803638999999999 15.510426"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[13]" " -type \"float3\" 12.576164 0.30803633000000002 7.34570840000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[14]" " -type \"float3\" 11.578574 0.30803633000000002 6.34571120000000022"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[15]" " -type \"float3\" 5.14063309999999962 0.30803638999999999 14.510429"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[16]" " -type \"float3\" 6.20785759999999964 0.30845552999999998 15.772248"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[17]" " -type \"float3\" 12.814925 0.30845549999999999 7.39304019999999973"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[18]" " -type \"float3\" 4.90186550000000043 0.30845549999999999 14.463105"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[19]" " -type \"float3\" 11.508933 0.30845549999999999 6.08389709999999972"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[20]" " -type \"float3\" 12.814925 0.31284261000000002 7.39304019999999973"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[21]" " -type \"float3\" 12.732075 0.31747167999999998 7.376615"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[22]" " -type \"float3\" 6.20785759999999964 0.31284261000000002 15.772248"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[23]" " -type \"float3\" 6.18369769999999974 0.31747167999999998 15.681391"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[24]" " -type \"float3\" 6.20785759999999964 0.31283318999999998 15.772248"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[25]" " -type \"float3\" 6.17304660000000016 0.31745294000000002 15.641349"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[26]" " -type \"float3\" 4.90186550000000043 0.31283318999999998 14.463105"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[27]" " -type \"float3\" 5.02123830000000027 0.31745294000000002 14.486762"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[28]" " -type \"float3\" 4.90186550000000043 0.31284261000000002 14.463105"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[29]" " -type \"float3\" 4.9847216999999997 0.31747167999999998 14.479523"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[30]" " -type \"float3\" 11.508933 0.31284261000000002 6.08389709999999972"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[31]" " -type \"float3\" 11.533099 0.31747167999999998 6.17474650000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[32]" " -type \"float3\" 11.508933 0.31283318999999998 6.08389709999999972"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[33]" " -type \"float3\" 11.543751 0.31745294000000002 6.21479080000000028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[34]" " -type \"float3\" 12.814925 0.31283318999999998 7.39304019999999973"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[35]" " -type \"float3\" 12.695557 0.31745294000000002 7.3693761999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[36]" " -type \"float3\" 8.35960389999999975 0.30803633000000002 10.42807"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[37]" " -type \"float3\" 8.35960389999999975 0.16195960000000001 10.42807"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[38]" " -type \"float3\" 8.35960389999999975 0.0043889224000000001 10.42807"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[39]" " -type \"float3\" 9.96908859999999919 0.30803633000000002 8.38689040000000041"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[40]" " -type \"float3\" 9.96908859999999919 0.16195960000000001 8.38689040000000041"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[41]" " -type \"float3\" 9.96908859999999919 0.0043889224000000001 8.38689040000000041"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[42]" " -type \"float3\" 6.75011829999999957 0.30803638999999999 12.46925"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[43]" " -type \"float3\" 6.75011829999999957 0.16195960000000001 12.46925"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[44]" " -type \"float3\" 6.75011829999999957 0.0043889224000000001 12.46925"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[45]" " -type \"float3\" 11.416426 0.30803633000000002 6.55135009999999962"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[46]" " -type \"float3\" 11.416427 0.16195960000000001 6.5513496"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[47]" " -type \"float3\" 11.416427 0.0043889224000000001 6.5513496"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[48]" " -type \"float3\" 5.31212660000000003 0.0043889224000000001 14.292937"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[49]" " -type \"float3\" 5.31212660000000003 0.16195960000000001 14.292937"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[50]" " -type \"float3\" 5.31212660000000003 0.30803638999999999 14.292937"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[51]" " -type \"float3\" 12.576164 0.023078227 7.34570840000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[52]" " -type \"float3\" 6.13822319999999966 0.023078227 15.510426"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[53]" " -type \"float3\" 5.14063309999999962 0.023078227 14.510429"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[54]" " -type \"float3\" 5.31212660000000003 0.023078227 14.292937"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[55]" " -type \"float3\" 6.75011829999999957 0.023078227 12.46925"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[56]" " -type \"float3\" 8.35960389999999975 0.023078227 10.42807"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[57]" " -type \"float3\" 9.96908859999999919 0.023078227 8.38689040000000041"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[58]" " -type \"float3\" 11.416427 0.023078227 6.5513496"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[59]" " -type \"float3\" 11.578574 0.023078227 6.34571120000000022"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[60]" " -type \"float3\" 10.710744 0.0043889224000000001 5.84396510000000013"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[61]" " -type \"float3\" 10.872891 0.0043889224000000001 5.63832619999999984"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[62]" " -type \"float3\" 10.710744 0.023078227 5.84396510000000013"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[63]" " -type \"float3\" 10.872891 0.023078227 5.63832619999999984"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[64]" " -type \"float3\" 4.43225430000000031 0.023078227 13.800341"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[65]" " -type \"float3\" 4.60374779999999983 0.023078227 13.58285"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[66]" " -type \"float3\" 4.60374779999999983 0.0043889224000000001 13.58285"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[67]" " -type \"float3\" 4.43225430000000031 0.0043889224000000001 13.800341"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[68]" " -type \"float3\" 11.4011 0.023078227 6.51482109999999981"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[69]" " -type \"float3\" 11.544604 0.023078227 6.33282610000000012"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[70]" " -type \"float3\" 10.888218 0.023078227 5.67485570000000017"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[71]" " -type \"float3\" 10.744714 0.023078227 5.85685059999999957"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[72]" " -type \"float3\" 5.12575010000000031 0.023078227 14.473125"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[73]" " -type \"float3\" 5.27752540000000003 0.023078227 14.28064"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[74]" " -type \"float3\" 4.6186303999999998 0.023078227 13.620154"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[75]" " -type \"float3\" 4.466855 0.023078227 13.812639"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[76]" " -type \"float3\" 11.4011 0.024101667 6.51482109999999981"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[77]" " -type \"float3\" 11.400374 0.024825215000000001 6.507947"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[78]" " -type \"float3\" 11.398622 0.025124921000000001 6.49135210000000029"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[79]" " -type \"float3\" 11.523643 0.025124921000000001 6.3327985"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[80]" " -type \"float3\" 11.538465 0.024825215000000001 6.332818"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[81]" " -type \"float3\" 11.544604 0.024101667 6.33282610000000012"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[82]" " -type \"float3\" 10.890697 0.025124921000000001 5.6983252000000002"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[83]" " -type \"float3\" 10.888944 0.024825215000000001 5.68172980000000027"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[84]" " -type \"float3\" 10.888218 0.024101667 5.67485570000000017"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[85]" " -type \"float3\" 10.765676 0.025124921000000001 5.85687879999999961"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[86]" " -type \"float3\" 10.750854 0.024825215000000001 5.85685870000000008"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[87]" " -type \"float3\" 10.744714 0.024101667 5.85685059999999957"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[88]" " -type \"float3\" 5.12575010000000031 0.024101667 14.473125"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[89]" " -type \"float3\" 5.12502380000000013 0.024825215000000001 14.46625"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[90]" " -type \"float3\" 5.12326960000000042 0.025124921000000001 14.449657"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[91]" " -type \"float3\" 5.25656320000000044 0.025124921000000001 14.280612"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[92]" " -type \"float3\" 5.27138609999999996 0.024825215000000001 14.280631"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[93]" " -type \"float3\" 5.27752540000000003 0.024101667 14.28064"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[94]" " -type \"float3\" 4.62110850000000006 0.025124921000000001 13.643624"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[95]" " -type \"float3\" 4.6193565999999997 0.024825215000000001 13.627028"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[96]" " -type \"float3\" 4.6186303999999998 0.024101667 13.620154"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[97]" " -type \"float3\" 4.48781490000000005 0.025124921000000001 13.81267"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[98]" " -type \"float3\" 4.47299429999999987 0.024825215000000001 13.812648"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[99]" " -type \"float3\" 4.466855 0.024101667 13.812639"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[100]" " -type \"float3\" 11.438887 0.16788061000000001 6.52286579999999994"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[101]" " -type \"float3\" 11.556113 0.16788061000000001 6.37419609999999981"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[102]" " -type \"float3\" 11.438887 0.30211528999999998 6.52286579999999994"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[103]" " -type \"float3\" 11.556113 0.30211528999999998 6.37419609999999981"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[104]" " -type \"float3\" 5.28837109999999999 0.16788061000000001 14.323065"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[105]" " -type \"float3\" 5.28837109999999999 0.30211535 14.323065"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[106]" " -type \"float3\" 5.16438820000000032 0.16788061000000001 14.480303"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[107]" " -type \"float3\" 5.16438820000000032 0.30211535 14.480303"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[108]" " -type \"float3\" 11.427431 0.168706 6.49445579999999989"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[109]" " -type \"float3\" 11.424929 0.16812235 6.50391630000000021"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[110]" " -type \"float3\" 11.42943 0.16788061000000001 6.51338669999999986"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[111]" " -type \"float3\" 11.546658 0.16788061000000001 6.36471750000000025"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[112]" " -type \"float3\" 11.537789 0.16812235 6.36078550000000043"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[113]" " -type \"float3\" 11.529749 0.168706 6.36469459999999998"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[114]" " -type \"float3\" 11.427431 0.30128994999999997 6.49445579999999989"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[115]" " -type \"float3\" 11.424929 0.30187355999999999 6.50391670000000044"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[116]" " -type \"float3\" 11.42943 0.30211528999999998 6.51338669999999986"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[117]" " -type \"float3\" 11.529749 0.30128994999999997 6.36469459999999998"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[118]" " -type \"float3\" 11.537789 0.30187355999999999 6.36078550000000043"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[119]" " -type \"float3\" 11.546658 0.30211528999999998 6.36471750000000025"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[120]" " -type \"float3\" 5.26200630000000036 0.168706 14.313564"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[121]" " -type \"float3\" 5.27004620000000035 0.16812235 14.309654"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[122]" " -type \"float3\" 5.27891539999999981 0.16788061000000001 14.313586"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[123]" " -type \"float3\" 5.27891539999999981 0.30211535 14.313586"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[124]" " -type \"float3\" 5.27004620000000035 0.30187362000000001 14.309654"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[125]" " -type \"float3\" 5.26200630000000036 0.30128994999999997 14.313564"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[126]" " -type \"float3\" 5.15293310000000027 0.168706 14.451893"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[127]" " -type \"float3\" 5.15042970000000011 0.16812235 14.461355"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[128]" " -type \"float3\" 5.15493250000000014 0.16788061000000001 14.470823"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[129]" " -type \"float3\" 5.15293310000000027 0.30128994999999997 14.451893"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[130]" " -type \"float3\" 5.15042970000000011 0.30187362000000001 14.461355"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[131]" " -type \"float3\" 5.15493250000000014 0.30211535 14.470823"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[132]" " -type \"float3\" 8.35960389999999975 0.16195960000000001 10.42807"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[133]" " -type \"float3\" 8.35960389999999975 0.023078227 10.42807"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[134]" " -type \"float3\" 6.75011829999999957 0.023078227 12.46925"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[135]" " -type \"float3\" 6.75011829999999957 0.16195960000000001 12.46925"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[136]" " -type \"float3\" 9.96908859999999919 0.16195960000000001 8.38689040000000041"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[137]" " -type \"float3\" 9.96908859999999919 0.023078227 8.38689040000000041"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[138]" " -type \"float3\" 6.824439 0.029746246 12.374994"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[139]" " -type \"float3\" 8.35960389999999975 0.029746246 10.42807"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[140]" " -type \"float3\" 6.824439 0.1552916 12.374994"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[141]" " -type \"float3\" 8.35960389999999975 0.1552916 10.42807"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[142]" " -type \"float3\" 9.89476780000000034 0.1552916 8.48114589999999957"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[143]" " -type \"float3\" 9.89476780000000034 0.029746246 8.48114589999999957"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[144]" " -type \"float3\" 6.85977130000000024 0.029746246 12.410412"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[145]" " -type \"float3\" 8.39493560000000016 0.029746246 10.463487"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[146]" " -type \"float3\" 6.85977130000000024 0.1552916 12.410412"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[147]" " -type \"float3\" 8.39493560000000016 0.1552916 10.463487"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[148]" " -type \"float3\" 9.93009950000000075 0.1552916 8.51656249999999915"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[149]" " -type \"float3\" 9.93009950000000075 0.029746246 8.51656249999999915"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[150]" " -type \"float3\" 6.88427159999999994 0.16653146999999999 12.374969"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[151]" " -type \"float3\" 8.39301110000000072 0.16653146999999999 10.461558"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[152]" " -type \"float3\" 6.88427159999999994 0.30346450000000003 12.374969"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[153]" " -type \"float3\" 8.39301110000000072 0.30346446999999999 10.461558"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[154]" " -type \"float3\" 9.90174960000000048 0.30346446999999999 8.54814619999999969"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[155]" " -type \"float3\" 9.90174960000000048 0.16653146999999999 8.54814619999999969"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[156]" " -type \"float3\" 6.13822319999999966 0.30803638999999999 15.510426"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[157]" " -type \"float3\" 6.13822319999999966 0.30803638999999999 15.510426"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[158]" " -type \"float3\" 6.13822319999999966 0.30803638999999999 15.510426"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[159]" " -type \"float3\" 6.13822319999999966 0.30803638999999999 15.510426"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[160]" " -type \"float3\" 6.13822319999999966 0.30803638999999999 15.510426"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[161]" " -type \"float3\" 12.576164 0.30803633000000002 7.34570840000000036"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[162]" " -type \"float3\" 12.576164 0.30803633000000002 7.34570840000000036"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[163]" " -type \"float3\" 12.576164 0.30803633000000002 7.34570840000000036"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[164]" " -type \"float3\" 12.576164 0.30803633000000002 7.34570840000000036"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[165]" " -type \"float3\" 12.576164 0.30803633000000002 7.34570840000000036"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[166]" " -type \"float3\" 11.578574 0.30803633000000002 6.34571120000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[167]" " -type \"float3\" 11.578574 0.30803633000000002 6.34571120000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[168]" " -type \"float3\" 11.578574 0.30803633000000002 6.34571120000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[169]" " -type \"float3\" 11.578574 0.30803633000000002 6.34571120000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[170]" " -type \"float3\" 11.578574 0.30803633000000002 6.34571120000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[171]" " -type \"float3\" 11.578574 0.30803633000000002 6.34571120000000022"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[172]" " -type \"float3\" 5.14063309999999962 0.30803638999999999 14.510429"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[173]" " -type \"float3\" 5.14063309999999962 0.30803638999999999 14.510429"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[174]" " -type \"float3\" 5.14063309999999962 0.30803638999999999 14.510429"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[175]" " -type \"float3\" 5.14063309999999962 0.30803638999999999 14.510429"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[176]" " -type \"float3\" 5.14063309999999962 0.30803638999999999 14.510429"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[177]" " -type \"float3\" 5.14063309999999962 0.30803638999999999 14.510429"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[178]" " -type \"float3\" 6.20785759999999964 0.30845552999999998 15.772248"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[179]" " -type \"float3\" 6.20785759999999964 0.30845552999999998 15.772248"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[180]" " -type \"float3\" 6.20785759999999964 0.30845552999999998 15.772248"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[181]" " -type \"float3\" 6.20785759999999964 0.30845552999999998 15.772248"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[182]" " -type \"float3\" 6.20785759999999964 0.30845552999999998 15.772248"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[183]" " -type \"float3\" 12.814925 0.30845549999999999 7.39304019999999973"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[184]" " -type \"float3\" 12.814925 0.30845549999999999 7.39304019999999973"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[185]" " -type \"float3\" 12.814925 0.30845549999999999 7.39304019999999973"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[186]" " -type \"float3\" 12.814925 0.30845549999999999 7.39304019999999973"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[187]" " -type \"float3\" 12.814925 0.30845549999999999 7.39304019999999973"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[188]" " -type \"float3\" 4.90186550000000043 0.30845549999999999 14.463105"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[189]" " -type \"float3\" 4.90186550000000043 0.30845549999999999 14.463105"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[190]" " -type \"float3\" 4.90186550000000043 0.30845549999999999 14.463105"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[191]" " -type \"float3\" 4.90186550000000043 0.30845549999999999 14.463105"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[192]" " -type \"float3\" 4.90186550000000043 0.30845549999999999 14.463105"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[193]" " -type \"float3\" 11.508933 0.30845549999999999 6.08389709999999972"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[194]" " -type \"float3\" 11.508933 0.30845549999999999 6.08389709999999972"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[195]" " -type \"float3\" 11.508933 0.30845549999999999 6.08389709999999972"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[196]" " -type \"float3\" 11.508933 0.30845549999999999 6.08389709999999972"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
-		"pnts[197]" " -type \"float3\" 11.508933 0.30845549999999999 6.08389709999999972"
-		
+		"pt[0:165]" (" -type \"float3\" 12.576164 0.0043889224000000001 7.34570840000000036 11.578574 0.0043889224000000001 6.34571120000000022 12.576164 0.31739146000000001 7.34570840000000036 11.578574 0.31739146000000001 6.34571120000000022 6.13822319999999966 0.31739146000000001 15.510426 5.14063309999999962 0.31739146000000001 14.510429 6.13822319999999966 0.0043889224000000001 15.510426 5.14063309999999962 0.0043889224000000001 14.510429 12.576164 0.16195960000000001 7.34570840000000036 6.13822319999999966 0.16195960000000001 15.510426 5.14063309999999962 0.16195960000000001 14.510429 11.578574 0.16195960000000001 6.34571120000000022 6.13822319999999966 0.30803638999999999 15.510426 12.576164 0.30803633000000002 7.34570840000000036 11.578574 0.30803633000000002 6.34571120000000022 5.14063309999999962 0.30803638999999999 14.510429 6.20785759999999964 0.30845552999999998 15.772248 12.814925 0.30845549999999999 7.39304019999999973 4.90186550000000043 0.30845549999999999 14.463105 11.508933 0.30845549999999999 6.08389709999999972 "
+		+ "12.814925 0.31284261000000002 7.39304019999999973 12.732075 0.31747167999999998 7.376615 6.20785759999999964 0.31284261000000002 15.772248 6.18369769999999974 0.31747167999999998 15.681391 6.20785759999999964 0.31283318999999998 15.772248 6.17304660000000016 0.31745294000000002 15.641349 4.90186550000000043 0.31283318999999998 14.463105 5.02123830000000027 0.31745294000000002 14.486762 4.90186550000000043 0.31284261000000002 14.463105 4.9847216999999997 0.31747167999999998 14.479523 11.508933 0.31284261000000002 6.08389709999999972 11.533099 0.31747167999999998 6.17474650000000036 11.508933 0.31283318999999998 6.08389709999999972 11.543751 0.31745294000000002 6.21479080000000028 12.814925 0.31283318999999998 7.39304019999999973 12.695557 0.31745294000000002 7.3693761999999996 8.35960389999999975 0.30803633000000002 10.42807 8.35960389999999975 0.16195960000000001 10.42807 8.35960389999999975 0.0043889224000000001 10.42807 9.96908859999999919 0.30803633000000002 8.38689040000000041 9.96908859999999919 0.161959"
+		+ "60000000001 8.38689040000000041 9.96908859999999919 0.0043889224000000001 8.38689040000000041 6.75011829999999957 0.30803638999999999 12.46925 6.75011829999999957 0.16195960000000001 12.46925 6.75011829999999957 0.0043889224000000001 12.46925 11.416426 0.30803633000000002 6.55135009999999962 11.416427 0.16195960000000001 6.5513496 11.416427 0.0043889224000000001 6.5513496 5.31212660000000003 0.0043889224000000001 14.292937 5.31212660000000003 0.16195960000000001 14.292937 5.31212660000000003 0.30803638999999999 14.292937 12.576164 0.023078227 7.34570840000000036 6.13822319999999966 0.023078227 15.510426 5.14063309999999962 0.023078227 14.510429 5.31212660000000003 0.023078227 14.292937 6.75011829999999957 0.023078227 12.46925 8.35960389999999975 0.023078227 10.42807 9.96908859999999919 0.023078227 8.38689040000000041 11.416427 0.023078227 6.5513496 11.578574 0.023078227 6.34571120000000022 10.710744 0.0043889224000000001 5.84396510000000013 10.872891 0.0043889224000000001 5.63832619999999984 10.710744 0.02307"
+		+ "8227 5.84396510000000013 10.872891 0.023078227 5.63832619999999984 4.43225430000000031 0.023078227 13.800341 4.60374779999999983 0.023078227 13.58285 4.60374779999999983 0.0043889224000000001 13.58285 4.43225430000000031 0.0043889224000000001 13.800341 11.4011 0.023078227 6.51482109999999981 11.544604 0.023078227 6.33282610000000012 10.888218 0.023078227 5.67485570000000017 10.744714 0.023078227 5.85685059999999957 5.12575010000000031 0.023078227 14.473125 5.27752540000000003 0.023078227 14.28064 4.6186303999999998 0.023078227 13.620154 4.466855 0.023078227 13.812639 11.4011 0.024101667 6.51482109999999981 11.400374 0.024825215000000001 6.507947 11.398622 0.025124921000000001 6.49135210000000029 11.523643 0.025124921000000001 6.3327985 11.538465 0.024825215000000001 6.332818 11.544604 0.024101667 6.33282610000000012 10.890697 0.025124921000000001 5.6983252000000002 10.888944 0.024825215000000001 5.68172980000000027 10.888218 0.024101667 5.67485570000000017 10.765676 0.025124921000000001 5.85687879999999961 10"
+		+ ".750854 0.024825215000000001 5.85685870000000008 10.744714 0.024101667 5.85685059999999957 5.12575010000000031 0.024101667 14.473125 5.12502380000000013 0.024825215000000001 14.46625 5.12326960000000042 0.025124921000000001 14.449657 5.25656320000000044 0.025124921000000001 14.280612 5.27138609999999996 0.024825215000000001 14.280631 5.27752540000000003 0.024101667 14.28064 4.62110850000000006 0.025124921000000001 13.643624 4.6193565999999997 0.024825215000000001 13.627028 4.6186303999999998 0.024101667 13.620154 4.48781490000000005 0.025124921000000001 13.81267 4.47299429999999987 0.024825215000000001 13.812648 4.466855 0.024101667 13.812639 11.438887 0.16788061000000001 6.52286579999999994 11.556113 0.16788061000000001 6.37419609999999981 11.438887 0.30211528999999998 6.52286579999999994 11.556113 0.30211528999999998 6.37419609999999981 5.28837109999999999 0.16788061000000001 14.323065 5.28837109999999999 0.30211535 14.323065 5.16438820000000032 0.16788061000000001 14.480303 5.16438820000000032 0.30211535 1"
+		+ "4.480303 11.427431 0.168706 6.49445579999999989 11.424929 0.16812235 6.50391630000000021 11.42943 0.16788061000000001 6.51338669999999986 11.546658 0.16788061000000001 6.36471750000000025 11.537789 0.16812235 6.36078550000000043 11.529749 0.168706 6.36469459999999998 11.427431 0.30128994999999997 6.49445579999999989 11.424929 0.30187355999999999 6.50391670000000044 11.42943 0.30211528999999998 6.51338669999999986 11.529749 0.30128994999999997 6.36469459999999998 11.537789 0.30187355999999999 6.36078550000000043 11.546658 0.30211528999999998 6.36471750000000025 5.26200630000000036 0.168706 14.313564 5.27004620000000035 0.16812235 14.309654 5.27891539999999981 0.16788061000000001 14.313586 5.27891539999999981 0.30211535 14.313586 5.27004620000000035 0.30187362000000001 14.309654 5.26200630000000036 0.30128994999999997 14.313564 5.15293310000000027 0.168706 14.451893 5.15042970000000011 0.16812235 14.461355 5.15493250000000014 0.16788061000000001 14.470823 5.15293310000000027 0.30128994999999997 14.451893 5.1504"
+		+ "2970000000011 0.30187362000000001 14.461355 5.15493250000000014 0.30211535 14.470823 8.35960389999999975 0.16195960000000001 10.42807 8.35960389999999975 0.023078227 10.42807 6.75011829999999957 0.023078227 12.46925 6.75011829999999957 0.16195960000000001 12.46925 9.96908859999999919 0.16195960000000001 8.38689040000000041 9.96908859999999919 0.023078227 8.38689040000000041 6.824439 0.029746246 12.374994 8.35960389999999975 0.029746246 10.42807 6.824439 0.1552916 12.374994 8.35960389999999975 0.1552916 10.42807 9.89476780000000034 0.1552916 8.48114589999999957 9.89476780000000034 0.029746246 8.48114589999999957 6.85977130000000024 0.029746246 12.410412 8.39493560000000016 0.029746246 10.463487 6.85977130000000024 0.1552916 12.410412 8.39493560000000016 0.1552916 10.463487 9.93009950000000075 0.1552916 8.51656249999999915 9.93009950000000075 0.029746246 8.51656249999999915 6.88427159999999994 0.16653146999999999 12.374969 8.39301110000000072 0.16653146999999999 10.461558 6.88427159999999994 0.30346450000000003"
+		+ " 12.374969 8.39301110000000072 0.30346446999999999 10.461558 9.90174960000000048 0.30346446999999999 8.54814619999999969 9.90174960000000048 0.16653146999999999 8.54814619999999969 6.13822319999999966 0.30803638999999999 15.510426 6.13822319999999966 0.30803638999999999 15.510426 6.13822319999999966 0.30803638999999999 15.510426 6.13822319999999966 0.30803638999999999 15.510426 6.13822319999999966 0.30803638999999999 15.510426 12.576164 0.30803633000000002 7.34570840000000036 12.576164 0.30803633000000002 7.34570840000000036 12.576164 0.30803633000000002 7.34570840000000036 12.576164 0.30803633000000002 7.34570840000000036 12.576164 0.30803633000000002 7.34570840000000036"
+		)
+		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape" 
+		"pt[166:197]" (" 11.578574 0.30803633000000002 6.34571120000000022 11.578574 0.30803633000000002 6.34571120000000022 11.578574 0.30803633000000002 6.34571120000000022 11.578574 0.30803633000000002 6.34571120000000022 11.578574 0.30803633000000002 6.34571120000000022 11.578574 0.30803633000000002 6.34571120000000022 5.14063309999999962 0.30803638999999999 14.510429 5.14063309999999962 0.30803638999999999 14.510429 5.14063309999999962 0.30803638999999999 14.510429 5.14063309999999962 0.30803638999999999 14.510429 5.14063309999999962 0.30803638999999999 14.510429 5.14063309999999962 0.30803638999999999 14.510429 6.20785759999999964 0.30845552999999998 15.772248 6.20785759999999964 0.30845552999999998 15.772248 6.20785759999999964 0.30845552999999998 15.772248 6.20785759999999964 0.30845552999999998 15.772248 6.20785759999999964 0.30845552999999998 15.772248 12.814925 0.30845549999999999 7.39304019999999973 12.814925 0.30845549999999999 7.39304019999999973 12.814925 0.30845549999999999 7.39304019999999973 12.814925 0.30845549999"
+		+ "999999 7.39304019999999973 12.814925 0.30845549999999999 7.39304019999999973 4.90186550000000043 0.30845549999999999 14.463105 4.90186550000000043 0.30845549999999999 14.463105 4.90186550000000043 0.30845549999999999 14.463105 4.90186550000000043 0.30845549999999999 14.463105 4.90186550000000043 0.30845549999999999 14.463105 11.508933 0.30845549999999999 6.08389709999999972 11.508933 0.30845549999999999 6.08389709999999972 11.508933 0.30845549999999999 6.08389709999999972 11.508933 0.30845549999999999 6.08389709999999972 11.508933 0.30845549999999999 6.08389709999999972"
+		)
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18" "rotatePivot" 
@@ -7003,23 +4236,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18" 
-		"pnts[0]" " -type \"float3\" 8.27808 0.10921499 10.565063"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18" 
-		"pnts[1]" " -type \"float3\" 7.89769460000000034 0.10921499 10.183977"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18" 
-		"pnts[2]" " -type \"float3\" 8.26047130000000074 0.11243017 10.56916"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18" 
-		"pnts[3]" " -type \"float3\" 7.93381019999999992 0.11243017 10.241711"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18" 
-		"pnts[4]" " -type \"float3\" 8.23131659999999954 0.11243017 10.606288"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18" 
-		"pnts[5]" " -type \"float3\" 7.90465549999999961 0.11243017 10.278838"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18" 
-		"pnts[6]" " -type \"float3\" 8.22981359999999995 0.10921499 10.626529"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18" 
-		"pnts[7]" " -type \"float3\" 7.84961890000000029 0.10921499 10.2452"
+		"pt[0:7]" " -s 8 -type \"float3\" 8.27808 0.10921499 10.565063 7.89769460000000034 0.10921499 10.183977 8.26047130000000074 0.11243017 10.56916 7.93381019999999992 0.11243017 10.241711 8.23131659999999954 0.11243017 10.606288 7.90465549999999961 0.11243017 10.278838 8.22981359999999995 0.10921499 10.626529 7.84961890000000029 0.10921499 10.2452"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27" "rotatePivot" 
@@ -7029,23 +4247,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27" 
-		"pnts[0]" " -type \"float3\" 6.52294679999999971 0.10921499 12.800174"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27" 
-		"pnts[1]" " -type \"float3\" 6.14256189999999958 0.10921499 12.419087"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27" 
-		"pnts[2]" " -type \"float3\" 6.50533870000000025 0.11243017 12.80427"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27" 
-		"pnts[3]" " -type \"float3\" 6.178678 0.11243017 12.476821"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27" 
-		"pnts[4]" " -type \"float3\" 6.47618389999999966 0.11243017 12.841398"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27" 
-		"pnts[5]" " -type \"float3\" 6.14952279999999973 0.11243017 12.513949"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27" 
-		"pnts[6]" " -type \"float3\" 6.47468090000000007 0.10921499 12.861639"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27" 
-		"pnts[7]" " -type \"float3\" 6.09448620000000041 0.10921499 12.48031"
+		"pt[0:7]" " -s 8 -type \"float3\" 6.52294679999999971 0.10921499 12.800174 6.14256189999999958 0.10921499 12.419087 6.50533870000000025 0.11243017 12.80427 6.178678 0.11243017 12.476821 6.47618389999999966 0.11243017 12.841398 6.14952279999999973 0.11243017 12.513949 6.47468090000000007 0.10921499 12.861639 6.09448620000000041 0.10921499 12.48031"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32" "rotatePivot" 
@@ -7055,23 +4258,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32" 
-		"pnts[0]" " -type \"float3\" 5.70470189999999988 0.10921499 13.842185"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32" 
-		"pnts[1]" " -type \"float3\" 5.324317 0.10921499 13.461099"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32" 
-		"pnts[2]" " -type \"float3\" 5.68709370000000014 0.11243017 13.846282"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32" 
-		"pnts[3]" " -type \"float3\" 5.36043260000000021 0.11243017 13.518832"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32" 
-		"pnts[4]" " -type \"float3\" 5.6579385000000002 0.11243017 13.88341"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32" 
-		"pnts[5]" " -type \"float3\" 5.33127779999999962 0.11243017 13.555961"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32" 
-		"pnts[6]" " -type \"float3\" 5.65643549999999973 0.10921499 13.90365"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32" 
-		"pnts[7]" " -type \"float3\" 5.27624080000000006 0.10921499 13.522322"
+		"pt[0:7]" " -s 8 -type \"float3\" 5.70470189999999988 0.10921499 13.842185 5.324317 0.10921499 13.461099 5.68709370000000014 0.11243017 13.846282 5.36043260000000021 0.11243017 13.518832 5.6579385000000002 0.11243017 13.88341 5.33127779999999962 0.11243017 13.555961 5.65643549999999973 0.10921499 13.90365 5.27624080000000006 0.10921499 13.522322"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17" "rotatePivot" 
@@ -7081,23 +4269,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17" 
-		"pnts[0]" " -type \"float3\" 8.15943719999999928 0.10921499 10.71615"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17" 
-		"pnts[1]" " -type \"float3\" 7.77905230000000003 0.10921499 10.335064"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17" 
-		"pnts[2]" " -type \"float3\" 8.14182950000000005 0.11243017 10.720247"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17" 
-		"pnts[3]" " -type \"float3\" 7.81516789999999961 0.11243017 10.392798"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17" 
-		"pnts[4]" " -type \"float3\" 8.1126737999999996 0.11243017 10.757376"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17" 
-		"pnts[5]" " -type \"float3\" 7.78601309999999991 0.11243017 10.429926"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17" 
-		"pnts[6]" " -type \"float3\" 8.11117080000000001 0.10921499 10.777617"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17" 
-		"pnts[7]" " -type \"float3\" 7.73097659999999998 0.10921499 10.396288"
+		"pt[0:7]" " -s 8 -type \"float3\" 8.15943719999999928 0.10921499 10.71615 7.77905230000000003 0.10921499 10.335064 8.14182950000000005 0.11243017 10.720247 7.81516789999999961 0.11243017 10.392798 8.1126737999999996 0.11243017 10.757376 7.78601309999999991 0.11243017 10.429926 8.11117080000000001 0.10921499 10.777617 7.73097659999999998 0.10921499 10.396288"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26" "rotatePivot" 
@@ -7107,23 +4280,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape" 
-		"pnts[0]" " -type \"float3\" 6.41845510000000008 0.10921499 12.933241"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape" 
-		"pnts[1]" " -type \"float3\" 6.03806970000000032 0.10921499 12.552155"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape" 
-		"pnts[2]" " -type \"float3\" 6.400847 0.11243017 12.937338"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape" 
-		"pnts[3]" " -type \"float3\" 6.07418580000000041 0.11243017 12.609888"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape" 
-		"pnts[4]" " -type \"float3\" 6.3716917000000004 0.11243017 12.974465"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape" 
-		"pnts[5]" " -type \"float3\" 6.0450311000000001 0.11243017 12.647017"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape" 
-		"pnts[6]" " -type \"float3\" 6.37018869999999993 0.10921499 12.994706"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape" 
-		"pnts[7]" " -type \"float3\" 5.98999449999999989 0.10921499 12.613378"
+		"pt[0:7]" " -s 8 -type \"float3\" 6.41845510000000008 0.10921499 12.933241 6.03806970000000032 0.10921499 12.552155 6.400847 0.11243017 12.937338 6.07418580000000041 0.11243017 12.609888 6.3716917000000004 0.11243017 12.974465 6.0450311000000001 0.11243017 12.647017 6.37018869999999993 0.10921499 12.994706 5.98999449999999989 0.10921499 12.613378"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34" "rotatePivot" 
@@ -7133,23 +4291,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34" 
-		"pnts[0]" " -type \"float3\" 6.06678490000000004 0.10921499 13.381083"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34" 
-		"pnts[1]" " -type \"float3\" 5.68639989999999962 0.10921499 12.999997"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34" 
-		"pnts[2]" " -type \"float3\" 6.0491767000000003 0.11243017 13.38518"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34" 
-		"pnts[3]" " -type \"float3\" 5.72251560000000037 0.11243017 13.057731"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34" 
-		"pnts[4]" " -type \"float3\" 6.02002140000000008 0.11243017 13.422308"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34" 
-		"pnts[5]" " -type \"float3\" 5.69336030000000015 0.11243017 13.094858"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34" 
-		"pnts[6]" " -type \"float3\" 6.0185183999999996 0.10921499 13.442549"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34" 
-		"pnts[7]" " -type \"float3\" 5.63832429999999984 0.10921499 13.06122"
+		"pt[0:7]" " -s 8 -type \"float3\" 6.06678490000000004 0.10921499 13.381083 5.68639989999999962 0.10921499 12.999997 6.0491767000000003 0.11243017 13.38518 5.72251560000000037 0.11243017 13.057731 6.02002140000000008 0.11243017 13.422308 5.69336030000000015 0.11243017 13.094858 6.0185183999999996 0.10921499 13.442549 5.63832429999999984 0.10921499 13.06122"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25" "rotatePivot" 
@@ -7159,23 +4302,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25" 
-		"pnts[0]" " -type \"float3\" 7.8158903000000004 0.10921499 11.153647"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25" 
-		"pnts[1]" " -type \"float3\" 7.43550489999999975 0.10921499 10.772562"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25" 
-		"pnts[2]" " -type \"float3\" 7.79828209999999977 0.11243017 11.157744"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25" 
-		"pnts[3]" " -type \"float3\" 7.471621 0.11243017 10.830296"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25" 
-		"pnts[4]" " -type \"float3\" 7.76912689999999984 0.11243017 11.194873"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25" 
-		"pnts[5]" " -type \"float3\" 7.44246579999999991 0.11243017 10.867423"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25" 
-		"pnts[6]" " -type \"float3\" 7.76762390000000025 0.10921499 11.215114"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25" 
-		"pnts[7]" " -type \"float3\" 7.3874291999999997 0.10921499 10.833785"
+		"pt[0:7]" " -s 8 -type \"float3\" 7.8158903000000004 0.10921499 11.153647 7.43550489999999975 0.10921499 10.772562 7.79828209999999977 0.11243017 11.157744 7.471621 0.11243017 10.830296 7.76912689999999984 0.11243017 11.194873 7.44246579999999991 0.11243017 10.867423 7.76762390000000025 0.10921499 11.215114 7.3874291999999997 0.10921499 10.833785"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder" "scale" 
@@ -7187,217 +4315,12 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.95919712785637312 0.0040738772511305713 10.25077335460444061"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts" " -s 104"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[0]" " -type \"float3\" 11.594596 0.11929391 6.41445679999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[1]" " -type \"float3\" 10.822342 0.11929391 5.64033889999999971"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[2]" " -type \"float3\" 11.594596 0.13697217 6.41445679999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[3]" " -type \"float3\" 10.822342 0.13697217 5.64033889999999971"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[4]" " -type \"float3\" 5.20383789999999991 0.13697217 14.519337"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[5]" " -type \"float3\" 4.43158340000000006 0.13697217 13.745219"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[6]" " -type \"float3\" 5.20383789999999991 0.11929391 14.519337"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[7]" " -type \"float3\" 4.43158340000000006 0.11929391 13.745219"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[8]" " -type \"float3\" 11.022244 0.11929391 5.84072350000000018"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[9]" " -type \"float3\" 11.022244 0.13697217 5.84072350000000018"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[10]" " -type \"float3\" 4.63148590000000038 0.13697217 13.945603"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[11]" " -type \"float3\" 4.63148550000000014 0.11929391 13.945603"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[12]" " -type \"float3\" 11.022244 0.15025108000000001 5.84072350000000018"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[13]" " -type \"float3\" 4.63148550000000014 0.15025108000000001 13.945603"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[14]" " -type \"float3\" 11.442871 0.13697217 6.60687729999999984"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[15]" " -type \"float3\" 11.442865 0.11929391 6.6068844999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[16]" " -type \"float3\" 10.870513 0.11929391 6.03315110000000043"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[17]" " -type \"float3\" 10.670611 0.11929391 5.83276649999999997"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[18]" " -type \"float3\" 10.670617 0.13697217 5.83275939999999959"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[19]" " -type \"float3\" 10.870519 0.15025108000000001 6.033144"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[20]" " -type \"float3\" 10.870519 0.13697217 6.033144"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[21]" " -type \"float3\" 5.38242910000000041 0.11929391 14.292845"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[22]" " -type \"float3\" 5.38242629999999966 0.13697217 14.292848"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[23]" " -type \"float3\" 4.8100738999999999 0.13697217 13.719114"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[24]" " -type \"float3\" 4.8100738999999999 0.15025108000000001 13.719114"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[25]" " -type \"float3\" 4.61017179999999982 0.13697217 13.51873"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[26]" " -type \"float3\" 4.61017469999999996 0.11929391 13.518726"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[27]" " -type \"float3\" 4.81007669999999976 0.11929391 13.719111"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[28]" " -type \"float3\" 11.594596 0.17046749999999999 6.41445679999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[29]" " -type \"float3\" 11.442871 0.17046749999999999 6.60687729999999984"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[30]" " -type \"float3\" 5.38242629999999966 0.17046749999999999 14.292848"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[31]" " -type \"float3\" 5.20383789999999991 0.17046749999999999 14.519337"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[32]" " -type \"float3\" 11.421088 0.17130569000000001 6.24052950000000006"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[33]" " -type \"float3\" 11.269363 0.17130569000000001 6.43295049999999957"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[34]" " -type \"float3\" 5.03032970000000024 0.17130569000000001 14.34541"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[35]" " -type \"float3\" 5.2089181 0.17130569000000001 14.118921"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[36]" " -type \"float3\" 10.844614 0.14830662 5.66266490000000022"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[37]" " -type \"float3\" 10.898383 0.15025108000000001 5.71656419999999965"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[38]" " -type \"float3\" 10.822342 0.1436123 5.64033889999999971"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[39]" " -type \"float3\" 10.670617 0.1436123 5.83275939999999959"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[40]" " -type \"float3\" 10.692889 0.14830662 5.85508540000000011"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[41]" " -type \"float3\" 10.746658 0.15025108000000001 5.90898470000000042"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[42]" " -type \"float3\" 4.68621350000000003 0.15025108000000001 13.594955"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[43]" " -type \"float3\" 4.63244390000000017 0.14830662 13.541056"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[44]" " -type \"float3\" 4.61017179999999982 0.1436123 13.51873"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[45]" " -type \"float3\" 4.45385550000000041 0.14830662 13.767545"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[46]" " -type \"float3\" 4.43158340000000006 0.1436123 13.745219"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[47]" " -type \"float3\" 4.50762510000000027 0.15025108000000001 13.821445"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[48]" " -type \"float3\" 11.272687 0.17375093999999999 6.09177060000000026"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[49]" " -type \"float3\" 11.022244 0.15861612999999999 5.84072350000000018"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[50]" " -type \"float3\" 11.038004 0.16495362999999999 5.85652159999999977"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[51]" " -type \"float3\" 11.082446 0.17015004 5.90107110000000024"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[52]" " -type \"float3\" 11.147569 0.17326971999999999 5.96635060000000017"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[53]" " -type \"float3\" 11.120962 0.17375093999999999 6.28419110000000014"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[54]" " -type \"float3\" 10.995844 0.17326971999999999 6.158771"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[55]" " -type \"float3\" 10.930721 0.17015004 6.09349160000000012"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[56]" " -type \"float3\" 10.886279 0.16495362999999999 6.04894209999999966"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[57]" " -type \"float3\" 10.870519 0.15861612999999999 6.033144"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[58]" " -type \"float3\" 5.06051680000000026 0.17375093999999999 13.970161"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[59]" " -type \"float3\" 4.8100738999999999 0.15861612999999999 13.719114"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[60]" " -type \"float3\" 4.82583430000000035 0.16495362999999999 13.734913"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[61]" " -type \"float3\" 4.87027650000000012 0.17015004 13.779462"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[62]" " -type \"float3\" 4.93539909999999971 0.17326971999999999 13.844742"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[63]" " -type \"float3\" 4.88192839999999961 0.17375093999999999 14.196651"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[64]" " -type \"float3\" 4.75681069999999995 0.17326971999999999 14.071231"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[65]" " -type \"float3\" 4.69168810000000036 0.17015004 14.005951"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[66]" " -type \"float3\" 4.64724589999999971 0.16495362999999999 13.961402"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[67]" " -type \"float3\" 4.63148590000000038 0.15861612999999999 13.945603"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[68]" " -type \"float3\" 11.594596 0.19597677999999999 6.41445679999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[69]" " -type \"float3\" 11.421088 0.19681498 6.24052950000000006"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[70]" " -type \"float3\" 11.269363 0.19681498 6.43295049999999957"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[71]" " -type \"float3\" 11.442871 0.19597677999999999 6.60687729999999984"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[72]" " -type \"float3\" 5.03032970000000024 0.19573525999999999 14.34541"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[73]" " -type \"float3\" 5.2089181 0.19573525999999999 14.118921"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[74]" " -type \"float3\" 5.38242629999999966 0.19489707000000001 14.292848"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[75]" " -type \"float3\" 5.20383789999999991 0.19489707000000001 14.519337"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[76]" " -type \"float3\" 11.328788 0.18206838 6.14800740000000001"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[77]" " -type \"float3\" 11.330268 0.18527904000000001 6.14949040000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[78]" " -type \"float3\" 11.316971 0.17796356999999999 6.13616130000000037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[79]" " -type \"float3\" 11.178542 0.18527904000000001 6.34191079999999996"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[80]" " -type \"float3\" 11.177063 0.18206838 6.34042789999999989"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[81]" " -type \"float3\" 11.165246 0.17796356999999999 6.32858180000000026"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[82]" " -type \"float3\" 5.10750680000000035 0.18174968999999999 14.017265"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[83]" " -type \"float3\" 5.1112618000000003 0.18495070999999999 14.021029"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[84]" " -type \"float3\" 5.10445689999999974 0.17838846 14.014208"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[85]" " -type \"float3\" 4.93267349999999993 0.18495070999999999 14.247519"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[86]" " -type \"float3\" 4.9289183999999997 0.18174968999999999 14.243754"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[87]" " -type \"float3\" 4.92586849999999998 0.17838846 14.240697"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[88]" " -type \"float3\" 11.326203 0.18854447999999999 6.14541629999999994"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[89]" " -type \"float3\" 11.336367 0.19151212000000001 6.15560390000000002"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[90]" " -type \"float3\" 11.368543 0.19393642 6.18785760000000007"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[91]" " -type \"float3\" 11.174479 0.18854447999999999 6.33783670000000043"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[92]" " -type \"float3\" 11.216818 0.19393642 6.38027809999999995"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[93]" " -type \"float3\" 11.184642 0.19151212000000001 6.3480243999999999"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[94]" " -type \"float3\" 5.1029334000000004 0.18726392 14.012681"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[95]" " -type \"float3\" 5.10739330000000002 0.19081882999999999 14.017151"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[96]" " -type \"float3\" 5.13361409999999996 0.19347939 14.043435"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[97]" " -type \"float3\" 4.924345 0.18726392 14.23917"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[98]" " -type \"float3\" 4.95502610000000043 0.19347939 14.269924"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[99]" " -type \"float3\" 4.92880490000000027 0.19081882999999999 14.24364"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[100]" " -type \"float3\" 11.269235 0.19130485 6.43282180000000015"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[101]" " -type \"float3\" 11.443 0.19114795000000001 6.60700559999999992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[102]" " -type \"float3\" 5.38443710000000042 0.18963467000000001 14.294864"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape" 
-		"pnts[103]" " -type \"float3\" 5.20690730000000013 0.18956205000000001 14.116905"
-		
+		"pt[0:103]" (" -s 104 -type \"float3\" 11.594596 0.11929391 6.41445679999999996 10.822342 0.11929391 5.64033889999999971 11.594596 0.13697217 6.41445679999999996 10.822342 0.13697217 5.64033889999999971 5.20383789999999991 0.13697217 14.519337 4.43158340000000006 0.13697217 13.745219 5.20383789999999991 0.11929391 14.519337 4.43158340000000006 0.11929391 13.745219 11.022244 0.11929391 5.84072350000000018 11.022244 0.13697217 5.84072350000000018 4.63148590000000038 0.13697217 13.945603 4.63148550000000014 0.11929391 13.945603 11.022244 0.15025108000000001 5.84072350000000018 4.63148550000000014 0.15025108000000001 13.945603 11.442871 0.13697217 6.60687729999999984 11.442865 0.11929391 6.6068844999999996 10.870513 0.11929391 6.03315110000000043 10.670611 0.11929391 5.83276649999999997 10.670617 0.13697217 5.83275939999999959 10.870519 0.15025108000000001 6.033144 10.870519 0.13697217 6.033144 5.38242910000000041 0.11929391 14.292845 5.38242629999999966 0.13697217 14.292848 4.8100738999999999 0.13697217 13.719114 4.810073899999"
+		+ "9999 0.15025108000000001 13.719114 4.61017179999999982 0.13697217 13.51873 4.61017469999999996 0.11929391 13.518726 4.81007669999999976 0.11929391 13.719111 11.594596 0.17046749999999999 6.41445679999999996 11.442871 0.17046749999999999 6.60687729999999984 5.38242629999999966 0.17046749999999999 14.292848 5.20383789999999991 0.17046749999999999 14.519337 11.421088 0.17130569000000001 6.24052950000000006 11.269363 0.17130569000000001 6.43295049999999957 5.03032970000000024 0.17130569000000001 14.34541 5.2089181 0.17130569000000001 14.118921 10.844614 0.14830662 5.66266490000000022 10.898383 0.15025108000000001 5.71656419999999965 10.822342 0.1436123 5.64033889999999971 10.670617 0.1436123 5.83275939999999959 10.692889 0.14830662 5.85508540000000011 10.746658 0.15025108000000001 5.90898470000000042 4.68621350000000003 0.15025108000000001 13.594955 4.63244390000000017 0.14830662 13.541056 4.61017179999999982 0.1436123 13.51873 4.45385550000000041 0.14830662 13.767545 4.43158340000000006 0.1436123 13.745219 4.507"
+		+ "62510000000027 0.15025108000000001 13.821445 11.272687 0.17375093999999999 6.09177060000000026 11.022244 0.15861612999999999 5.84072350000000018 11.038004 0.16495362999999999 5.85652159999999977 11.082446 0.17015004 5.90107110000000024 11.147569 0.17326971999999999 5.96635060000000017 11.120962 0.17375093999999999 6.28419110000000014 10.995844 0.17326971999999999 6.158771 10.930721 0.17015004 6.09349160000000012 10.886279 0.16495362999999999 6.04894209999999966 10.870519 0.15861612999999999 6.033144 5.06051680000000026 0.17375093999999999 13.970161 4.8100738999999999 0.15861612999999999 13.719114 4.82583430000000035 0.16495362999999999 13.734913 4.87027650000000012 0.17015004 13.779462 4.93539909999999971 0.17326971999999999 13.844742 4.88192839999999961 0.17375093999999999 14.196651 4.75681069999999995 0.17326971999999999 14.071231 4.69168810000000036 0.17015004 14.005951 4.64724589999999971 0.16495362999999999 13.961402 4.63148590000000038 0.15861612999999999 13.945603 11.594596 0.19597677999999999 6.414456"
+		+ "79999999996 11.421088 0.19681498 6.24052950000000006 11.269363 0.19681498 6.43295049999999957 11.442871 0.19597677999999999 6.60687729999999984 5.03032970000000024 0.19573525999999999 14.34541 5.2089181 0.19573525999999999 14.118921 5.38242629999999966 0.19489707000000001 14.292848 5.20383789999999991 0.19489707000000001 14.519337 11.328788 0.18206838 6.14800740000000001 11.330268 0.18527904000000001 6.14949040000000036 11.316971 0.17796356999999999 6.13616130000000037 11.178542 0.18527904000000001 6.34191079999999996 11.177063 0.18206838 6.34042789999999989 11.165246 0.17796356999999999 6.32858180000000026 5.10750680000000035 0.18174968999999999 14.017265 5.1112618000000003 0.18495070999999999 14.021029 5.10445689999999974 0.17838846 14.014208 4.93267349999999993 0.18495070999999999 14.247519 4.9289183999999997 0.18174968999999999 14.243754 4.92586849999999998 0.17838846 14.240697 11.326203 0.18854447999999999 6.14541629999999994 11.336367 0.19151212000000001 6.15560390000000002 11.368543 0.19393642 6.187857"
+		+ "60000000007 11.174479 0.18854447999999999 6.33783670000000043 11.216818 0.19393642 6.38027809999999995 11.184642 0.19151212000000001 6.3480243999999999 5.1029334000000004 0.18726392 14.012681 5.10739330000000002 0.19081882999999999 14.017151 5.13361409999999996 0.19347939 14.043435 4.924345 0.18726392 14.23917 4.95502610000000043 0.19347939 14.269924 4.92880490000000027 0.19081882999999999 14.24364 11.269235 0.19130485 6.43282180000000015 11.443 0.19114795000000001 6.60700559999999992 5.38443710000000042 0.18963467000000001 14.294864 5.20690730000000013 0.18956205000000001 14.116905"
+		)
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20" "rotatePivot" 
@@ -7407,23 +4330,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20" 
-		"pnts[0]" " -type \"float3\" 8.63413519999999934 0.10921499 10.111636"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20" 
-		"pnts[1]" " -type \"float3\" 8.25374979999999958 0.10921499 9.73054980000000036"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20" 
-		"pnts[2]" " -type \"float3\" 8.61652660000000026 0.11243017 10.115733"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20" 
-		"pnts[3]" " -type \"float3\" 8.2898663999999993 0.11243017 9.78828430000000083"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20" 
-		"pnts[4]" " -type \"float3\" 8.58737179999999967 0.11243017 10.152862"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20" 
-		"pnts[5]" " -type \"float3\" 8.26071070000000063 0.11243017 9.82541179999999947"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20" 
-		"pnts[6]" " -type \"float3\" 8.58586880000000008 0.10921499 10.173101"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20" 
-		"pnts[7]" " -type \"float3\" 8.2056742000000007 0.10921499 9.79177280000000039"
+		"pt[0:7]" " -s 8 -type \"float3\" 8.63413519999999934 0.10921499 10.111636 8.25374979999999958 0.10921499 9.73054980000000036 8.61652660000000026 0.11243017 10.115733 8.2898663999999993 0.11243017 9.78828430000000083 8.58737179999999967 0.11243017 10.152862 8.26071070000000063 0.11243017 9.82541179999999947 8.58586880000000008 0.10921499 10.173101 8.2056742000000007 0.10921499 9.79177280000000039"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg" "scale" " -type \"double3\" 1 1 1"
@@ -7436,480 +4344,19 @@ createNode reference -n "Asset2RN";
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
 		"pnts" " -s 202"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[0]" " -type \"float3\" 4.5719460999999999 0.025377514 13.794594"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[1]" " -type \"float3\" 4.56556129999999971 0.025377514 13.827188"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[2]" " -type \"float3\" 4.56873609999999974 0.025377514 13.861318"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[3]" " -type \"float3\" 4.58115960000000033 0.025377514 13.89364"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[4]" " -type \"float3\" 4.60161640000000016 0.025377514 13.920992"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[5]" " -type \"float3\" 4.62810279999999974 0.025377514 13.940696"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[6]" " -type \"float3\" 4.65802720000000026 0.025377514 13.950824"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[7]" " -type \"float3\" 4.68846040000000031 0.025377514 13.950383"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[8]" " -type \"float3\" 4.71642259999999958 0.025377514 13.939418"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[9]" " -type \"float3\" 4.73917720000000031 0.025377514 13.919002"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[10]" " -type \"float3\" 4.75449660000000041 0.025377514 13.891132"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[11]" " -type \"float3\" 4.76088139999999971 0.025377514 13.858538"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[12]" " -type \"float3\" 4.75770659999999967 0.025377514 13.824409"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[13]" " -type \"float3\" 4.74528309999999998 0.025377514 13.792086"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[14]" " -type \"float3\" 4.72482679999999977 0.025377514 13.764733"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[15]" " -type \"float3\" 4.69833989999999968 0.025377514 13.745029"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[16]" " -type \"float3\" 4.66841550000000005 0.025377514 13.734901"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[17]" " -type \"float3\" 4.63798240000000028 0.025377514 13.735343"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[18]" " -type \"float3\" 4.61002020000000012 0.025377514 13.746307"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[19]" " -type \"float3\" 4.587266 0.025377514 13.766724"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[20]" " -type \"float3\" 4.53427459999999982 0.11881959 13.774672"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[21]" " -type \"float3\" 4.52525469999999963 0.11881959 13.820719"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[22]" " -type \"float3\" 4.52973990000000004 0.11881959 13.868934"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[23]" " -type \"float3\" 4.54729079999999986 0.11881959 13.914597"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[24]" " -type \"float3\" 4.57619050000000005 0.11881959 13.953238"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[25]" " -type \"float3\" 4.61360879999999973 0.11881959 13.981074"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[26]" " -type \"float3\" 4.65588379999999979 0.11881959 13.995382"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[27]" " -type \"float3\" 4.69887730000000037 0.11881959 13.99476"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[28]" " -type \"float3\" 4.73838 0.11881959 13.979269"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[29]" " -type \"float3\" 4.77052589999999999 0.11881959 13.950426"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[30]" " -type \"float3\" 4.7921680999999996 0.11881959 13.911054"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[31]" " -type \"float3\" 4.8011885000000003 0.11881959 13.865006"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[32]" " -type \"float3\" 4.79670329999999989 0.11881959 13.816792"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[33]" " -type \"float3\" 4.77915189999999956 0.11881959 13.77113"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[34]" " -type \"float3\" 4.75025269999999988 0.11881959 13.732489"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[35]" " -type \"float3\" 4.71283389999999969 0.11881959 13.704652"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[36]" " -type \"float3\" 4.67055940000000014 0.11881959 13.690344"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[37]" " -type \"float3\" 4.62756589999999957 0.11881959 13.690966"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[38]" " -type \"float3\" 4.58806280000000033 0.11881959 13.706456"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[39]" " -type \"float3\" 4.55591680000000032 0.11881959 13.735299"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[40]" " -type \"float3\" 4.66322140000000029 0.025377514 13.842863"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[41]" " -type \"float3\" 4.66322140000000029 0.11976384 13.842863"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[42]" " -type \"float3\" 4.54893829999999966 0.1162913 13.782426"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[43]" " -type \"float3\" 4.568119 0.11629117 13.747531"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[44]" " -type \"float3\" 4.59661010000000037 0.1162913 13.721969"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[45]" " -type \"float3\" 4.63162089999999971 0.1162913 13.708239"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[46]" " -type \"float3\" 4.66972450000000006 0.1162913 13.707688"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[47]" " -type \"float3\" 4.70719189999999976 0.1162913 13.720369"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[48]" " -type \"float3\" 4.74035549999999972 0.1162913 13.74504"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[49]" " -type \"float3\" 4.76596780000000031 0.1162913 13.779287"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[50]" " -type \"float3\" 4.78152319999999964 0.1162913 13.819757"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[51]" " -type \"float3\" 4.78549860000000038 0.1162913 13.862489"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[52]" " -type \"float3\" 4.77750439999999976 0.1162913 13.903299"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[53]" " -type \"float3\" 4.75832269999999991 0.11629117 13.938193"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[54]" " -type \"float3\" 4.72983259999999994 0.1162913 13.963758"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[55]" " -type \"float3\" 4.69482230000000023 0.1162913 13.977486"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[56]" " -type \"float3\" 4.65671829999999964 0.1162913 13.978037"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[57]" " -type \"float3\" 4.61925079999999966 0.1162913 13.965357"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[58]" " -type \"float3\" 4.58608770000000021 0.1162913 13.940685"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[59]" " -type \"float3\" 4.5604749 0.1162913 13.906439"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[60]" " -type \"float3\" 4.544919 0.1162913 13.865969"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[61]" " -type \"float3\" 4.54094460000000044 0.1162913 13.823236"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[62]" " -type \"float3\" 4.60393380000000008 0.030215880000000001 13.811509"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[63]" " -type \"float3\" 4.61388439999999989 0.030215880000000001 13.793406"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[64]" " -type \"float3\" 4.62866450000000018 0.030215880000000001 13.780146"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[65]" " -type \"float3\" 4.64682719999999971 0.030215880000000001 13.773023"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[66]" " -type \"float3\" 4.66659450000000042 0.030215880000000001 13.772738"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[67]" " -type \"float3\" 4.6860318000000003 0.030215880000000001 13.779315"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[68]" " -type \"float3\" 4.70323609999999981 0.030215880000000001 13.792114"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[69]" " -type \"float3\" 4.71652360000000037 0.030215880000000001 13.80988"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[70]" " -type \"float3\" 4.72459320000000016 0.030215880000000001 13.830875"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[71]" " -type \"float3\" 4.72665549999999968 0.030215880000000001 13.853044"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[72]" " -type \"float3\" 4.72250839999999972 0.030215880000000001 13.874215"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[73]" " -type \"float3\" 4.71255779999999991 0.030215880000000001 13.892318"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[74]" " -type \"float3\" 4.69777769999999961 0.030215880000000001 13.90558"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[75]" " -type \"float3\" 4.679615 0.030215880000000001 13.912702"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[76]" " -type \"float3\" 4.65984730000000003 0.030215880000000001 13.912988"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[77]" " -type \"float3\" 4.64041040000000038 0.030215880000000001 13.906409"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[78]" " -type \"float3\" 4.62320569999999975 0.030215880000000001 13.893611"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[79]" " -type \"float3\" 4.60991860000000031 0.030215880000000001 13.875844"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[80]" " -type \"float3\" 4.60184860000000029 0.030215880000000001 13.85485"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[81]" " -type \"float3\" 4.59978629999999988 0.030215880000000001 13.832681"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[82]" " -type \"float3\" 4.5835170999999999 0.11474276999999999 13.800713"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[83]" " -type \"float3\" 4.59689429999999977 0.11474264000000001 13.776376"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[84]" " -type \"float3\" 4.616765 0.11474276999999999 13.758548"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[85]" " -type \"float3\" 4.6411819000000003 0.11474276999999999 13.748973"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[86]" " -type \"float3\" 4.667757 0.11474276999999999 13.748588"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[87]" " -type \"float3\" 4.69388770000000033 0.11474276999999999 13.757432"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[88]" " -type \"float3\" 4.71701719999999991 0.11474276999999999 13.774638"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[89]" " -type \"float3\" 4.73488 0.11474276999999999 13.798523"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[90]" " -type \"float3\" 4.745729 0.11474276999999999 13.826748"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[91]" " -type \"float3\" 4.74850080000000041 0.11474276999999999 13.85655"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[92]" " -type \"float3\" 4.74292560000000041 0.11474276999999999 13.885013"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[93]" " -type \"float3\" 4.72954749999999979 0.11474264000000001 13.909348"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[94]" " -type \"float3\" 4.7096777000000003 0.11474276999999999 13.927178"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[95]" " -type \"float3\" 4.6852608 0.11474276999999999 13.936752"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[96]" " -type \"float3\" 4.65868570000000037 0.11474276999999999 13.937138"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[97]" " -type \"float3\" 4.632555 0.11474276999999999 13.928294"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[98]" " -type \"float3\" 4.609426 0.11474276999999999 13.911087"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[99]" " -type \"float3\" 4.5915632000000004 0.11474276999999999 13.887202"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[100]" " -type \"float3\" 4.58071420000000007 0.11474276999999999 13.858978"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[101]" " -type \"float3\" 4.5779418999999999 0.11474276999999999 13.829175"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[102]" " -type \"float3\" 4.58641050000000039 0.028613079 13.802242"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[103]" " -type \"float3\" 4.57875440000000022 0.027668521000000001 13.798194"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[104]" " -type \"float3\" 4.57447050000000033 0.026565124999999998 13.795928"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[105]" " -type \"float3\" 4.58936790000000006 0.026565811000000002 13.768831"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[106]" " -type \"float3\" 4.59293029999999991 0.027668562000000001 13.772402"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[107]" " -type \"float3\" 4.59929749999999959 0.028612576000000001 13.778785"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[108]" " -type \"float3\" 4.61149170000000019 0.026565124999999998 13.748978"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[109]" " -type \"float3\" 4.61398840000000021 0.027668521000000001 13.75351"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[110]" " -type \"float3\" 4.61845060000000007 0.028613079 13.761609"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[111]" " -type \"float3\" 4.63868050000000043 0.026564747 13.738315"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[112]" " -type \"float3\" 4.63986590000000021 0.027668769999999999 13.743366"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[113]" " -type \"float3\" 4.64198589999999989 0.028614418999999999 13.752398"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[114]" " -type \"float3\" 4.668272 0.026564834999999998 13.737886"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[115]" " -type \"float3\" 4.66802690000000009 0.027669231999999998 13.742965"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[116]" " -type \"float3\" 4.66758969999999973 0.028616073999999998 13.752049"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[117]" " -type \"float3\" 4.69736810000000027 0.026565327999999999 13.747736"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[118]" " -type \"float3\" 4.69571540000000009 0.027669699999999998 13.752339"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[119]" " -type \"float3\" 4.69275619999999982 0.028617403999999999 13.760584"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[120]" " -type \"float3\" 4.72312159999999981 0.026566033999999999 13.766896"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[121]" " -type \"float3\" 4.720222 0.027670017000000002 13.770573"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[122]" " -type \"float3\" 4.71502779999999966 0.028617928000000001 13.777161"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[123]" " -type \"float3\" 4.743012 0.026565987999999999 13.793491"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[124]" " -type \"float3\" 4.73915150000000018 0.027669741000000001 13.795879"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[125]" " -type \"float3\" 4.73224019999999967 0.028616921999999999 13.800156"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[126]" " -type \"float3\" 4.75509209999999971 0.026565926 13.824919"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[127]" " -type \"float3\" 4.75065139999999975 0.027669299000000001 13.825786"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[128]" " -type \"float3\" 4.74270770000000041 0.028615280999999999 13.827338"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[129]" " -type \"float3\" 4.75817870000000021 0.026565856999999998 13.858104"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[130]" " -type \"float3\" 4.75359439999999989 0.027668852000000001 13.857368"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[131]" " -type \"float3\" 4.745398 0.028613619999999999 13.856052"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[132]" " -type \"float3\" 4.75197029999999998 0.026565815999999999 13.889796"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[133]" " -type \"float3\" 4.74768830000000008 0.027668567000000002 13.887531"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[134]" " -type \"float3\" 4.740037 0.028612576000000001 13.883485"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[135]" " -type \"float3\" 4.73707529999999988 0.026565815999999999 13.916895"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[136]" " -type \"float3\" 4.73351140000000026 0.027668567000000002 13.913322"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[137]" " -type \"float3\" 4.72714419999999969 0.028612582000000001 13.90694"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[138]" " -type \"float3\" 4.714951 0.026565124999999998 13.936748"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[139]" " -type \"float3\" 4.71245340000000024 0.027668521000000001 13.932215"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[140]" " -type \"float3\" 4.7079911000000001 0.028613079 13.924116"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[141]" " -type \"float3\" 4.68776230000000016 0.026564747 13.947411"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[142]" " -type \"float3\" 4.68657639999999986 0.027668769999999999 13.942358"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[143]" " -type \"float3\" 4.68445629999999991 0.028614423999999999 13.933327"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[144]" " -type \"float3\" 4.65817070000000033 0.026564834999999998 13.947839"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[145]" " -type \"float3\" 4.65841480000000008 0.027669231999999998 13.94276"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[146]" " -type \"float3\" 4.65885209999999983 0.028616079999999999 13.933676"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[147]" " -type \"float3\" 4.62907460000000004 0.026565327999999999 13.93799"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[148]" " -type \"float3\" 4.6307267999999997 0.027669699999999998 13.933385"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[149]" " -type \"float3\" 4.6336864999999996 0.028617403999999999 13.92514"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[150]" " -type \"float3\" 4.60332160000000012 0.026566033999999999 13.918829"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[151]" " -type \"float3\" 4.60622069999999972 0.027670017000000002 13.915152"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[152]" " -type \"float3\" 4.61141440000000014 0.028617928000000001 13.908565"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[153]" " -type \"float3\" 4.58343119999999971 0.026565987999999999 13.892234"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[154]" " -type \"float3\" 4.58729030000000026 0.027669741000000001 13.889845"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[155]" " -type \"float3\" 4.594202 0.028616921999999999 13.885569"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[156]" " -type \"float3\" 4.57135110000000022 0.026565926 13.860806"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[157]" " -type \"float3\" 4.57579039999999981 0.027669299000000001 13.859939"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[158]" " -type \"float3\" 4.583734 0.028615280999999999 13.858387"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[159]" " -type \"float3\" 4.568264 0.026565856999999998 13.827621"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[160]" " -type \"float3\" 4.57284779999999991 0.027668852000000001 13.828357"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[161]" " -type \"float3\" 4.58104420000000001 0.028613619999999999 13.829672"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[162]" " -type \"float3\" 4.5639839000000002 0.025325686 13.790382"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[163]" " -type \"float3\" 4.55704210000000032 0.025325686 13.825821"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[164]" " -type \"float3\" 4.55998039999999971 0.026617687000000001 13.826292"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[165]" " -type \"float3\" 4.56672860000000025 0.026616883000000001 13.791834"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[166]" " -type \"float3\" 4.56049389999999999 0.025325686 13.862926"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[167]" " -type \"float3\" 4.56333680000000008 0.026617754 13.862371"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[168]" " -type \"float3\" 4.57400129999999994 0.025325686 13.898068"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[169]" " -type \"float3\" 4.57647090000000034 0.026617827 13.896541"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[170]" " -type \"float3\" 4.59624240000000039 0.025325686 13.927807"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[171]" " -type \"float3\" 4.59809589999999968 0.026617864000000001 13.925456"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[172]" " -type \"float3\" 4.62503960000000003 0.025325686 13.94923"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[173]" " -type \"float3\" 4.6260962000000001 0.026617095 13.946288"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[174]" " -type \"float3\" 4.6575742 0.025325686 13.960241"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[175]" " -type \"float3\" 4.65773010000000021 0.026616570999999999 13.956996"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[176]" " -type \"float3\" 4.69066190000000027 0.025325686 13.959763"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[177]" " -type \"float3\" 4.68990330000000011 0.026616482 13.956531"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[178]" " -type \"float3\" 4.72106310000000029 0.025325686 13.947841"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[179]" " -type \"float3\" 4.71946330000000014 0.026616883000000001 13.944938"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[180]" " -type \"float3\" 4.74580290000000016 0.025325686 13.925644"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[181]" " -type \"float3\" 4.74351789999999962 0.026617635000000001 13.923353"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[182]" " -type \"float3\" 4.76245829999999959 0.025325686 13.895343"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[183]" " -type \"float3\" 4.75971269999999969 0.026617635000000001 13.89389"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[184]" " -type \"float3\" 4.76940059999999999 0.025325686 13.859905"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[185]" " -type \"float3\" 4.76646229999999971 0.026617687000000001 13.859433"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[186]" " -type \"float3\" 4.76594880000000032 0.025325686 13.822799"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[187]" " -type \"float3\" 4.76310629999999957 0.026617754 13.823354"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[188]" " -type \"float3\" 4.7524419 0.025325686 13.787656"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[189]" " -type \"float3\" 4.74997229999999959 0.026617827 13.789185"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[190]" " -type \"float3\" 4.73020080000000043 0.025325686 13.757918"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[191]" " -type \"float3\" 4.72834679999999974 0.026617864000000001 13.76027"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[192]" " -type \"float3\" 4.7014035999999999 0.025325686 13.736495"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[193]" " -type \"float3\" 4.70034690000000044 0.026617095 13.739437"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[194]" " -type \"float3\" 4.66886850000000031 0.025325686 13.725484"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[195]" " -type \"float3\" 4.6687126000000001 0.026616570999999999 13.728729"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[196]" " -type \"float3\" 4.63578080000000003 0.025325686 13.725964"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[197]" " -type \"float3\" 4.63653989999999983 0.026616482 13.729195"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[198]" " -type \"float3\" 4.60537960000000002 0.025325686 13.737884"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[199]" " -type \"float3\" 4.60697940000000017 0.026616883000000001 13.740788"
-		
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[200]" " -type \"float3\" 4.58063980000000015 0.025325686 13.760082"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
-		"pnts[201]" " -type \"float3\" 4.58292530000000031 0.026617641000000001 13.762373"
-		
+		"pt[0:165]" (" -type \"float3\" 4.5719460999999999 0.025377514 13.794594 4.56556129999999971 0.025377514 13.827188 4.56873609999999974 0.025377514 13.861318 4.58115960000000033 0.025377514 13.89364 4.60161640000000016 0.025377514 13.920992 4.62810279999999974 0.025377514 13.940696 4.65802720000000026 0.025377514 13.950824 4.68846040000000031 0.025377514 13.950383 4.71642259999999958 0.025377514 13.939418 4.73917720000000031 0.025377514 13.919002 4.75449660000000041 0.025377514 13.891132 4.76088139999999971 0.025377514 13.858538 4.75770659999999967 0.025377514 13.824409 4.74528309999999998 0.025377514 13.792086 4.72482679999999977 0.025377514 13.764733 4.69833989999999968 0.025377514 13.745029 4.66841550000000005 0.025377514 13.734901 4.63798240000000028 0.025377514 13.735343 4.61002020000000012 0.025377514 13.746307 4.587266 0.025377514 13.766724 4.53427459999999982 0.11881959 13.774672 4.52525469999999963 0.11881959 13.820719 4.52973990000000004 0.11881959 13.868934 4.54729079999999986 0.11881959 13.914597 4.576190500000000"
+		+ "05 0.11881959 13.953238 4.61360879999999973 0.11881959 13.981074 4.65588379999999979 0.11881959 13.995382 4.69887730000000037 0.11881959 13.99476 4.73838 0.11881959 13.979269 4.77052589999999999 0.11881959 13.950426 4.7921680999999996 0.11881959 13.911054 4.8011885000000003 0.11881959 13.865006 4.79670329999999989 0.11881959 13.816792 4.77915189999999956 0.11881959 13.77113 4.75025269999999988 0.11881959 13.732489 4.71283389999999969 0.11881959 13.704652 4.67055940000000014 0.11881959 13.690344 4.62756589999999957 0.11881959 13.690966 4.58806280000000033 0.11881959 13.706456 4.55591680000000032 0.11881959 13.735299 4.66322140000000029 0.025377514 13.842863 4.66322140000000029 0.11976384 13.842863 4.54893829999999966 0.1162913 13.782426 4.568119 0.11629117 13.747531 4.59661010000000037 0.1162913 13.721969 4.63162089999999971 0.1162913 13.708239 4.66972450000000006 0.1162913 13.707688 4.70719189999999976 0.1162913 13.720369 4.74035549999999972 0.1162913 13.74504 4.76596780000000031 0.1162913 13.779287 4.7815231"
+		+ "9999999964 0.1162913 13.819757 4.78549860000000038 0.1162913 13.862489 4.77750439999999976 0.1162913 13.903299 4.75832269999999991 0.11629117 13.938193 4.72983259999999994 0.1162913 13.963758 4.69482230000000023 0.1162913 13.977486 4.65671829999999964 0.1162913 13.978037 4.61925079999999966 0.1162913 13.965357 4.58608770000000021 0.1162913 13.940685 4.5604749 0.1162913 13.906439 4.544919 0.1162913 13.865969 4.54094460000000044 0.1162913 13.823236 4.60393380000000008 0.030215880000000001 13.811509 4.61388439999999989 0.030215880000000001 13.793406 4.62866450000000018 0.030215880000000001 13.780146 4.64682719999999971 0.030215880000000001 13.773023 4.66659450000000042 0.030215880000000001 13.772738 4.6860318000000003 0.030215880000000001 13.779315 4.70323609999999981 0.030215880000000001 13.792114 4.71652360000000037 0.030215880000000001 13.80988 4.72459320000000016 0.030215880000000001 13.830875 4.72665549999999968 0.030215880000000001 13.853044 4.72250839999999972 0.030215880000000001 13.874215 4.712557799999"
+		+ "99991 0.030215880000000001 13.892318 4.69777769999999961 0.030215880000000001 13.90558 4.679615 0.030215880000000001 13.912702 4.65984730000000003 0.030215880000000001 13.912988 4.64041040000000038 0.030215880000000001 13.906409 4.62320569999999975 0.030215880000000001 13.893611 4.60991860000000031 0.030215880000000001 13.875844 4.60184860000000029 0.030215880000000001 13.85485 4.59978629999999988 0.030215880000000001 13.832681 4.5835170999999999 0.11474276999999999 13.800713 4.59689429999999977 0.11474264000000001 13.776376 4.616765 0.11474276999999999 13.758548 4.6411819000000003 0.11474276999999999 13.748973 4.667757 0.11474276999999999 13.748588 4.69388770000000033 0.11474276999999999 13.757432 4.71701719999999991 0.11474276999999999 13.774638 4.73488 0.11474276999999999 13.798523 4.745729 0.11474276999999999 13.826748 4.74850080000000041 0.11474276999999999 13.85655 4.74292560000000041 0.11474276999999999 13.885013 4.72954749999999979 0.11474264000000001 13.909348 4.7096777000000003 0.11474276999999999 1"
+		+ "3.927178 4.6852608 0.11474276999999999 13.936752 4.65868570000000037 0.11474276999999999 13.937138 4.632555 0.11474276999999999 13.928294 4.609426 0.11474276999999999 13.911087 4.5915632000000004 0.11474276999999999 13.887202 4.58071420000000007 0.11474276999999999 13.858978 4.5779418999999999 0.11474276999999999 13.829175 4.58641050000000039 0.028613079 13.802242 4.57875440000000022 0.027668521000000001 13.798194 4.57447050000000033 0.026565124999999998 13.795928 4.58936790000000006 0.026565811000000002 13.768831 4.59293029999999991 0.027668562000000001 13.772402 4.59929749999999959 0.028612576000000001 13.778785 4.61149170000000019 0.026565124999999998 13.748978 4.61398840000000021 0.027668521000000001 13.75351 4.61845060000000007 0.028613079 13.761609 4.63868050000000043 0.026564747 13.738315 4.63986590000000021 0.027668769999999999 13.743366 4.64198589999999989 0.028614418999999999 13.752398 4.668272 0.026564834999999998 13.737886 4.66802690000000009 0.027669231999999998 13.742965 4.66758969999999973 0.02"
+		+ "8616073999999998 13.752049 4.69736810000000027 0.026565327999999999 13.747736 4.69571540000000009 0.027669699999999998 13.752339 4.69275619999999982 0.028617403999999999 13.760584 4.72312159999999981 0.026566033999999999 13.766896 4.720222 0.027670017000000002 13.770573 4.71502779999999966 0.028617928000000001 13.777161 4.743012 0.026565987999999999 13.793491 4.73915150000000018 0.027669741000000001 13.795879 4.73224019999999967 0.028616921999999999 13.800156 4.75509209999999971 0.026565926 13.824919 4.75065139999999975 0.027669299000000001 13.825786 4.74270770000000041 0.028615280999999999 13.827338 4.75817870000000021 0.026565856999999998 13.858104 4.75359439999999989 0.027668852000000001 13.857368 4.745398 0.028613619999999999 13.856052 4.75197029999999998 0.026565815999999999 13.889796 4.74768830000000008 0.027668567000000002 13.887531 4.740037 0.028612576000000001 13.883485 4.73707529999999988 0.026565815999999999 13.916895 4.73351140000000026 0.027668567000000002 13.913322 4.72714419999999969 0.02861258"
+		+ "2000000001 13.90694 4.714951 0.026565124999999998 13.936748 4.71245340000000024 0.027668521000000001 13.932215 4.7079911000000001 0.028613079 13.924116 4.68776230000000016 0.026564747 13.947411 4.68657639999999986 0.027668769999999999 13.942358 4.68445629999999991 0.028614423999999999 13.933327 4.65817070000000033 0.026564834999999998 13.947839 4.65841480000000008 0.027669231999999998 13.94276 4.65885209999999983 0.028616079999999999 13.933676 4.62907460000000004 0.026565327999999999 13.93799 4.6307267999999997 0.027669699999999998 13.933385 4.6336864999999996 0.028617403999999999 13.92514 4.60332160000000012 0.026566033999999999 13.918829 4.60622069999999972 0.027670017000000002 13.915152 4.61141440000000014 0.028617928000000001 13.908565 4.58343119999999971 0.026565987999999999 13.892234 4.58729030000000026 0.027669741000000001 13.889845 4.594202 0.028616921999999999 13.885569 4.57135110000000022 0.026565926 13.860806 4.57579039999999981 0.027669299000000001 13.859939 4.583734 0.028615280999999999 13.858387"
+		+ " 4.568264 0.026565856999999998 13.827621 4.57284779999999991 0.027668852000000001 13.828357 4.58104420000000001 0.028613619999999999 13.829672 4.5639839000000002 0.025325686 13.790382 4.55704210000000032 0.025325686 13.825821 4.55998039999999971 0.026617687000000001 13.826292 4.56672860000000025 0.026616883000000001 13.791834"
+		)
+		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape" 
+		"pt[166:201]" (" 4.56049389999999999 0.025325686 13.862926 4.56333680000000008 0.026617754 13.862371 4.57400129999999994 0.025325686 13.898068 4.57647090000000034 0.026617827 13.896541 4.59624240000000039 0.025325686 13.927807 4.59809589999999968 0.026617864000000001 13.925456 4.62503960000000003 0.025325686 13.94923 4.6260962000000001 0.026617095 13.946288 4.6575742 0.025325686 13.960241 4.65773010000000021 0.026616570999999999 13.956996 4.69066190000000027 0.025325686 13.959763 4.68990330000000011 0.026616482 13.956531 4.72106310000000029 0.025325686 13.947841 4.71946330000000014 0.026616883000000001 13.944938 4.74580290000000016 0.025325686 13.925644 4.74351789999999962 0.026617635000000001 13.923353 4.76245829999999959 0.025325686 13.895343 4.75971269999999969 0.026617635000000001 13.89389 4.76940059999999999 0.025325686 13.859905 4.76646229999999971 0.026617687000000001 13.859433 4.76594880000000032 0.025325686 13.822799 4.76310629999999957 0.026617754 13.823354 4.7524419 0.025325686 13.787656 4.74997229999999959 0.0266"
+		+ "17827 13.789185 4.73020080000000043 0.025325686 13.757918 4.72834679999999974 0.026617864000000001 13.76027 4.7014035999999999 0.025325686 13.736495 4.70034690000000044 0.026617095 13.739437 4.66886850000000031 0.025325686 13.725484 4.6687126000000001 0.026616570999999999 13.728729 4.63578080000000003 0.025325686 13.725964 4.63653989999999983 0.026616482 13.729195 4.60537960000000002 0.025325686 13.737884 4.60697940000000017 0.026616883000000001 13.740788 4.58063980000000015 0.025325686 13.760082 4.58292530000000031 0.026617641000000001 13.762373"
+		)
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35" "rotatePivot" 
@@ -7919,23 +4366,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35" 
-		"pnts[0]" " -type \"float3\" 6.1794 0.10921499 13.237671"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35" 
-		"pnts[1]" " -type \"float3\" 5.799015 0.10921499 12.856585"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35" 
-		"pnts[2]" " -type \"float3\" 6.1617917999999996 0.11243017 13.241767"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35" 
-		"pnts[3]" " -type \"float3\" 5.83513069999999967 0.11243017 12.914318"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35" 
-		"pnts[4]" " -type \"float3\" 6.132637 0.11243017 13.278895"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35" 
-		"pnts[5]" " -type \"float3\" 5.80597589999999997 0.11243017 12.951447"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35" 
-		"pnts[6]" " -type \"float3\" 6.131134 0.10921499 13.299136"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35" 
-		"pnts[7]" " -type \"float3\" 5.75093890000000041 0.10921499 12.917808"
+		"pt[0:7]" " -s 8 -type \"float3\" 6.1794 0.10921499 13.237671 5.799015 0.10921499 12.856585 6.1617917999999996 0.11243017 13.241767 5.83513069999999967 0.11243017 12.914318 6.132637 0.11243017 13.278895 5.80597589999999997 0.11243017 12.951447 6.131134 0.10921499 13.299136 5.75093890000000041 0.10921499 12.917808"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33" "rotatePivot" 
@@ -7945,23 +4377,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33" 
-		"pnts[0]" " -type \"float3\" 5.82334420000000019 0.10921499 13.691097"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33" 
-		"pnts[1]" " -type \"float3\" 5.44295930000000006 0.10921499 13.310011"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33" 
-		"pnts[2]" " -type \"float3\" 5.80573609999999984 0.11243017 13.695194"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33" 
-		"pnts[3]" " -type \"float3\" 5.479075 0.11243017 13.367744"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33" 
-		"pnts[4]" " -type \"float3\" 5.77658130000000014 0.11243017 13.732322"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33" 
-		"pnts[5]" " -type \"float3\" 5.44992020000000021 0.11243017 13.404873"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33" 
-		"pnts[6]" " -type \"float3\" 5.77507829999999966 0.10921499 13.752563"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33" 
-		"pnts[7]" " -type \"float3\" 5.3948836 0.10921499 13.371234"
+		"pt[0:7]" " -s 8 -type \"float3\" 5.82334420000000019 0.10921499 13.691097 5.44295930000000006 0.10921499 13.310011 5.80573609999999984 0.11243017 13.695194 5.479075 0.11243017 13.367744 5.77658130000000014 0.11243017 13.732322 5.44992020000000021 0.11243017 13.404873 5.77507829999999966 0.10921499 13.752563 5.3948836 0.10921499 13.371234"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23" "rotatePivot" 
@@ -7971,23 +4388,8 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23" 
-		"pnts[0]" " -type \"float3\" 7.45983459999999976 0.10921499 11.607075"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23" 
-		"pnts[1]" " -type \"float3\" 7.07944969999999962 0.10921499 11.225988"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23" 
-		"pnts[2]" " -type \"float3\" 7.44222640000000002 0.11243017 11.611171"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23" 
-		"pnts[3]" " -type \"float3\" 7.11556530000000009 0.11243017 11.283722"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23" 
-		"pnts[4]" " -type \"float3\" 7.41307120000000008 0.11243017 11.648299"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23" 
-		"pnts[5]" " -type \"float3\" 7.08641050000000039 0.11243017 11.32085"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23" 
-		"pnts[6]" " -type \"float3\" 7.41156819999999961 0.10921499 11.66854"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23" 
-		"pnts[7]" " -type \"float3\" 7.03137349999999994 0.10921499 11.287211"
+		"pt[0:7]" " -s 8 -type \"float3\" 7.45983459999999976 0.10921499 11.607075 7.07944969999999962 0.10921499 11.225988 7.44222640000000002 0.11243017 11.611171 7.11556530000000009 0.11243017 11.283722 7.41307120000000008 0.11243017 11.648299 7.08641050000000039 0.11243017 11.32085 7.41156819999999961 0.10921499 11.66854 7.03137349999999994 0.10921499 11.287211"
+		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16" "rotatePivot" 
@@ -7997,27 +4399,241 @@ createNode reference -n "Asset2RN";
 		" -type \"double3\" 7.97011678467505913 -0.046775480202588808 10.25079966976653623"
 		
 		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape" 
-		"pnts" " -s 8"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape" 
-		"pnts[0]" " -type \"float3\" 8.054945 0.10921499 10.849218"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape" 
-		"pnts[1]" " -type \"float3\" 7.67456009999999988 0.10921499 10.468132"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape" 
-		"pnts[2]" " -type \"float3\" 8.03733730000000079 0.11243017 10.853314"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape" 
-		"pnts[3]" " -type \"float3\" 7.71067619999999998 0.11243017 10.525866"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape" 
-		"pnts[4]" " -type \"float3\" 8.00818160000000034 0.11243017 10.890443"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape" 
-		"pnts[5]" " -type \"float3\" 7.68152089999999976 0.11243017 10.562994"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape" 
-		"pnts[6]" " -type \"float3\" 8.00667860000000076 0.10921499 10.910684"
-		2 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape" 
-		"pnts[7]" " -type \"float3\" 7.62648439999999983 0.10921499 10.529355"
+		"pt[0:7]" " -s 8 -type \"float3\" 8.054945 0.10921499 10.849218 7.67456009999999988 0.10921499 10.468132 8.03733730000000079 0.11243017 10.853314 7.71067619999999998 0.11243017 10.525866 8.00818160000000034 0.11243017 10.890443 7.68152089999999976 0.11243017 10.562994 8.00667860000000076 0.10921499 10.910684 7.62648439999999983 0.10921499 10.529355"
+		
 		2 "Asset2:Keys" "visibility" " 1"
-		2 "Asset2:Piano" "visibility" " 1";
+		2 "Asset2:Piano" "visibility" " 1"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape.instObjGroups" 
+		"Asset2:lambert1SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape.instObjGroups" 
+		"Asset2:lambert1SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape.instObjGroups" 
+		"Asset2:lambert1SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1.instObjGroups" 
+		"Asset2:lambert1SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape.instObjGroups" 
+		"Asset2:lambert2SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		3 "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24.instObjGroups" 
+		"Asset2:lambert3SG.dagSetMembers" "-na"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeysShape24.instObjGroups" 
+		"Asset2RN.placeHolderList[1]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys|Asset2:BlackPianoKeysShape.instObjGroups" 
+		"Asset2RN.placeHolderList[2]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys3|Asset2:BlackPianoKeysShape3.instObjGroups" 
+		"Asset2RN.placeHolderList[3]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys12|Asset2:BlackPianoKeysShape12.instObjGroups" 
+		"Asset2RN.placeHolderList[4]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys10|Asset2:BlackPianoKeysShape10.instObjGroups" 
+		"Asset2RN.placeHolderList[5]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg1|Asset2:PianoLegShape1.instObjGroups" 
+		"Asset2RN.placeHolderList[6]" "Asset2:lambert1SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys19|Asset2:BlackPianoKeysShape19.instObjGroups" 
+		"Asset2RN.placeHolderList[7]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoKeys|Asset2:PianoKeysShape.instObjGroups" 
+		"Asset2RN.placeHolderList[8]" "Asset2:lambert2SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys6|Asset2:BlackPianoKeys6Shape.instObjGroups" 
+		"Asset2RN.placeHolderList[9]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys4|Asset2:BlackPianoKeysShape4.instObjGroups" 
+		"Asset2RN.placeHolderList[10]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys7|Asset2:BlackPianoKeysShape7.instObjGroups" 
+		"Asset2RN.placeHolderList[11]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys13|Asset2:BlackPianoKeysShape13.instObjGroups" 
+		"Asset2RN.placeHolderList[12]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys14|Asset2:BlackPianoKeysShape14.instObjGroups" 
+		"Asset2RN.placeHolderList[13]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys5|Asset2:BlackPianoKeys5Shape.instObjGroups" 
+		"Asset2RN.placeHolderList[14]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys1|Asset2:BlackPianoKeysShape1.instObjGroups" 
+		"Asset2RN.placeHolderList[15]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys2|Asset2:BlackPianoKeysShape2.instObjGroups" 
+		"Asset2RN.placeHolderList[16]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys11|Asset2:BlackPianoKeys11Shape.instObjGroups" 
+		"Asset2RN.placeHolderList[17]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys8|Asset2:BlackPianoKeysShape8.instObjGroups" 
+		"Asset2RN.placeHolderList[18]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys9|Asset2:BlackPianoKeysShape9.instObjGroups" 
+		"Asset2RN.placeHolderList[19]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys30|Asset2:BlackPianoKeysShape30.instObjGroups" 
+		"Asset2RN.placeHolderList[20]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys15|Asset2:BlackPianoKeysShape15.instObjGroups" 
+		"Asset2RN.placeHolderList[21]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys21|Asset2:BlackPianoKeys21Shape.instObjGroups" 
+		"Asset2RN.placeHolderList[22]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys22|Asset2:BlackPianoKeysShape22.instObjGroups" 
+		"Asset2RN.placeHolderList[23]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys31|Asset2:BlackPianoKeys31Shape.instObjGroups" 
+		"Asset2RN.placeHolderList[24]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys28|Asset2:BlackPianoKeysShape28.instObjGroups" 
+		"Asset2RN.placeHolderList[25]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys29|Asset2:BlackPianoKeysShape29.instObjGroups" 
+		"Asset2RN.placeHolderList[26]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoBack|Asset2:PianoBackShape.instObjGroups" 
+		"Asset2RN.placeHolderList[27]" "Asset2:lambert1SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys18|Asset2:BlackPianoKeysShape18.instObjGroups" 
+		"Asset2RN.placeHolderList[28]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys27|Asset2:BlackPianoKeysShape27.instObjGroups" 
+		"Asset2RN.placeHolderList[29]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys32|Asset2:BlackPianoKeysShape32.instObjGroups" 
+		"Asset2RN.placeHolderList[30]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys17|Asset2:BlackPianoKeysShape17.instObjGroups" 
+		"Asset2RN.placeHolderList[31]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys26|Asset2:BlackPianoKeys26Shape.instObjGroups" 
+		"Asset2RN.placeHolderList[32]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys34|Asset2:BlackPianoKeysShape34.instObjGroups" 
+		"Asset2RN.placeHolderList[33]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys25|Asset2:BlackPianoKeysShape25.instObjGroups" 
+		"Asset2RN.placeHolderList[34]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:KeyboardHolder|Asset2:KeyboardHolderShape.instObjGroups" 
+		"Asset2RN.placeHolderList[35]" "Asset2:lambert1SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys20|Asset2:BlackPianoKeysShape20.instObjGroups" 
+		"Asset2RN.placeHolderList[36]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:PianoLeg|Asset2:PianoLegShape.instObjGroups" 
+		"Asset2RN.placeHolderList[37]" "Asset2:lambert1SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys35|Asset2:BlackPianoKeysShape35.instObjGroups" 
+		"Asset2RN.placeHolderList[38]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys33|Asset2:BlackPianoKeysShape33.instObjGroups" 
+		"Asset2RN.placeHolderList[39]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys23|Asset2:BlackPianoKeysShape23.instObjGroups" 
+		"Asset2RN.placeHolderList[40]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "|Asset2:Piano1|Asset2:BlackPianoKeys24|Asset2:BlackPianoKeys16|Asset2:BlackPianoKeys16Shape.instObjGroups" 
+		"Asset2RN.placeHolderList[41]" "Asset2:lambert3SG.dsm"
+		5 3 "Asset2RN" "Asset2:lambert2.message" "Asset2RN.placeHolderList[42]" 
+		""
+		5 3 "Asset2RN" "Asset2:lambert2SG.message" "Asset2RN.placeHolderList[43]" 
+		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "_UNKNOWN_REF_NODE_";
+	rename -uid "CFBC4B5B-48B6-C46B-FA2D-2E99406BC3C2";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"_UNKNOWN_REF_NODE_"
+		"_UNKNOWN_REF_NODE_" 2
+		2 ":openPBR_shader1" "bc" " -type \"float3\" 1 1 1"
+		2 ":openPBR_shader1" "sr" " 0.5";
+createNode aiOptions -s -n "defaultArnoldRenderOptions";
+	rename -uid "E5170045-4FFA-799A-1ACE-9D881A3FA454";
+	setAttr ".version" -type "string" "5.4.5";
+createNode aiAOVFilter -s -n "defaultArnoldFilter";
+	rename -uid "30B17271-4125-C020-5D1C-E391BED35DC9";
+	setAttr ".ai_translator" -type "string" "gaussian";
+createNode aiAOVDriver -s -n "defaultArnoldDriver";
+	rename -uid "31FF4C4A-4522-F0DB-437B-F09C3CD7757C";
+	setAttr ".ai_translator" -type "string" "exr";
+createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
+	rename -uid "00828981-429F-8B0D-806E-4DB3E775B48B";
+	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
+createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
+	rename -uid "EF0821B4-4A72-0BC2-21AA-AD8027B8A6F5";
+createNode lambert -n "lambert5";
+	rename -uid "28331D2F-4186-CAE9-7A8F-31B646838EDF";
+createNode shadingEngine -n "lambert5SG";
+	rename -uid "412CF837-4149-4B6D-F761-869B69B529DE";
+	setAttr ".ihi" 0;
+	setAttr -s 88 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo4";
+	rename -uid "E98AD861-4EFB-96F0-9325-2195F2FAFC33";
+createNode file -n "file1";
+	rename -uid "20113064-4E1F-F148-1A20-0D97C10511D1";
+	setAttr ".ftn" -type "string" "C:/Users/10830498/Documents/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/Scene2_Texture.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture1";
+	rename -uid "6637A5DC-4EAD-891C-232C-6C8C90C7B157";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "D804E6CB-45B5-DA5A-408F-16BA8E2458F0";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" 48.070589474484535 -548.51220217202092 ;
+	setAttr ".tgi[0].vh" -type "double2" 598.60372625543926 11.112307509903726 ;
+	setAttr -s 6 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 725.71429443359375;
+	setAttr ".tgi[0].ni[0].y" -328.57144165039062;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" -195.71427917480469;
+	setAttr ".tgi[0].ni[1].y" -328.57144165039062;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 28.080791473388672;
+	setAttr ".tgi[0].ni[2].y" -110.60471343994141;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 398.95675659179688;
+	setAttr ".tgi[0].ni[3].y" -456.54522705078125;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" 475.71429443359375;
+	setAttr ".tgi[0].ni[4].y" -232.85714721679688;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 297.33828735351562;
+	setAttr ".tgi[0].ni[5].y" -44.305343627929688;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -8029,32 +4645,31 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 8 ".st";
+	setAttr -s 9 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
 	setAttr -s 9 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
+	setAttr -s 2 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 2 ".r";
 select -ne :defaultTextureList1;
+	setAttr -s 2 ".tx";
 select -ne :lambert1;
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
-select -ne :openPBR_shader1;
-	setAttr ".bc" -type "float3" 1 1 1 ;
-	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 46 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
-	setAttr ".dss" -type "string" "openPBR_shader1";
+	setAttr ".dss" -type "string" "lambert1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 select -ne :defaultColorMgtGlobals;
@@ -8069,8 +4684,51 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+connectAttr "Asset2RN.phl[1]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[2]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[3]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[4]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[5]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[6]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[7]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[8]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[9]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[10]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[11]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[12]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[13]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[14]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[15]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[16]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[17]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[18]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[19]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[20]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[21]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[22]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[23]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[24]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[25]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[26]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[27]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[28]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[29]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[30]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[31]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[32]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[33]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[34]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[35]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[36]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[37]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[38]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[39]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[40]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[41]" "lambert5SG.dsm" -na;
+connectAttr "Asset2RN.phl[42]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "Asset2RN.phl[43]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
 connectAttr "Blockout.di" "group1.do";
 connectAttr "polyCylinder3.out" "PianoChairShape.i";
 connectAttr "polyPlane2.out" "RugShape.i";
@@ -8088,11 +4746,13 @@ relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightS
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "polyCube2.out" "polySplit1.ip";
@@ -8103,66 +4763,104 @@ connectAttr "layerManager.dli[1]" "Blockout.id";
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "lambert3SG.msg" "materialInfo2.sg";
 connectAttr "RugMat.oc" "lambert4SG.ss";
-connectAttr "RugShape.iog" "lambert4SG.dsm" -na;
 connectAttr "lambert4SG.msg" "materialInfo3.sg";
 connectAttr "RugMat.msg" "materialInfo3.m";
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "_UNKNOWN_REF_NODE_.ur" "Asset2RN.ur";
+connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
+		 -na;
+connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
+connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "file1.oc" "lambert5.c";
+connectAttr "lambert5.oc" "lambert5SG.ss";
+connectAttr "blockout1Shape.iog" "lambert5SG.dsm" -na;
+connectAttr "pCylinderShape6.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape43.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape47.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape9.iog" "lambert5SG.dsm" -na;
+connectAttr "pCylinderShape1.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape3.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape13.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape22.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape44.iog" "lambert5SG.dsm" -na;
+connectAttr "pCylinderShape7.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape50.iog" "lambert5SG.dsm" -na;
+connectAttr "pCylinderShape4.iog" "lambert5SG.dsm" -na;
+connectAttr "blockout2Shape.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape29.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape41.iog" "lambert5SG.dsm" -na;
+connectAttr "blockoutShape.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape39.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape27.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape28.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape45.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape6.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape12.iog" "lambert5SG.dsm" -na;
+connectAttr "PianoChairShape.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape25.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape23.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape8.iog" "lambert5SG.dsm" -na;
+connectAttr "pCylinderShape2.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape10.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape2.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape1.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape5.iog" "lambert5SG.dsm" -na;
+connectAttr "RugShape.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape49.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape48.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape38.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape24.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape40.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape11.iog" "lambert5SG.dsm" -na;
+connectAttr "blockout3Shape.iog" "lambert5SG.dsm" -na;
+connectAttr "pCylinderShape3.iog" "lambert5SG.dsm" -na;
+connectAttr "pSphereShape1.iog" "lambert5SG.dsm" -na;
+connectAttr "pCylinderShape5.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape4.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape42.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape26.iog" "lambert5SG.dsm" -na;
+connectAttr "pCubeShape46.iog" "lambert5SG.dsm" -na;
+connectAttr "lambert5SG.msg" "materialInfo4.sg";
+connectAttr "lambert5.msg" "materialInfo4.m";
+connectAttr "file1.msg" "materialInfo4.t" -na;
+connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file1.ws";
+connectAttr "place2dTexture1.c" "file1.c";
+connectAttr "place2dTexture1.tf" "file1.tf";
+connectAttr "place2dTexture1.rf" "file1.rf";
+connectAttr "place2dTexture1.mu" "file1.mu";
+connectAttr "place2dTexture1.mv" "file1.mv";
+connectAttr "place2dTexture1.s" "file1.s";
+connectAttr "place2dTexture1.wu" "file1.wu";
+connectAttr "place2dTexture1.wv" "file1.wv";
+connectAttr "place2dTexture1.re" "file1.re";
+connectAttr "place2dTexture1.of" "file1.of";
+connectAttr "place2dTexture1.r" "file1.ro";
+connectAttr "place2dTexture1.n" "file1.n";
+connectAttr "place2dTexture1.vt1" "file1.vt1";
+connectAttr "place2dTexture1.vt2" "file1.vt2";
+connectAttr "place2dTexture1.vt3" "file1.vt3";
+connectAttr "place2dTexture1.vc1" "file1.vc1";
+connectAttr "place2dTexture1.o" "file1.uv";
+connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "lambert5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "lambert4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "RugMat.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "lambert5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert5SG.pa" ":renderPartition.st" -na;
 connectAttr "RugMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert5.msg" ":defaultShaderList1.s" -na;
+connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "blockoutShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape6.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape7.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "blockout1Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "blockout2Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "blockout3Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape8.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape9.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape10.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape11.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape12.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape13.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape22.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape23.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape24.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape25.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape26.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape27.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape28.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape29.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape38.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape39.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "PianoChairShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape40.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape41.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape42.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape43.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape44.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape45.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape46.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape47.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape48.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape49.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape50.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 // End of scene2.ma
