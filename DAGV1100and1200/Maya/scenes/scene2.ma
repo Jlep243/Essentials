@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: scene2.ma
-//Last modified: Fri, Nov 07, 2025 04:42:48 PM
+//Last modified: Fri, Nov 07, 2025 04:43:07 PM
 //Codeset: 1252
 file -rdi 1 -ns "Asset2" -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Asset2.ma";
 file -r -ns "Asset2" -dr 1 -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/nickl/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Asset2.ma";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "6ED3C5CB-4E0B-93E0-2C21-F6865A52BA8F";
+fileInfo "UUID" "066BC795-4569-EAC3-17B9-BC8C568DBA0C";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "681B7346-4D66-609C-3EC1-429764BA586F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 44.070403633390285 9.4906994871013399 -15.329444269076072 ;
+	setAttr ".t" -type "double3" 42.968335459841484 10.821491174124777 -18.386205168754469 ;
 	setAttr ".r" -type "double3" -10.199999999869396 -254.40000000002024 0 ;
 	setAttr ".rpt" -type "double3" -1.9134157218128132e-15 3.2147083126339009e-15 1.0657037235953275e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -4615,7 +4615,7 @@ createNode file -n "file1";
 createNode place2dTexture -n "place2dTexture1";
 	rename -uid "6637A5DC-4EAD-891C-232C-6C8C90C7B157";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "544D4C97-4E15-7C7B-B417-2ABE620B6721";
+	rename -uid "1140E15D-4043-A7EE-F889-28B0C213C2AB";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -60.478093035487241 -388.64132201331677 ;
 	setAttr ".tgi[0].vh" -type "double2" 490.05504374546763 -59.331592489296114 ;
