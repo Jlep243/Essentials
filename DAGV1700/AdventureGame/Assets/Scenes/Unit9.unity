@@ -430,7 +430,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183158031}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -995,8 +995,10 @@ GameObject:
   - component: {fileID: 679893572}
   - component: {fileID: 679893571}
   - component: {fileID: 679893574}
+  - component: {fileID: 679893576}
+  - component: {fileID: 679893575}
   m_Layer: 10
-  m_Name: Idle (84x38)_0
+  m_Name: CHAMELEON!!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1088,7 +1090,7 @@ Transform:
   m_GameObject: {fileID: 679893570}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.1, y: -1.754, z: -0.24}
+  m_LocalPosition: {x: -9.88, y: -1.754, z: -0.24}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1107,6 +1109,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2089286220}
+--- !u!114 &679893575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679893570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd887bc84ba82451f9fcc0243328aa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!95 &679893576
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679893570}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5613f5fbf3f4346a0acd1eb93101c3ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &847486929 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7940325442628056597, guid: f75ab2127af87a2429bac7c8e37da9e4, type: 3}
@@ -12269,12 +12306,12 @@ NavMeshObstacle:
   m_GameObject: {fileID: 7849852}
   m_Enabled: 1
   serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 0.59, y: 0.755, z: 0.59}
+  m_Shape: 1
+  m_Extents: {x: 0.4, y: 0.6, z: 0.5}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0.03, y: 0.12, z: 0}
+  m_Center: {x: 0, y: 0.12, z: 0}
   m_TimeToStationary: 0.5
 --- !u!1001 &5801329249124757576
 PrefabInstance:
